@@ -3,6 +3,7 @@
 The table for the pedigree would be something like this:
 
 ```mermaid
+erDiagram
     wp-pedigree-dogs {
         string name
         date birth
