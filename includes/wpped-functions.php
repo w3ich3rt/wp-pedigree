@@ -22,9 +22,10 @@
             __('Dog Pedigree - Plugin','wp-pedigree'), // Title of the page
             __('Dog Pedigree','wp-pedigree'), // Text to show on the menu link
             'manage_options', // Capability requirement to see the link
-            'sample-page', // The 'slug' - file to display when clicking the link
+            'wpped_Admin', // The 'slug' - file to display when clicking the link
             'wpped_Admin_Contents',
-            'public/images/dog.svg'
+            'public/images/dog.svg',
+            6
         );
     }
 
@@ -32,9 +33,5 @@
     ** Add the content for the admin menu
     **/
     function wpped_Admin_Contents() {
-        ?>
-            <h1>
-                <?php esc_html_e( 'Welcome to my custom admin page.', 'my-plugin-textdomain' );
-            </h1>
-        <?php
+        include_once('includes/wpped-admin.php');
     }
