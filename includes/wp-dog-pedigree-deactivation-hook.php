@@ -6,7 +6,7 @@ function wp_dog_pedigree_deinstall() {
 	global $wpdb;
 	global $wp_dog_pedigree_db;
 
-	$table_name = $wpdb->prefix . 'wp_dogpedigree_dogs';
+	$table_name = $wpdb->prefix . 'dogpedigree_dogs';
 	
 	$charset_collate = $wpdb->get_charset_collate();
 
@@ -14,6 +14,4 @@ function wp_dog_pedigree_deinstall() {
 
 	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 	dbDelta( $sql );
-
-	add_option( 'wp_dog_pedigree_db', $wp_dog_pedigree_db );
 }
