@@ -31,3 +31,14 @@
     define( 'WP_DOG_PEDIGREE_VERSION', '0.0.1' );
 
     require_once plugin_dir_path(__FILE__) . 'includes/wp-dog-pedigree-functions.php';
+
+    /**
+    * Create Database for the dog pedigrees.
+    **/
+    register_activation_hook( __FILE__, 'wp_dog_pedigree_db_install' );
+    register_activation_hook( __FILE__, 'wp_dog_pedigree_data' );
+
+    /**
+    * Remove Database for the dog pedigrees when deinstall.
+    **/
+    register_deactivation_hook( __FILE__, 'wp_dog_pedigree_deinstall' );

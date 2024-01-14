@@ -1,8 +1,8 @@
 <?php
 global $wp_dog_pedigree_db;
-$wp_dog_pedigree_db = '1.0';
+$wp_dog_pedigree_db = '1.0.0';
 
-function wp_dog_pedigree_install() {
+function wp_dog_pedigree_db_install() {
 	global $wpdb;
 	global $wp_dog_pedigree_db;
 
@@ -22,7 +22,7 @@ function wp_dog_pedigree_install() {
 	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 	dbDelta( $sql );
 
-	add_option( 'wp_dog_pedigree_db', $wp_dog_pedigree_db );
+	//add_option( 'wp_dog_pedigree_db', $wp_dog_pedigree_db );
 }
 
 function wp_dog_pedigree_data() {

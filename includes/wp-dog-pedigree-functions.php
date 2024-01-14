@@ -1,10 +1,9 @@
 <?php
     /**
-    * Create Database for the dog pedigrees.
+    * Import needed files
     **/
     require_once plugin_dir_path(__FILE__) . 'wp-dog-pedigree-activation-hook.php';
-    register_activation_hook( __FILE__, 'wp_dog_pedigree_install' );
-    register_activation_hook( __FILE__, 'wp_dog_pedigree_data' );
+    require_once plugin_dir_path(__FILE__) . 'wp-dog-pedigree-deactivation-hook.php';
 
     /**
     * Add the stylesheet for the plugin
@@ -39,9 +38,3 @@
     function wp_dog_pedigree_Admin_Contents() {
         include_once('wp-dog-pedigree-admin.php');
     }
-
-    /**
-    * Remove Database for the dog pedigrees when deinstall.
-    **/
-    require_once plugin_dir_path(__FILE__) . 'wp-dog-pedigree-deactivation-hook.php';
-    register_deactivation_hook( __FILE__, 'wp_dog_pedigree_deinstall' );
