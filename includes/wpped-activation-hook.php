@@ -33,12 +33,12 @@ function wp_dog_pedigree_data() {
 	
 	$table_name = $wpdb->prefix . 'liveshoutbox';
 	
-	$wpdb->insert( 
-		$table_name, 
-		array( 
-			'time' => current_time( 'mysql' ), 
-			'name' => $welcome_name, 
-			'text' => $welcome_text, 
-		) 
+	$wpdb->insert(
+		$table_name,
+		array(
+			'time' => current_time( 'mysql' ),
+			'name' => $welcome_name,
+			'text' => $welcome_text,
+		)
 	);
 }
