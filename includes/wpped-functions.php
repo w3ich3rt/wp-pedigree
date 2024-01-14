@@ -12,15 +12,15 @@
     }
 
 
-    // Hook the 'admin_menu' action hook, run the function named 'wpped_Add_My_Admin_Link()'
-    add_action( 'admin_menu', 'wpped_Add_My_Admin_Link' );
+    // Hook the 'admin_menu' action hook, run the function named 'wpped_Menu_Page()'
+    add_action( 'admin_menu', 'wpped_Menu_Page' );
     // Add a new top level menu link to the ACP
-    function wpped_Add_My_Admin_Link()
+    function wpped_Menu_Page()
     {
         add_menu_page(
             'Dog Pedigree - Plugin', // Title of the page
             'Dog Pedigree', // Text to show on the menu link
             'manage_options', // Capability requirement to see the link
-            plugin_dir_path(__FILE__) . 'includes/wpped-menu-page.php' // The 'slug' - file to display when clicking the link
+            'includes/wpped-menu-page.php' // The 'slug' - file to display when clicking the link
         );
     }
