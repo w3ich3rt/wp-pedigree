@@ -6,7 +6,7 @@ function wp_dog_pedigree_db_install() {
 	global $wpdb;
 	global $wp_dog_pedigree_db;
 
-	$table_name = $wpdb->prefix . 'dogpedigree_dogs';
+	$table_name = $wpdb->prefix . 'dogpedigree';
 	
 	$charset_collate = $wpdb->get_charset_collate();
 
@@ -29,8 +29,10 @@ function wp_dog_pedigree_db_install() {
 	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 	dbDelta( $sql );
 
-	//add_option( 'wp_dog_pedigree_db', $wp_dog_pedigree_db );
+	add_option( 'wp_dog_pedigree_db', $wp_dog_pedigree_db );
 }
+
+
 
 function wp_dog_pedigree_data() {
 	global $wpdb;
@@ -47,7 +49,7 @@ function wp_dog_pedigree_data() {
 	$example_father = 'Hary-Ming North Black King';
 	$example_mother = 'Sbi-Wang Asuka';
 	
-	$table_name = $wpdb->prefix . 'wp_dogpedigree_dogs';
+	$table_name = $wpdb->prefix . 'dogpedigree';
 	
 	$wpdb->insert(
 		$table_name,
