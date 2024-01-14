@@ -3,6 +3,7 @@
     ** Add the stylesheet for the plugin
     **/
     add_action('wp_enqueue_scripts', 'prefix_add_wpped_stylesheet');
+    add_action('admin_enqueue_scripts', 'prefix_add_wpped_stylesheet');
     function prefix_add_wpped_stylesheet()
     {
         wp_register_style('prefix-style', plugins_url('public/css/wp-pedigree-style.css', __FILE__));
