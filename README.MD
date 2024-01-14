@@ -12,3 +12,7 @@ I didn't want to constantly create new pedigrees for the dogs and sometimes even
 ## What is the purpose of the plugin?
 
 With this plugin I would like to create the possibility at the end of the development that the animals can be created in a database and the parent animals can also be stored there, and then the pedigree of the animals up to the great-grandfather generation can be created.
+
+## Table
+
+This plugin will create a new table for the dogs. The table schema is described [here](TABLE_SCHEMA.MD).
