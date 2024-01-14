@@ -5,6 +5,7 @@
     require_once plugin_dir_path(__FILE__) . 'wp-dog-pedigree-activation-hook.php';
     require_once plugin_dir_path(__FILE__) . 'wp-dog-pedigree-deactivation-hook.php';
 
+
     /**
     * Add the stylesheet for the public pages
     **/
@@ -25,7 +26,7 @@
             return;
         } else {
 
-            wp_enqueue_style('boot_css', plugins_url('inc/bootstrap.css',__FILE__ ));
+            wp_enqueue_style('boot_css', plugins_url('public/css/wp-pedigree-style.css',__FILE__ ));
             //wp_enqueue_script('boot_js', plugins_url('inc/bootstrap.js',__FILE__ ));
             //wp_enqueue_script('ln_script', plugins_url('inc/main_script.js', __FILE__), ['jquery'], false, true);
             }
