@@ -13,18 +13,17 @@
     /**
     ** Add my new menu to the Admin Control Panel
     **/
-    // Hook the 'admin_menu' action hook, run the function named 'wpped_Menu_Page()'
-    add_action( 'admin_menu', 'wpped_Menu_Page' );
-    // Add a new top level menu link to the ACP
-    function wpped_Menu_Page()
+    // Hook the 'admin_menu' action hook, run the function named 'wpped_ACP_Menu_Page()'
+    add_action( 'admin_menu', 'wpped_ACP_Menu_Page' );
+    function wpped_ACP_Menu_Page()
     {
         add_menu_page(
-            __('Dog Pedigree - Plugin','wp-pedigree'), // Title of the page
-            __('Dog Pedigree','wp-pedigree'), // Text to show on the menu link
-            'manage_options', // Capability requirement to see the link
-            'wpped_Admin', // The 'slug' - file to display when clicking the link
+            __('Dog Pedigree - Plugin','wp-pedigree'),
+            __('Dog Pedigree','wp-pedigree'),
+            'manage_options',
+            'wpped_Admin',
             'wpped_Admin_Contents',
-            'public/images/dog.svg',
+            plugin_dir_path( __FILE__ ) . '/public/images/dog.svg',
             6
         );
     }
@@ -33,5 +32,5 @@
     ** Add the content for the admin menu
     **/
     function wpped_Admin_Contents() {
-        include_once('includes/wpped-admin.php');
+        include(plugin_dir_path( __FILE__ ) . '/includes/wpped-admin.php');
     }
