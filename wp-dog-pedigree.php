@@ -2,14 +2,14 @@
     /**
      * Plugin Name
      *
-     * @package           Wp_Dog_Pedigree
+     * @package           Dog_Pedigree
      * @author            Ullrich Weichert - w3ich3rt
      * @copyright         2024 - Weichert.IT
      * @license           GPL-3.0-or-later
      *
      * @wordpress-plugin
-     * Plugin Name:       WP Dog Pedigree
-     * Plugin URI:        https://www.wazishen.com/wp-pedigree
+     * Plugin Name:       Dog Pedigree
+     * Plugin URI:        https://www.wazishen.com/wp-dog-pedigree
      * Description:       This is a plugin to create pedigree charts for animals or other things.
      * Version:           0.0.2
      * Requires at least: 5.2
