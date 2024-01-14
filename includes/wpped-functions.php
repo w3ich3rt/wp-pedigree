@@ -1,5 +1,10 @@
 <?php
     /**
+    ** Create Database for the dog pedigrees.
+    **/
+    register_activation_hook( __FILE__, 'wpped_create_db' );
+
+    /**
     ** Add the stylesheet for the plugin
     **/
     add_action('wp_enqueue_scripts', 'prefix_add_wpped_stylesheet');

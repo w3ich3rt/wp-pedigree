@@ -23,5 +23,6 @@
      * Update URI:        https://www.wazishen.com/wp-pedigree
      **/
 
-    // Include mfp-functions.php, use require_once to stop the script if mfp-functions.php is not found
+    // Include wpped-functions.php, use require_once to stop the script if wpped-functions.php is not found
+    require_once plugin_dir_path(__FILE__) . 'includes/wpped-activation-hook.php';
     require_once plugin_dir_path(__FILE__) . 'includes/wpped-functions.php';
