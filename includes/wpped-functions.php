@@ -2,18 +2,17 @@
     /**
     ** Add the stylesheet for the plugin
     **/
-        // Add the stylesheet for the plugin
-    add_action('wp_enqueue_scripts', 'prefix_add_my_stylesheet');
-    function prefix_add_my_stylesheet()
+    add_action('wp_enqueue_scripts', 'prefix_add_wpped_stylesheet');
+    function prefix_add_wpped_stylesheet()
     {
         wp_register_style('prefix-style', plugins_url('public/css/wp-pedigree-style.css', __FILE__));
+        admin_enqueue_style('prefix-style');
         wp_enqueue_style('prefix-style');
     }
 
     /**
-    ** Add my new menu to the Admin Control Panel
+    ** Add WPPED Menu to the Admin Control Panel
     **/
-    // Hook the 'admin_menu' action hook, run the function named 'wpped_ACP_Menu_Page()'
     add_action( 'admin_menu', 'wpped_ACP_Menu_Page' );
     function wpped_ACP_Menu_Page()
     {
@@ -32,5 +31,5 @@
     ** Add the content for the admin menu
     **/
     function wpped_Admin_Contents() {
-        include('wpped-admin.php');
+        include_once('wpped-admin.php');
     }
