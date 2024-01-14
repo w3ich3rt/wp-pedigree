@@ -23,7 +23,7 @@
             'manage_options',
             'wpped_Admin',
             'wpped_Admin_Contents',
-            plugin_dir_path( __FILE__ ) . '/public/images/dog.svg',
+            plugins_url( '/public/images/dog.svg', __FILE__ ),
             6
         );
     }
@@ -32,5 +32,5 @@
     ** Add the content for the admin menu
     **/
     function wpped_Admin_Contents() {
-        include(plugin_dir_path( __FILE__ ) . '/includes/wpped-admin.php');
+        include('wpped-admin.php');
     }
