@@ -1,11 +1,12 @@
 <?php
     /**
-    ** Create Database for the dog pedigrees.
+    * Create Database for the dog pedigrees.
     **/
-    register_activation_hook( __FILE__, 'wpped_create_db' );
+    register_activation_hook( __FILE__, 'wp_dog_pedigree_install' );
+    register_activation_hook( __FILE__, 'wp_dog_pedigree_data' );
 
     /**
-    ** Add the stylesheet for the plugin
+    * Add the stylesheet for the plugin
     **/
     add_action('wp_enqueue_scripts', 'prefix_add_wpped_stylesheet');
     function prefix_add_wpped_stylesheet()
@@ -16,7 +17,7 @@
     }
 
     /**
-    ** Add WPPED Menu to the Admin Control Panel
+    * Add WPPED Menu to the Admin Control Panel
     **/
     add_action( 'admin_menu', 'wpped_ACP_Menu_Page' );
     function wpped_ACP_Menu_Page()
@@ -33,8 +34,13 @@
     }
 
     /**
-    ** Add the content for the admin menu
+    * Add the content for the admin menu
     **/
     function wpped_Admin_Contents() {
         include_once('wpped-admin.php');
     }
+
+    /**
+    * Remove Database for the dog pedigrees when deinstall.
+    **/
+    register_deactivation_hook( __FILE__, 'wp_dog_pedigree_deinstall' );
