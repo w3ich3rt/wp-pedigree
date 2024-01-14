@@ -3,7 +3,7 @@
     * Create Database for the dog pedigrees.
     **/
     require_once 'includes/wp-dog-pedigree-activation-hook.php';
-    register_activation_hook( __FILE__, 'wp_dog_install' );
+    register_activation_hook( __FILE__, 'wp_dog_pedigree_install' );
     register_activation_hook( __FILE__, 'wp_dog_pedigree_data' );
 
     /**
