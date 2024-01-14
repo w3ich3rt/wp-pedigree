@@ -6,7 +6,7 @@ function wp_dog_pedigree_deinstall() {
 	global $wpdb;
 	global $wp_dog_pedigree_db;
 
-	$table_name = $wpdb->prefix . 'wpdogpedigree_dogs';
+	$table_name = $wpdb->prefix . 'wp_dogpedigree_dogs';
 	
 	$charset_collate = $wpdb->get_charset_collate();
 

@@ -31,7 +31,7 @@ function wp_dog_pedigree_data() {
 	$welcome_name = 'Mr. WordPress';
 	$welcome_text = 'Congratulations, you just completed the installation!';
 	
-	$table_name = $wpdb->prefix . 'liveshoutbox';
+	$table_name = $wpdb->prefix . 'wp_dogpedigree_dogs';
 	
 	$wpdb->insert(
 		$table_name,
