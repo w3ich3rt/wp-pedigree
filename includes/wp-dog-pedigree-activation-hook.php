@@ -47,7 +47,7 @@ function wp_dog_pedigree_data() {
 	$example_champion = '0';
 	$example_multi = '0';
 	$example_father = 'Hary-Ming North Black King';
-	$example_mother = 'Sbi-Wang Asuka';
+	$example_mother = 'Sbi-Wang Ayumi';
 	
 	$table_name = $wpdb->prefix . 'dogpedigree';
 	
