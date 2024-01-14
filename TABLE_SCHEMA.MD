@@ -27,7 +27,7 @@ erDiagram
 - Gender: Female (1) or Male (0)
 - Color: The color of the fur
 - HD: The HD values of the dog (Hip dysplasia)
-- Fur type: The type of the fur (short hair (1) or long hair (0))
+- Fur type: The type of the fur (short hair (0) or long hair (1))
 - Champion: Is the dog a champion? (Yes (1) or No (0))
 - Multi Champion: Is the dog a multichampion? (Yes (1) or No (0))
 - Father: Father of the dog
