@@ -30,6 +30,4 @@
 
     define( 'WP_DOG_PEDIGREE_VERSION', '0.0.1' );
 
-    // Include wpped-functions.php, use require_once to stop the script if wpped-functions.php is not found
-    require_once plugin_dir_path(__FILE__) . 'includes/wp-dog-pedigree-activation-hook.php';
     require_once plugin_dir_path(__FILE__) . 'includes/wp-dog-pedigree-functions.php';
