@@ -2,7 +2,7 @@
 global $wp_dog_pedigree_db;
 $wp_dog_pedigree_db = '1.0';
 
-function wp_dog_pedigree_install() {
+function wp_dog_pedigree_deinstall() {
 	global $wpdb;
 	global $wp_dog_pedigree_db;
 
