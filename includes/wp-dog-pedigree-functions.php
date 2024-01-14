@@ -12,7 +12,6 @@
     function prefix_add_wp_dog_stylesheet()
     {
         wp_register_style('prefix-style', plugins_url('public/css/wp-pedigree-style.css', __FILE__));
-        admin_enqueue_style('prefix-style');
         wp_enqueue_style('prefix-style');
     }
 
