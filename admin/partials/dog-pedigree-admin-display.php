@@ -8,8 +8,8 @@
  * @link       https://www.weichert.it
  * @since      1.0.0
  *
- * @package    Wp_Dog_Pedigree
- * @subpackage Wp_Dog_Pedigree/admin/partials
+ * @package    Dog_Pedigree
+ * @subpackage Dog_Pedigree/admin/partials
  */
 ?>
 

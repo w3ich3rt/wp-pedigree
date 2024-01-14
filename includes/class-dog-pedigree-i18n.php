@@ -9,8 +9,8 @@
  * @link       https://www.weichert.it
  * @since      1.0.0
  *
- * @package    Wp_Dog_Pedigree
- * @subpackage Wp_Dog_Pedigree/includes
+ * @package    Dog_Pedigree
+ * @subpackage Dog_Pedigree/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Wp_Dog_Pedigree
- * @subpackage Wp_Dog_Pedigree/includes
+ * @package    Dog_Pedigree
+ * @subpackage Dog_Pedigree/includes
  * @author     Ullrich Weichert - w3ich3rt <ullrich@weichert.it>
  */
-class Wp_Dog_Pedigree_i18n {
+class Dog_Pedigree_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Wp_Dog_Pedigree_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'wp-dog-pedigree',
+			'dog-pedigree',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

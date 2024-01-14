@@ -6,8 +6,8 @@
  * @link       https://www.weichert.it
  * @since      1.0.0
  *
- * @package    Wp_Dog_Pedigree
- * @subpackage Wp_Dog_Pedigree/includes
+ * @package    Dog_Pedigree
+ * @subpackage Dog_Pedigree/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Wp_Dog_Pedigree
- * @subpackage Wp_Dog_Pedigree/includes
+ * @package    Dog_Pedigree
+ * @subpackage Dog_Pedigree/includes
  * @author     Ullrich Weichert - w3ich3rt <ullrich@weichert.it>
  */
-class Wp_Dog_Pedigree_Loader {
+class Dog_Pedigree_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

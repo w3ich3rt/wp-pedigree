@@ -6,8 +6,8 @@
  * @link       https://www.weichert.it
  * @since      1.0.0
  *
- * @package    Wp_Dog_Pedigree
- * @subpackage Wp_Dog_Pedigree/includes
+ * @package    Dog_Pedigree
+ * @subpackage Dog_Pedigree/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Wp_Dog_Pedigree
- * @subpackage Wp_Dog_Pedigree/includes
+ * @package    Dog_Pedigree
+ * @subpackage Dog_Pedigree/includes
  * @author     Ullrich Weichert - w3ich3rt <ullrich@weichert.it>
  */
-class Wp_Dog_Pedigree_Activator {
+class Dog_Pedigree_Activator {
 
 	/**
 	 * Short Description. (use period)

@@ -22,7 +22,7 @@
  * @link       https://www.weichert.it
  * @since      1.0.0
  *
- * @package    Wp_Dog_Pedigree
+ * @package    Dog_Pedigree
  */
 
 // If uninstall not called from WordPress, then exit.

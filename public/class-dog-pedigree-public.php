@@ -6,8 +6,8 @@
  * @link       https://www.weichert.it
  * @since      1.0.0
  *
- * @package    Wp_Dog_Pedigree
- * @subpackage Wp_Dog_Pedigree/public
+ * @package    Dog_Pedigree
+ * @subpackage Dog_Pedigree/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Wp_Dog_Pedigree
- * @subpackage Wp_Dog_Pedigree/public
+ * @package    Dog_Pedigree
+ * @subpackage Dog_Pedigree/public
  * @author     Ullrich Weichert - w3ich3rt <ullrich@weichert.it>
  */
-class Wp_Dog_Pedigree_Public {
+class Dog_Pedigree_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,15 +65,15 @@ class Wp_Dog_Pedigree_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wp_Dog_Pedigree_Loader as all of the hooks are defined
+		 * defined in Dog_Pedigree_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wp_Dog_Pedigree_Loader will then create the relationship
+		 * The Dog_Pedigree_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wp-dog-pedigree-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/dog-pedigree-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -88,15 +88,15 @@ class Wp_Dog_Pedigree_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wp_Dog_Pedigree_Loader as all of the hooks are defined
+		 * defined in Dog_Pedigree_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wp_Dog_Pedigree_Loader will then create the relationship
+		 * The Dog_Pedigree_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wp-dog-pedigree-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/dog-pedigree-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 
