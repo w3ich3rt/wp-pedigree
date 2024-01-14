@@ -12,7 +12,7 @@
     add_action('wp_enqueue_scripts', 'prefix_add_wp_dog_stylesheet');
     function prefix_add_wp_dog_stylesheet()
     {
-        wp_register_style('prefix-style', plugins_url('public/css/wp-pedigree-style.css', __FILE__));
+        wp_register_style('prefix-style', plugins_url('../public/css/wp-pedigree-style.css', __FILE__));
         wp_enqueue_style('prefix-style');
     }
     /**
@@ -26,7 +26,7 @@
             return;
         } else {
 
-            wp_enqueue_style('boot_css', plugins_url('public/css/wp-pedigree-style.css',__FILE__ ));
+            wp_enqueue_style('boot_css', plugins_url('../public/css/wp-pedigree-style.css',__FILE__ ));
             //wp_enqueue_script('boot_js', plugins_url('inc/bootstrap.js',__FILE__ ));
             //wp_enqueue_script('ln_script', plugins_url('inc/main_script.js', __FILE__), ['jquery'], false, true);
             }

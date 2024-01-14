@@ -34,7 +34,7 @@
                     if($row->gender == 0){echo "<td>Male</td>";} else { echo "<td>Female</td>";}
                     echo "<td>$row->color</td>";
                     echo "<td>$row->HD_value</td>";
-                    if($row->fur_type == 1){echo "Long hair";} else { echo "<td>Short hair</td>";}
+                    if($row->fur_type == 1){echo "<td>Long hair</td>";} else { echo "<td>Short hair</td>";}
                     if($row->champion == 0){echo "<td>No</td>";} else { echo "<td>Yes</td>";}
                     if($row->multi == 0){echo "<td>No</td>";} else { echo "<td>Yes</td>";}
                     echo "<td>$row->father</td>";
