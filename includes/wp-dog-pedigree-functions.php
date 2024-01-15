@@ -56,3 +56,59 @@
     function wp_dog_pedigree_Admin_Contents() {
         include_once('wp-dog-pedigree-admin.php');
     }
+
+
+    /**
+    * Add a new pedigree to database_table
+    **/
+    function wp_dog_pedigree_add_pedigree() {
+        global $wpdb;
+        if (
+            !empty($_POST)
+            && $_POST['name'] != ''
+            && $_POST['owner'] != ''
+            && $_POST['breeder'] != ''
+            && $_POST['gender'] != ''
+            && $_POST['color'] != ''
+            && $_POST['HD_value'] != ''
+            && $_POST['fur_type'] != ''
+            && $_POST['champion'] != ''
+            && $_POST['multi'] != ''
+            && $_POST['father'] != ''
+            && $_POST['mother'] != ''
+        ) {
+
+            $table_name = $wpdb->prefix . 'dogpedigree';
+            $dog_name = sanitize_text_field($_POST['name']);
+            $owner = sanitize_text_field($_POST['owner']);
+            $breeder = sanitize_text_field($_POST['breeder']);
+            $gender = $_POST['gender'];
+            $color = sanitize_text_field($_POST['color']);
+            $hd_value = sanitize_text_field($_POST['HD_value']);
+            $fur_type = sanitize_text_field($_POST['fur_type']);
+            $champion = $_POST['champion'];
+            $multi = $_POST['multi'];
+            $father = sanitize_text_field($_POST['father']);
+            $mother = sanitize_text_field($_POST['mother']);            
+
+            $wpdb->insert(
+                $table_name,
+                array(
+                    'name' => $dog_name,
+                    'owner' => $owner,
+                    'breeder' => $breeder,
+                    'gender' => $gender,
+                    'color' => $color,
+                    'HD_value' => $hd_value,
+                    'fur_type' => $fur_type,
+                    'champion' => $champion,
+                    'multi' => $multi,
+                    'father' => $father,
+                    'mother' => $mother
+                )
+            );
+        }
+    }
+
+
+
