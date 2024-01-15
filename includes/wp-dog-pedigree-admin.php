@@ -5,8 +5,8 @@
         <p>Then you will have the ID to use them on your page.</p>
     </div>
     <div class="wp-dog-pedigree-form">
-        <h1>Add Episodes</h1>
-        <form method="post" action="?page=wp_dog_pedigree_Admin">
+        <h1>Add pedigree</h1>
+        <form method="<?php echo esc_attr('admin-post.php'); ?>" action="?page=wp_dog_pedigree_Admin">
             <label for="name">Dogname:</label>
             <input type="text" name="name" id="name" />
             <label for="owner">Owner:</label>

@@ -61,6 +61,7 @@
     /**
     * Add a new pedigree to database_table
     **/
+    add_action( 'admin_post_wp_dog_pedigree_add_pedigree', 'wp_dog_pedigree_add_pedigree' );
     function wp_dog_pedigree_add_pedigree() {
         global $wpdb;
         if (
@@ -73,7 +74,7 @@
             && $_POST['hdvalue'] != ''
             && $_POST['fur_type'] != ''
             && $_POST['champion'] != ''
-            && $_POST['multi'] != ''
+            && $_POST['mchamp'] != ''
             && $_POST['father'] != ''
             && $_POST['mother'] != ''
         ) {
@@ -84,12 +85,12 @@
             $breeder = sanitize_text_field($_POST['breeder']);
             $gender = $_POST['gender'];
             $color = sanitize_text_field($_POST['color']);
-            $hd_value = sanitize_text_field($_POST['HD_value']);
+            $hd_value = sanitize_text_field($_POST['hdvalue']);
             $fur_type = sanitize_text_field($_POST['fur_type']);
             $champion = $_POST['champion'];
-            $multi = $_POST['multi'];
+            $multi = $_POST['mchamp'];
             $father = sanitize_text_field($_POST['father']);
-            $mother = sanitize_text_field($_POST['mother']);            
+            $mother = sanitize_text_field($_POST['mother']);
 
             $wpdb->insert(
                 $table_name,
