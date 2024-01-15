@@ -6,8 +6,7 @@
     </div>
     <div class="wp-dog-pedigree-form">
         <h1>Add pedigree</h1>
-        <form action="/wp-admin/admin-post.php" method="post">
-            <input type="hidden" name="action" value="wp_dog_pedigree_admin_add_pedigree">
+        <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
             <label for="name">Dogname:</label>
             <input type="text" name="name" id="name" />
             <label for="owner">Owner:</label>
@@ -42,6 +41,7 @@
             <input type="text" name="father" id="father" />
             <label for="mother">Mother:</label>
             <input type="text" name="mother" id="mother" />
+            <input type="hidden" name="action" value="wp_dog_pedigree_admin_add_pedigree">
             <input type="submit" value="Submit" />
         </form>
     </div>
@@ -57,8 +57,8 @@
                     <th>Breeder</th>
                     <th>Gender</th>
                     <th>Color</th>
-                    <th>HD Value</th>
-                    <th>Fur Type</th>
+                    <th>HD value</th>
+                    <th>Fur type</th>
                     <th>Champion</th>
                     <th>Multi</th>
                     <th>Father</th>
