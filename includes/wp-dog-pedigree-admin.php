@@ -41,7 +41,7 @@
             <input type="text" name="father" id="father" />
             <label for="mother">Mother:</label>
             <input type="text" name="mother" id="mother" />
-            <input type="hidden" name="action" value="wp_dog_pedigree_admin_add_pedigree">
+            <input type="hidden" name="action" value="submit_add_pedigree">
             <input type="submit" value="Submit" />
         </form>
     </div>

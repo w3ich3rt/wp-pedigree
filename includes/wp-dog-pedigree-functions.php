@@ -61,7 +61,7 @@
     /**
     * Add a new pedigree to database_table
     **/
-    add_action( 'admin_post_wp_dog_pedigree_add_pedigree', 'wp_dog_pedigree_admin_add_pedigree' );
+    add_action( 'admin_post_submit_add_pedigree', 'wp_dog_pedigree_admin_add_pedigree' );
     function wp_dog_pedigree_admin_add_pedigree() {
         global $wpdb;
         if (
