@@ -6,8 +6,8 @@
     </div>
     <div class="wp-dog-pedigree-form">
         <h1>Add pedigree</h1>
-        <form method="<?php admin_url('admin-post.php'); ?>" action="?page=wp_dog_pedigree_admin_add_pedigree">
-            <input type="hidden" name="action" value="add_pedigree">
+        <form action="/wp-admin/admin-post.php" method="post">
+            <input type="hidden" name="action" value="wp_dog_pedigree_admin_add_pedigree">
             <label for="name">Dogname:</label>
             <input type="text" name="name" id="name" />
             <label for="owner">Owner:</label>

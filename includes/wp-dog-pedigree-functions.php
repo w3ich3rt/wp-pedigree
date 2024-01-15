@@ -92,7 +92,7 @@
             $father = sanitize_text_field($_POST['father']);
             $mother = sanitize_text_field($_POST['mother']);
 
-            $wpdb->insert(
+            $success=$wpdb->insert(
                 $table_name,
                 array(
                     'name' => $dog_name,
@@ -108,6 +108,11 @@
                     'mother' => $mother
                 )
             );
+            if ($success) {
+                wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=true' ) );
+            } else {
+                wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=false' ) );
+            }
         }
     }
 
