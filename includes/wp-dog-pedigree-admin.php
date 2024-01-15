@@ -16,7 +16,7 @@
             <label for="hdvalue">HD-Value:</label>
             <input type="text" name="hdvalue" id="hdvalue" />
             <label for="gender">Gender:</label>
-            <select name="fur_type" id="fur_type">
+            <select name="gender" id="gender">
                 <option value="0">Male</option>
                 <option value="1">Female</option>
             </select>
@@ -26,9 +26,15 @@
                 <option value="0">Short hair</option>
             </select>
             <label for="champion">Champion</label>
-            <input type="checkbox" name="champion" id="champion" />
-            <label for="mchamp">Multichampion</label>
-            <input type="checkbox" name="mchamp" id="mchamp" />
+            <select name="champion" id="champion">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+            <label for="mchamp">Multi-Champion</label>
+            <select name="mchamp" id="mchamp">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
             <label for="color">Fur Color</label>
             <select name="color" id="color">
                 <option value="Red">Red</option>
