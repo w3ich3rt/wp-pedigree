@@ -15,17 +15,22 @@
             <input type="text" name="breeder" id="breeder" />
             <label for="hdvalue">HD-Value:</label>
             <input type="text" name="hdvalue" id="hdvalue" />
-            <p>Gender</p>
-            <label for="gender">Male</label>
-            <input type="radio" name="gender" id="gender" />
-            <label for="gender">Female</label>
-            <input type="radio" name="gender" id="gender" />
+            <label for="gender">Gender:</label>
+            <select name="fur_type" id="fur_type">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+            <label for="fur_type">Fur Type</label>
+            <select name="fur_type" id="fur_type">
+                <option value="1">Long hair</option>
+                <option value="0">Short hair</option>
+            </select>
             <label for="champion">Champion</label>
             <input type="checkbox" name="champion" id="champion" />
             <label for="mchamp">Multichampion</label>
             <input type="checkbox" name="mchamp" id="mchamp" />
-            <label for="furtype">Furtype</label>
-            <select name="furtype" id="furtype">
+            <label for="color">Fur Color</label>
+            <select name="color" id="color">
                 <option value="Red">Red</option>
                 <option value="Black">Black</option>
                 <option value="Blue">Blue</option>

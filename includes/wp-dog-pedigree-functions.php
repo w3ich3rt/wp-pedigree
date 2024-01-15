@@ -70,7 +70,7 @@
             && $_POST['breeder'] != ''
             && $_POST['gender'] != ''
             && $_POST['color'] != ''
-            && $_POST['HD_value'] != ''
+            && $_POST['hdvalue'] != ''
             && $_POST['fur_type'] != ''
             && $_POST['champion'] != ''
             && $_POST['multi'] != ''
