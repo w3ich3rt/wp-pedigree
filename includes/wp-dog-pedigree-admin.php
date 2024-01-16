@@ -89,7 +89,7 @@
                     echo "<td>$row->father</td>";
                     echo "<td>$row->mother</td>";
                     $link = admin_url('admin-post.php?action=delete_pedigree&id=' . $row->ID);
-                    $string = '<td><a href="%s"><i class="trashcan"></i></a></td>';
+                    $string = '<td><center><a href="%s"><i class="trashcans"></i></a></center></td>';
                     echo sprintf($string, $link);
                     echo "</tr>";
                 }
