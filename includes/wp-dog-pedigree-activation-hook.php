@@ -32,8 +32,6 @@ function wp_dog_pedigree_db_install() {
 	add_option( 'wp_dog_pedigree_db', $wp_dog_pedigree_db );
 }
 
-
-
 function wp_dog_pedigree_data() {
 	global $wpdb;
 	

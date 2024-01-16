@@ -12,7 +12,7 @@
     add_action('wp_enqueue_scripts', 'prefix_add_wp_dog_stylesheet');
     function prefix_add_wp_dog_stylesheet()
     {
-        wp_register_style('prefix-style', plugins_url('public/css/wp-pedigree-style.css', __FILE__));
+        wp_register_style('prefix-style', plugins_url('../public/css/wp-pedigree-style.css', __FILE__));
         wp_enqueue_style('prefix-style');
     }
     /**
@@ -26,7 +26,7 @@
             return;
         } else {
 
-            wp_enqueue_style('boot_css', plugins_url('public/css/wp-pedigree-style.css',__FILE__ ));
+            wp_enqueue_style('boot_css', plugins_url('../public/css/wp-pedigree-style.css',__FILE__ ));
             //wp_enqueue_script('boot_js', plugins_url('inc/bootstrap.js',__FILE__ ));
             //wp_enqueue_script('ln_script', plugins_url('inc/main_script.js', __FILE__), ['jquery'], false, true);
             }
@@ -56,3 +56,65 @@
     function wp_dog_pedigree_Admin_Contents() {
         include_once('wp-dog-pedigree-admin.php');
     }
+
+
+    /**
+    * Add a new pedigree to database_table
+    **/
+    add_action( 'admin_post_submit_add_pedigree', 'wp_dog_pedigree_admin_add_pedigree' );
+    function wp_dog_pedigree_admin_add_pedigree() {
+        global $wpdb;
+        if (
+            !empty($_POST)
+            && $_POST['name'] != ''
+            && $_POST['owner'] != ''
+            && $_POST['breeder'] != ''
+            && $_POST['gender'] != ''
+            && $_POST['color'] != ''
+            && $_POST['hdvalue'] != ''
+            && $_POST['fur_type'] != ''
+            && $_POST['champion'] != ''
+            && $_POST['mchamp'] != ''
+            && $_POST['father'] != ''
+            && $_POST['mother'] != ''
+        ) {
+
+            $table_name = $wpdb->prefix . 'dogpedigree';
+            $dog_name = sanitize_text_field($_POST['name']);
+            $owner = sanitize_text_field($_POST['owner']);
+            $breeder = sanitize_text_field($_POST['breeder']);
+            $gender = $_POST['gender'];
+            $color = sanitize_text_field($_POST['color']);
+            $hd_value = sanitize_text_field($_POST['hdvalue']);
+            $fur_type = sanitize_text_field($_POST['fur_type']);
+            $champion = $_POST['champion'];
+            $multi = $_POST['mchamp'];
+            $father = sanitize_text_field($_POST['father']);
+            $mother = sanitize_text_field($_POST['mother']);
+
+            $success=$wpdb->insert(
+                $table_name,
+                array(
+                    'name' => $dog_name,
+                    'owner' => $owner,
+                    'breeder' => $breeder,
+                    'gender' => $gender,
+                    'color' => $color,
+                    'HD_value' => $hd_value,
+                    'fur_type' => $fur_type,
+                    'champion' => $champion,
+                    'multi' => $multi,
+                    'father' => $father,
+                    'mother' => $mother
+                )
+            );
+            if ($success) {
+                wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=true' ) );
+            } else {
+                wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=false' ) );
+            }
+        }
+    }
+
+
+
