@@ -62,10 +62,10 @@ tbody {
 .trashcans:hover	{ 
 	animation: tilt-n-move-shaking 0.15s;
 }
-.trashcans i {
+i.trashcans {
 	color: lightslategrey;
 }
-.trashcans:hover i {
+i.trashcans:hover {
 	color: red;
 }
 @keyframes tilt-n-move-shaking {
