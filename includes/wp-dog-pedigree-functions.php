@@ -118,3 +118,21 @@
 
 
 
+    /**
+    * Delete a pedigree from the database_table
+    **/
+    add_action( 'admin_post_delete_pedigree', 'wp_dog_pedigree_admin_delete_pedigree' );
+    function wp_dog_pedigree_admin_delete_pedigree() {
+        global $wpdb;
+        $success=$wpdb->delete(
+            $wpdb->prefix . 'dogpedigree',
+            array( 'ID' => $_GET['id'] )
+        );
+        if ($success) {
+            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=true' ) );
+        } else {
+            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=false' ) );
+        }
+    }
+
+
