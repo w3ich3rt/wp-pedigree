@@ -7,6 +7,15 @@
 
 
     /**
+    * Internationalization
+    **/
+    function load_plugin_textdomain() {
+        load_plugin_textdomain( 'wp-dog-pedigree', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+    }
+    
+    add_action( 'plugins_loaded', 'load_plugin_textdomain' );
+
+    /**
     * Add the stylesheet for the public pages
     **/
     add_action('wp_enqueue_scripts', 'prefix_add_wp_dog_stylesheet');
