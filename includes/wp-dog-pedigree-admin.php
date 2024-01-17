@@ -22,26 +22,24 @@
             </select>
             <label for="fur_type"><?php _e('wp_dog_pedigree_lang_furtype','wp-dog-pedigree'); ?></label>
             <select name="fur_type" id="fur_type">
-                <option value="1"><?php _e('wp_dog_pedigree_lang_furtype','wp-dog-pedigree'); ?></option>
-                <option value="0"><?php _e('wp_dog_pedigree_lang_furtype','wp-dog-pedigree'); ?></option>
+                <option value="1"><?php _e('wp_dog_pedigree_lang_longhair','wp-dog-pedigree'); ?></option>
+                <option value="0"><?php _e('wp_dog_pedigree_lang_shorthair','wp-dog-pedigree'); ?></option>
             </select>
-            <?php $YES = _e('wp_dog_pedigree_lang_yes','wp-dog-pedigree'); ?>
-            <?php $NO = _e('wp_dog_pedigree_lang_no','wp-dog-pedigree'); ?>
             <label for="champion"><?php _e('wp_dog_pedigree_lang_champion','wp-dog-pedigree'); ?>:</label>
             <select name="champion" id="champion">
-                <option value="0"><?php echo $NO ?></option>
-                <option value="1"><?php echo $YES ?></option>
+                <option value="0"><?php _e('wp_dog_pedigree_lang_no','wp-dog-pedigree') ?></option>
+                <option value="1"><?php _e('wp_dog_pedigree_lang_yes','wp-dog-pedigree'); ?></option>
             </select>
             <label for="mchamp"><?php _e('wp_dog_pedigree_lang_mchamp','wp-dog-pedigree'); ?>:</label>
             <select name="mchamp" id="mchamp">
-                <option value="0"><?php echo $NO ?></option>
-                <option value="1"><?php echo $YES ?></option>
+                <option value="0"><?php _e('wp_dog_pedigree_lang_no','wp-dog-pedigree') ?></option>
+                <option value="1"><?php _e('wp_dog_pedigree_lang_yes','wp-dog-pedigree'); ?></option>
             </select>
             <label for="color"><?php _e('wp_dog_pedigree_lang_furcolor','wp-dog-pedigree'); ?>:</label>
             <select name="color" id="color">
-                <option value="Red"><?php _e('wp_dog_pedigree_lang_furcolor','wp-dog-pedigree'); ?></option>
-                <option value="Black"><?php _e('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree'); ?></option>
-                <option value="Blue"><?php _e('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree'); ?></option>
+                <option value="Red"><?php _e('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree'); ?></option>
+                <option value="Black"><?php _e('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree'); ?></option>
+                <option value="Blue"><?php _e('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree'); ?></option>
                 <option value="Cream"><?php _e('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree'); ?></option>
                 <option value="Fawn"><?php _e('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree'); ?></option>
             </select>
@@ -82,7 +80,7 @@
                     echo "<td>$row->name</td>";
                     echo "<td>$row->owner</td>";
                     echo "<td>$row->breeder</td>";
-                    if($row->gender == 0){echo '<td>' . _e('wp_dog_pedigree_lang_male','wp-dog-pedigree') . '</td>';} else { echo '<td>' . _e('wp_dog_pedigree_lang_female','wp-dog-pedigree') . '</td>';}
+                    if($row->gender == 0){echo '<td>' . _e('wp_dog_pedigree_table_male','wp-dog-pedigree') . '</td>';} else { echo '<td>' . _e('wp_dog_pedigree_table_female','wp-dog-pedigree') . '</td>';}
                     echo "<td>$row->color</td>";
                     echo "<td>$row->HD_value</td>";
                     if($row->fur_type == 1){echo "<td>Long hair</td>";} else { echo "<td>Short hair</td>";}

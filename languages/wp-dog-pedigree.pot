@@ -193,3 +193,12 @@ msgstr "Mother"
 #: includes/wp-dog-pedigree-admin.php:74
 msgid "wp_dog_pedigree_table_actions"
 msgstr "Actions"
+
+#: includes/wp-dog-pedigree-admin.php:83
+msgid "wp_dog_pedigree_table_male"
+msgstr "Male"
+
+#: includes/wp-dog-pedigree-admin.php:83
+msgid "wp_dog_pedigree_table_female"
+msgstr "Female"
+
