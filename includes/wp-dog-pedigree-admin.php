@@ -1,8 +1,8 @@
 <div class="wrap">
     <div>
-        <h1>Dog Pedigree Page</h1>
-        <p>On this page you can add dog pedigrees for your dog.</p>
-        <p>Then you will have the ID to use them on your page.</p>
+        <h1><?php __('Dog Pedigree Page','wp-dog-pedigree')?></h1>
+        <p><?php __('On this page you can add dog pedigrees for your dog.','wp-dog-pedigree') ?></p>
+        <p><?php __('Then you will have the ID to use them on your page.','wp-dog-pedigree') ?></p>
     </div>
     <div class="wp-dog-pedigree-form">
         <h1>Add pedigree</h1>
