@@ -118,6 +118,10 @@ msgstr "Schwarz"
 msgid "wp_dog_pedigree_lang_furcolor_blue"
 msgstr "Blau"
 
+#: includes/wp-dog-pedigree-admin.php:99
+msgid "wp_dog_pedigree_lang_furcolor_no"
+msgstr "Unbekannt"
+
 #: includes/wp-dog-pedigree-admin.php:45
 msgid "wp_dog_pedigree_lang_furcolor_cream"
 msgstr "Creme"
