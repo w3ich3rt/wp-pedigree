@@ -9,3 +9,7 @@ msgstr "Auf dieser Seite können Sie die Stammbäume Ihrer Hunde sehen und einpf
 #: includes/wp-dog-pedigree-admin.php:5
 msgid "Then you will have the ID to use them on your page."
 msgstr "Weiter sehen Sie hier auch die ID, welche für die Verwendung auf der gewünschten Seite benötigt wird."
+
+#: includes/wp-dog-pedigree-admin.php:6
+msgid "wp_dog_pedigree_lang_copyright"
+msgstr "Dieses Plugin wurde geschrieben von Ullrich Weichert von wazishen.de. Copyright 2024."

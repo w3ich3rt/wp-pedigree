@@ -45,3 +45,7 @@ msgstr ""
 #: includes/wp-dog-pedigree-admin.php:5
 msgid "Then you will have the ID to use them on your page."
 msgstr ""
+
+#: includes/wp-dog-pedigree-admin.php:5
+msgid "wp_dog_pedigree_lang_copyright"
+msgstr "This plugin was created by Ullrich Weichert from wazishen.de. Copyright 2024."

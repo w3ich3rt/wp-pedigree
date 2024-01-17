@@ -3,6 +3,7 @@
         <h1><?php _e('Dog Pedigree Page','wp-dog-pedigree'); ?></h1>
         <p><?php _e('On this page you can add dog pedigrees for your dog.','wp-dog-pedigree'); ?></p>
         <p><?php _e('Then you will have the ID to use them on your page.','wp-dog-pedigree'); ?></p>
+        <p><?php _e('wp_dog_pedigree_lang_copyright','wp-dog-pedigree'); ?></p>
     </div>
     <div class="wp-dog-pedigree-form">
         <h1>Add pedigree</h1>
