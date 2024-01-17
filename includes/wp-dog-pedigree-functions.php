@@ -5,16 +5,6 @@
     require_once plugin_dir_path(__FILE__) . 'wp-dog-pedigree-activation-hook.php';
     require_once plugin_dir_path(__FILE__) . 'wp-dog-pedigree-deactivation-hook.php';
 
-
-    /**
-    * Load internationalization files
-    *
-    * function wp_dog_pedigree_custom_plugin_setup() {
-    *     load_plugin_textdomain('wp-dog-pedigree', false, dirname(plugin_basename(__FILE__)) . '/languages/');
-    * } // end custom_theme_setup 
-    * add_action('after_setup_theme', 'wp_dog_pedigree_custom_plugin_setup');
-    **/
-
     /**
     * Add the stylesheet for the public pages
     **/

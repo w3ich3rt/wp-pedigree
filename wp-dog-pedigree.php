@@ -30,6 +30,14 @@
 
     define( 'WP_DOG_PEDIGREE_VERSION', '0.4.2' );
 
+    /**
+    * Load internationalization files
+    **/
+    function wp_dog_pedigree_custom_plugin_setup() {
+        load_plugin_textdomain('wp-dog-pedigree', false, plugin_dir_path(__FILE__) . 'languages/');
+    }
+    add_action('init', 'wp_dog_pedigree_custom_plugin_setup');
+
     require_once plugin_dir_path(__FILE__) . 'includes/wp-dog-pedigree-functions.php';
 
     /**
