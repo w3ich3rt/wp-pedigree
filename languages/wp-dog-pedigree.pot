@@ -2,7 +2,7 @@
 # This file is distributed under the GPL v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Dog Pedigree 0.4.2\n"
+"Project-Id-Version: Dog Pedigree 0.5.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-pedigree\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,11 +40,15 @@ msgstr "Dog Pedigree Page"
 
 #: includes/wp-dog-pedigree-admin.php:4
 msgid "wp_dog_pedigree_lang_description"
-msgstr "On this page you can add dog pedigrees for your dog.\nThen you will have the ID to use them on your page."
+msgstr "On this page you can add dog pedigrees for your dog.\n\nThen you will have the ID to use them on your page."
 
 #: includes/wp-dog-pedigree-admin.php:5
 msgid "wp_dog_pedigree_lang_copyright"
 msgstr "This plugin was created by Ullrich Weichert from wazishen.de. Copyright 2024."
+
+#: includes/wp-dog-pedigree-admin.php:8
+msgid "wp_dog_pedigree_lang_add-pedigree"
+msgstr "Add pedigree"
 
 #: includes/wp-dog-pedigree-admin.php:10
 msgid "wp_dog_pedigree_lang_dogname"

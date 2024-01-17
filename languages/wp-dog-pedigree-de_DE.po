@@ -2,7 +2,7 @@
 # This file is distributed under the GPL v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Dog Pedigree 0.4.2\n"
+"Project-Id-Version: Dog Pedigree 0.5.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-pedigree\n"
 "Last-Translator: ULLRICH WEICHERT <ullrich@weichert.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,11 +40,15 @@ msgstr "Hunde Stammbaum Seite"
 
 #: includes/wp-dog-pedigree-admin.php:4
 msgid "wp_dog_pedigree_lang_description"
-msgstr "Auf dieser Seite können Sie die Stammbäume Ihrer Hunde sehen und einpflegen.\nWeiter sehen Sie hier auch die ID, welche für die Verwendung auf der gewünschten Seite benötigt wird."
+msgstr "Auf dieser Seite können Sie die Stammbäume Ihrer Hunde sehen und einpflegen.\n\nWeiter sehen Sie hier auch die ID, welche für die Verwendung auf der gewünschten Seite benötigt wird."
 
 #: includes/wp-dog-pedigree-admin.php:5
 msgid "wp_dog_pedigree_lang_copyright"
 msgstr "Dieses Plugin wurde geschrieben von Ullrich Weichert von wazishen.de. Copyright 2024."
+
+#: includes/wp-dog-pedigree-admin.php:8
+msgid "wp_dog_pedigree_lang_add-pedigree"
+msgstr "Stammbaum hinzufügen"
 
 #: includes/wp-dog-pedigree-admin.php:10
 msgid "wp_dog_pedigree_lang_dogname"

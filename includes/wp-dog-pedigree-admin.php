@@ -5,7 +5,7 @@
         <p><?php esc_html_e('wp_dog_pedigree_lang_copyright','wp-dog-pedigree'); ?></p>
     </div>
     <div class="wp-dog-pedigree-form">
-        <h2>Add pedigree</h2>
+        <h2><?php esc_html_e('wp_dog_pedigree_lang_add-pedigree','wp-dog-pedigree'); ?></h2>
         <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
             <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="name" id="name" />
@@ -104,7 +104,7 @@
                     echo "<td>$row->owner</td>";
                     echo "<td>$row->breeder</td>";
                     echo "<td>$genderhtml</td>";
-                    echo "<td>%colorhtml</td>";
+                    echo "<td>$colorhtml</td>";
                     echo "<td>$row->HD_value</td>";
                     echo "<td>$furtypehtml</td>";
                     echo "<td>$championhtml</td>";
