@@ -18,7 +18,7 @@
      * Author URI:        https://www.weichert.it/
      * Text Domain:       wp-dog-pedigree
      * License:           GPL v3 or later
-     * Domain Path:       /languages
+     * Domain Path:       /languages/
      * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
      * Update URI:        https://www.wazishen.com/wp-pedigree
      **/
@@ -27,7 +27,7 @@
     if ( ! defined( 'WPINC' ) ) {
         die;
     }
-
+    
     define( 'WP_DOG_PEDIGREE_VERSION', '0.4.2' );
 
     require_once plugin_dir_path(__FILE__) . 'includes/wp-dog-pedigree-functions.php';
