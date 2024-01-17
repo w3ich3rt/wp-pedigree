@@ -193,7 +193,3 @@ msgstr "Mother"
 #: includes/wp-dog-pedigree-admin.php:74
 msgid "wp_dog_pedigree_table_actions"
 msgstr "Actions"
-
-#: includes/wp-dog-pedigree-admin.php:85
-msgid "wp_dog_pedigree_table_actions"
-msgstr "Actions"
