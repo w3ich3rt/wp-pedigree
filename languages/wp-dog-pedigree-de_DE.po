@@ -1,0 +1,211 @@
+# Copyright (C) 2024 Ullrich Weichert - w3ich3rt
+# This file is distributed under the GPL v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Dog Pedigree 0.5.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-pedigree\n"
+"Last-Translator: ULLRICH WEICHERT <ullrich@weichert.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-01-17T11:45:39+00:00\n"
+"PO-Revision-Date: 2024-01-17 15:24+00:00\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: wp-dog-pedigree\n"
+
+#. Plugin Name of the plugin
+msgid "Dog Pedigree"
+msgstr "Hunde Stammbaum"
+
+#. Plugin URI of the plugin
+msgid "https://www.wazishen.com/wp-dog-pedigree"
+msgstr "https://www.wazishen.com/wp-dog-pedigree"
+
+#. Description of the plugin
+msgid "This is a plugin to create pedigree charts for animals or other things."
+msgstr "Dieses Plugin erzeugt Stammbäume für Hunde oder auch andere Tiere."
+
+#. Author of the plugin
+msgid "Ullrich Weichert - w3ich3rt"
+msgstr "Ullrich Weichert - w3ich3rt"
+
+#. Author URI of the plugin
+msgid "https://www.weichert.it/"
+msgstr "https://www.weichert.it/"
+
+#: includes/wp-dog-pedigree-admin.php:3
+msgid "wp_dog_pedigree_lang_main_title"
+msgstr "Hunde Stammbaum Seite"
+
+#: includes/wp-dog-pedigree-admin.php:4
+msgid "wp_dog_pedigree_lang_description"
+msgstr "Auf dieser Seite können Sie die Stammbäume Ihrer Hunde sehen und einpflegen.\n\nWeiter sehen Sie hier auch die ID, welche für die Verwendung auf der gewünschten Seite benötigt wird."
+
+#: includes/wp-dog-pedigree-admin.php:5
+msgid "wp_dog_pedigree_lang_copyright"
+msgstr "Dieses Plugin wurde geschrieben von Ullrich Weichert von wazishen.de. Copyright 2024."
+
+#: includes/wp-dog-pedigree-admin.php:8
+msgid "wp_dog_pedigree_lang_add-pedigree"
+msgstr "Stammbaum hinzufügen"
+
+#: includes/wp-dog-pedigree-admin.php:10
+msgid "wp_dog_pedigree_lang_dogname"
+msgstr "Name des Hundes"
+
+#: includes/wp-dog-pedigree-admin.php:12
+msgid "wp_dog_pedigree_lang_owner"
+msgstr "Besitzer"
+
+#: includes/wp-dog-pedigree-admin.php:14
+msgid "wp_dog_pedigree_lang_breeder"
+msgstr "Züchter"
+
+#: includes/wp-dog-pedigree-admin.php:16
+msgid "wp_dog_pedigree_lang_hdvalue"
+msgstr "HD-Wert"
+
+#: includes/wp-dog-pedigree-admin.php:18
+msgid "wp_dog_pedigree_lang_gender"
+msgstr "Geschlecht"
+
+#: includes/wp-dog-pedigree-admin.php:20
+msgid "wp_dog_pedigree_lang_male"
+msgstr "Rüde"
+
+#: includes/wp-dog-pedigree-admin.php:21
+msgid "wp_dog_pedigree_lang_female"
+msgstr "Hündin"
+
+#: includes/wp-dog-pedigree-admin.php:23
+msgid "wp_dog_pedigree_lang_furtype"
+msgstr "Felltyp"
+
+#: includes/wp-dog-pedigree-admin.php:25
+msgid "wp_dog_pedigree_lang_longhair"
+msgstr "Langhaar"
+
+#: includes/wp-dog-pedigree-admin.php:26
+msgid "wp_dog_pedigree_lang_shorthair"
+msgstr "Kurzhaar"
+
+#: includes/wp-dog-pedigree-admin.php:28
+msgid "wp_dog_pedigree_lang_yes"
+msgstr "Ja"
+
+#: includes/wp-dog-pedigree-admin.php:29
+msgid "wp_dog_pedigree_lang_no"
+msgstr "Nein"
+
+#: includes/wp-dog-pedigree-admin.php:30
+msgid "wp_dog_pedigree_lang_champion"
+msgstr "Champion"
+
+#: includes/wp-dog-pedigree-admin.php:35
+msgid "wp_dog_pedigree_lang_mchamp"
+msgstr "Multi-Champion"
+
+#: includes/wp-dog-pedigree-admin.php:40
+msgid "wp_dog_pedigree_lang_furcolor"
+msgstr "Fellfarbe"
+
+#: includes/wp-dog-pedigree-admin.php:42
+msgid "wp_dog_pedigree_lang_furcolor_red"
+msgstr "Rot"
+
+#: includes/wp-dog-pedigree-admin.php:43
+msgid "wp_dog_pedigree_lang_furcolor_black"
+msgstr "Schwarz"
+
+#: includes/wp-dog-pedigree-admin.php:44
+msgid "wp_dog_pedigree_lang_furcolor_blue"
+msgstr "Blau"
+
+#: includes/wp-dog-pedigree-admin.php:99
+msgid "wp_dog_pedigree_lang_furcolor_no"
+msgstr "Unbekannt"
+
+#: includes/wp-dog-pedigree-admin.php:45
+msgid "wp_dog_pedigree_lang_furcolor_cream"
+msgstr "Creme"
+
+#: includes/wp-dog-pedigree-admin.php:46
+msgid "wp_dog_pedigree_lang_furcolor_fawn"
+msgstr "Rehfarbend/Zimt"
+
+#: includes/wp-dog-pedigree-admin.php:48
+msgid "wp_dog_pedigree_lang_father"
+msgstr "Vater"
+
+#: includes/wp-dog-pedigree-admin.php:50
+msgid "wp_dog_pedigree_lang_mother"
+msgstr "Mutter"
+
+#: includes/wp-dog-pedigree-admin.php:58
+msgid "wp_dog_pedigree_list_pedigree"
+msgstr "Liste der Stammbäume"
+
+#: includes/wp-dog-pedigree-admin.php:60
+msgid "wp_dog_pedigree_table_caption"
+msgstr "Liste aller erfassten Stammbäume der Tiere."
+
+#: includes/wp-dog-pedigree-admin.php:62
+msgid "wp_dog_pedigree_table_id"
+msgstr "ID"
+
+#: includes/wp-dog-pedigree-admin.php:63
+msgid "wp_dog_pedigree_table_name"
+msgstr "Name des Hundes"
+
+#: includes/wp-dog-pedigree-admin.php:64
+msgid "wp_dog_pedigree_table_owner"
+msgstr "Name Besitzer"
+
+#: includes/wp-dog-pedigree-admin.php:65
+msgid "wp_dog_pedigree_table_breeder"
+msgstr "Name Züchter"
+
+#: includes/wp-dog-pedigree-admin.php:66
+msgid "wp_dog_pedigree_table_gender"
+msgstr "Geschlecht"
+
+#: includes/wp-dog-pedigree-admin.php:67
+msgid "wp_dog_pedigree_table_color"
+msgstr "Farbe"
+
+#: includes/wp-dog-pedigree-admin.php:68
+msgid "wp_dog_pedigree_table_hdvalue"
+msgstr "HD Wert"
+
+#: includes/wp-dog-pedigree-admin.php:69
+msgid "wp_dog_pedigree_table_furtype"
+msgstr "Felltyp"
+
+#: includes/wp-dog-pedigree-admin.php:70
+msgid "wp_dog_pedigree_table_champion"
+msgstr "Champion"
+
+#: includes/wp-dog-pedigree-admin.php:71
+msgid "wp_dog_pedigree_table_mchamp"
+msgstr "Multi-Champion"
+
+#: includes/wp-dog-pedigree-admin.php:72
+msgid "wp_dog_pedigree_table_father"
+msgstr "Vater"
+
+#: includes/wp-dog-pedigree-admin.php:73
+msgid "wp_dog_pedigree_table_mother"
+msgstr "Mutter"
+
+#: includes/wp-dog-pedigree-admin.php:74
+msgid "wp_dog_pedigree_table_actions"
+msgstr "Aktionen"
+
+#: includes/wp-dog-pedigree-admin.php:83
+msgid "wp_dog_pedigree_table_male"
+msgstr "Rüde"
+
+#: includes/wp-dog-pedigree-admin.php:83
+msgid "wp_dog_pedigree_table_female"
+msgstr "Hündin"

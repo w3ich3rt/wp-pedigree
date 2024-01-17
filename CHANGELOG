@@ -1,9 +1,28 @@
-# WP-Pediree // Version 0.0.1
+# Changelog (17.01.2024)
 
-## New
+## About to come
 
-## Changed
+- Shortcode function to print pedigree on a page will be added
+- CSS style for the pedigree will be added
+- CSS style for admin menu will be added
 
-## Fixed
+## WP-Pediree // Version 0.5.1
 
-## Removed
+### New
+
+- Added translation for en_EN and de_DE
+- Added "insert" function for new pedigrees
+- Added "delete" function to remove entries from table
+- Added custom_table `<wordpress_table_prefix>_dogpedigree` for dog datasets
+
+### Changed
+
+- none // initial build
+
+### Fixed
+
+- none // initial build
+
+### Removed
+
+- none // initial build
