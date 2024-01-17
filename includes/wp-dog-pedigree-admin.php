@@ -6,7 +6,7 @@
         <p><?php _e('wp_dog_pedigree_lang_copyright','wp-dog-pedigree'); ?></p>
     </div>
     <div class="wp-dog-pedigree-form">
-        <h1>Add pedigree</h1>
+        <h2>Add pedigree</h2>
         <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
             <label for="name">Dogname:</label>
             <input type="text" name="name" id="name" />

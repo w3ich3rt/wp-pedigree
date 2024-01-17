@@ -10,7 +10,7 @@ function wp_dog_pedigree_db_install() {
 	
 	$charset_collate = $wpdb->get_charset_collate();
 
-	$sql = "CREATE TABLE $table_name (
+	$sql = "CREATE TABLE IF NOT EXISTS $table_name (
 		ID mediumint(9) NOT NULL AUTO_INCREMENT,
 		name tinytext NOT NULL,
 		owner tinytext NOT NULL,
