@@ -75,15 +75,17 @@
                 global $wpdb;
                 $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree");
                 foreach ( $result as $row ) {
+                    if($row->fur_type == 1){ $furtypehtml = '<td>'.__('wp_dog_pedigree_lang_longhair','wp-dog-pedigree').'</td>';} else { $furtypehtml = '<td>'.__('wp_dog_pedigree_lang_shorthair','wp-dog-pedigree').'</td>';}
+                    if($row->gender == 0){ $genderhtml =  '<td>'.__('wp_dog_pedigree_table_male','wp-dog-pedigree'.'</td>');} else { $genderhtml = '<td>'.__('wp_dog_pedigree_table_female','wp-dog-pedigree').'</td>';}
                     echo "<tr>";
                     echo "<td>$row->ID</td>";
                     echo "<td>$row->name</td>";
                     echo "<td>$row->owner</td>";
                     echo "<td>$row->breeder</td>";
-                    if($row->gender == 0){esc_html_e('wp_dog_pedigree_table_male','wp-dog-pedigree');} else { esc_html_e('wp_dog_pedigree_table_female','wp-dog-pedigree');}
+                    echo $genderhtml;
                     echo "<td>$row->color</td>";
                     echo "<td>$row->HD_value</td>";
-                    if($row->fur_type == 1){echo "<td>Long hair</td>";} else { echo "<td>Short hair</td>";}
+                    echo $furtypehtml;
                     if($row->champion == 0){echo "<td>No</td>";} else { echo "<td>Yes</td>";}
                     if($row->multi == 0){echo "<td>No</td>";} else { echo "<td>Yes</td>";}
                     echo "<td>$row->father</td>";

@@ -196,8 +196,8 @@ msgstr "Aktionen"
 
 #: includes/wp-dog-pedigree-admin.php:83
 msgid "wp_dog_pedigree_table_male"
-msgstr "<td>Rüde</td>"
+msgstr "Rüde"
 
 #: includes/wp-dog-pedigree-admin.php:83
 msgid "wp_dog_pedigree_table_female"
-msgstr "<td>Hündin</td>"
+msgstr "Hündin"
