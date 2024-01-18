@@ -4,7 +4,7 @@
     **/
     function wp_dog_pedigree_get_pedigree($dog_id) {
         global $wpdb;
-        $result = $wpdb->get_results( "SELECT name,father,mother FROM {$wpdb->prefix}dogpedigree WHERE name = '$name'" );
+        $result = $wpdb->get_results( "SELECT name,father,mother FROM {$wpdb->prefix}dogpedigree WHERE ID = $dog_id" );
         return $result;
     }
 
@@ -13,7 +13,7 @@
     **/
     function wp_dog_pedigree_get_dog($dog_name) {
         global $wpdb;
-        $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree WHERE ID = $dog_id" );
+        $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree WHERE name = '$name'" );
         return $result;
     }
 
