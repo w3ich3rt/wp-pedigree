@@ -17,18 +17,21 @@
             'id' => '',
         ), $atts));
 
-        $pedigree = get_pedigree($id);
+        $pedigree = wp_dog_pedigree_get_pedigree($id);
 
         $output = '<div class="dog-pedigree">';
-        $output .= '<ul>';
-        foreach ($pedigree as $dog) {
-            $output .= '<li>';
-            $output .= '<span class="dog-name">' . $dog->name . '</span>';
-            $output .= '<span class="dog-father">' . $dog->father . '</span>';
-            $output .= '<span class="dog-mother">' . $dog->mother . '</span>';
-            $output .= '</li>';
-        }
-        $output .= '</ul>';
+        $output .= '<table class="dog-pedigree-table">';
+        $output .= '<tr>';
+        $output .= '<th colspan="2">Pedigree</th>';
+        $output .= '</tr>';
+        $output .= '<tr>';
+        $output .= '<td colspan="2" class="dog-pedigree-name">' . $pedigree[0]->name . '</td>';
+        $output .= '</tr>';
+        $output .= '<tr>';
+        $output .= '<td class="dog-pedigree-father">' . $pedigree[0]->father . '</td>';
+        $output .= '<td class="dog-pedigree-mother">' . $pedigree[0]->mother . '</td>';
+        $output .= '</tr>';
+        $output .= '</table>';
         $output .= '</div>';
 
         return $output;
