@@ -14,6 +14,18 @@
     function wp_dog_pedigree_get_dog($dog_name) {
         global $wpdb;
         $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree WHERE name = '$name'" );
+        $dictionary = array();
+        $dictionary['name'] = $result[0]->name;
+        $dictionary['owner'] = $result[0]->owner;
+        $dictionary['breeder'] = $result[0]->breeder;
+        $dictionary['gender'] = $result[0]->gender;
+        $dictionary['color'] = $result[0]->color;
+        $dictionary['HD_value'] = $result[0]->HD_value;
+        $dictionary['fur_type'] = $result[0]->fur_type;
+        $dictionary['champion'] = $result[0]->champion;
+        $dictionary['multi'] = $result[0]->multi;
+        $dictionary['father'] = $result[0]->father;
+        $dictionary['mother'] = $result[0]->mother;
         return $result;
     }
 
