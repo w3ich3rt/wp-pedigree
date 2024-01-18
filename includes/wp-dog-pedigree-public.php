@@ -55,7 +55,7 @@
     * Generate the columns of the pedigree table
     **/
     function wp_dog_pedigree_build_parent($dog_name) {
-        $dog_data = wp_dog_pedigree_get_dog($dog_name);
+        $dog_data = wp_dog_pedigree_get_dog($dog_name)[0];
         switch ($dog_data->color) {
             case "Red":
                 $color = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
