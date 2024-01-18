@@ -4,6 +4,7 @@
     **/
     require_once plugin_dir_path(__FILE__) . 'wp-dog-pedigree-activation-hook.php';
     require_once plugin_dir_path(__FILE__) . 'wp-dog-pedigree-deactivation-hook.php';
+    include_once('wp-dog-pedigree-public.php');
 
     /**
     * Add the stylesheet for the public pages
@@ -55,7 +56,6 @@
     function wp_dog_pedigree_Admin_Contents() {
         include_once('wp-dog-pedigree-admin.php');
     }
-
 
     /**
     * Add a new pedigree to database_table
@@ -115,8 +115,6 @@
         }
     }
 
-
-
     /**
     * Delete a pedigree from the database_table
     **/
@@ -133,5 +131,3 @@
             wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=false' ) );
         }
     }
-
-
