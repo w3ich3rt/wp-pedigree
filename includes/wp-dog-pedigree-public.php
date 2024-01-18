@@ -65,7 +65,7 @@
         $output = '<div class="dog-pedigree">';
         $output .= '<table>';
         $output .= '<tr>';
-        $output .= '<td rowspan="4" class="dog-pedigree-name"><p>' . $pedigree['father'] . '</p><p>' . wp_dog_pedigree_get_dog($pedigree['father'])['color'] . '</p></td>';
+        $output .= '<td rowspan="4" class="dog-pedigree-name"><p>' . $pedigree['father'] . '</p><p>' . wp_dog_pedigree_get_dog($pedigree['father'])[0]->color . '</p></td>';
         $output .= '<td rowspan="2" class="dog-pedigree-name">' . $pedigree['father_father'] . '</td>';
         $output .= '<td class="dog-pedigree-name">' . $pedigree['father_father_father'] . '</td>';
         $output .= '</tr>';
