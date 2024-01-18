@@ -20,9 +20,9 @@
     /**
     * Get parents by name
     **/
-    function wp_dog_pedigree_get_parents_by_name($name) {
+    function wp_dog_pedigree_get_parents_by_name($dog_name) {
         global $wpdb;
-        $result = $wpdb->get_results( "SELECT father,mother FROM {$wpdb->prefix}dogpedigree WHERE name = '$name'" );
+        $result = $wpdb->get_results( "SELECT father,mother FROM {$wpdb->prefix}dogpedigree WHERE name = '$dog_name'" );
         return $result;
     }
 
