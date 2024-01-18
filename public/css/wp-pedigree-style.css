@@ -84,8 +84,26 @@ i.trashcans:hover {
 }
 
 .dog-pedigree-name {
-	font-size: 10px;
 	padding: 5px;
 	margin: 0 auto;
 	text-align: center;
+}
+
+.dog-pedigree-champ {
+	font-size: 12px;
+	padding: 0px;
+}
+
+.dog-pedigree-dogname {
+	font-size: 14px;
+}
+
+.dog-pedigree-color {
+	font-size: 12px;
+	padding: 0px;
+}
+
+.dog-pedigree-furtype {
+	font-size: 12px;
+	padding: 0px;
 }
