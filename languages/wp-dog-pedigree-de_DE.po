@@ -106,6 +106,14 @@ msgstr "Champion"
 msgid "wp_dog_pedigree_lang_mchamp"
 msgstr "Multi-Champion"
 
+#: includes/wp-dog-pedigree-public.php:79
+msgid "wp_dog_pedigree_table_champion_short"
+msgstr "Ch."
+
+#: includes/wp-dog-pedigree-public.php:80
+msgid "wp_dog_pedigree_table_mchamp_short"
+msgstr "Multi Ch."
+
 #: includes/wp-dog-pedigree-admin.php:40
 msgid "wp_dog_pedigree_lang_furcolor"
 msgstr "Fellfarbe"
