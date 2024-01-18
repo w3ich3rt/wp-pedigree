@@ -78,7 +78,7 @@
         if($dog_data->fur_type == 0){ $furtype = '<p>' . __('wp_dog_pedigree_lang_shorthair','wp-dog-pedigree') . '</p>';}
         if($dog_data->champion == 1){ $champion = __('wp_dog_pedigree_table_champion_short','wp-dog-pedigree');}
         if($dog_data->multi == 1){ $champion = __('wp_dog_pedigree_table_mchamp_short','wp-dog-pedigree');} //TODO: Solve with a if-else statement
-        $output = '<p>'. $champion . '</p><p>' . $dog_name . '</p><p>' . $color . '</p>' . $furtype;
+        $output = '<p>'. $champion . '</p><p>' . $dog_name . '</p><p>' . $color . '</p>' . $furtype; //TODO: Gender needs to be added
         return $output;
     }
 
@@ -94,7 +94,7 @@
         $pedigree = wp_dog_pedigree_generate_pedigree_dictionary($id);
 
         $output = '<div class="dog-pedigree">';
-        $output .= '<table>';
+        $output .= '<table class="dog-pedigree-table">';
         $output .= '<tr>';
         $output .= '<td rowspan="4" class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['father']) . '</td>';
         $output .= '<td rowspan="2" class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['father_father']) . '</td>';

@@ -1,37 +1,37 @@
-table {
+table.admin-table {
 	border-collapse: collapse;
 	overflow: hidden;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-th,
-td {
+th.admin-table,
+td.admin-table {
 	padding: 15px;
 	color: #000;
 }
 
-td {
+td.admin-table {
 	background-color: rgba(255,255,255,0.2);
 }
 
-th {
+th.admin-table {
 	text-align: left;
 	background-color: rgba(121, 121, 121, 0.3);
 }
 
-thead {
+thead.admin-table {
 	th {
 		background-color: #55608f;
 	}
 }
 
-tbody {
+tbody.admin-table {
 	tr {
 		&:hover {
 			background-color: rgba(255,255,255,0.3);
 		}
 	}
-	td {
+	td.admin-table {
 		position: relative;
 		&:hover {
 			&:before {
@@ -74,4 +74,11 @@ i.trashcans:hover {
 	50% { transform: translate(0, 0) rotate(0deg); }
 	75% { transform: translate(-5px, 5px) rotate(-5deg); }
 	100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+
+
+.dog-pedigree-table {
+	width: 800px;
+	margin: 0 auto;
 }

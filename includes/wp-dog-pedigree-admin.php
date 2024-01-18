@@ -54,22 +54,22 @@
     <div >
         <div>
             <h2><?php esc_html_e('wp_dog_pedigree_list_pedigree','wp-dog-pedigree'); ?></h2>
-            <table>
+            <table class="admin-table">
                 <caption><?php esc_html_e('wp_dog_pedigree_table_caption','wp-dog-pedigree'); ?></caption>
-                <tr>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_id','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_name','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_owner','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_breeder','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_gender','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_color','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_hdvalue','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_furtype','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_champion','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_mchamp','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_father','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_mother','wp-dog-pedigree'); ?></th>
-                    <th><?php esc_html_e('wp_dog_pedigree_table_actions','wp-dog-pedigree'); ?></th>
+                <tr class="admin-table">
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_id','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_name','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_owner','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_breeder','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_gender','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_color','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_hdvalue','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_furtype','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_champion','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_mchamp','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_father','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_mother','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_actions','wp-dog-pedigree'); ?></th>
                 </tr>
             <?php
                 global $wpdb;
@@ -98,21 +98,21 @@
                         default:
                             $colorhtml = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
                     }
-                    echo "<tr>";
-                    echo "<td>$row->ID</td>";
-                    echo "<td>$row->name</td>";
-                    echo "<td>$row->owner</td>";
-                    echo "<td>$row->breeder</td>";
-                    echo "<td>$genderhtml</td>";
-                    echo "<td>$colorhtml</td>";
-                    echo "<td>$row->HD_value</td>";
-                    echo "<td>$furtypehtml</td>";
-                    echo "<td>$championhtml</td>";
-                    echo "<td>$multihtml</td>";
-                    echo "<td>$row->father</td>";
-                    echo "<td>$row->mother</td>";
+                    echo "<tr class='admin-table'>";
+                    echo "<td class='admin-table'>$row->ID</td>";
+                    echo "<td class='admin-table'>$row->name</td>";
+                    echo "<td class='admin-table'>$row->owner</td>";
+                    echo "<td class='admin-table'>$row->breeder</td>";
+                    echo "<td class='admin-table'>$genderhtml</td>";
+                    echo "<td class='admin-table'>$colorhtml</td>";
+                    echo "<td class='admin-table'>$row->HD_value</td>";
+                    echo "<td class='admin-table'>$furtypehtml</td>";
+                    echo "<td class='admin-table'>$championhtml</td>";
+                    echo "<td class='admin-table'>$multihtml</td>";
+                    echo "<td class='admin-table'>$row->father</td>";
+                    echo "<td class='admin-table'>$row->mother</td>";
                     $link = admin_url('admin-post.php?action=delete_pedigree&id=' . $row->ID);
-                    $string = '<td><center><a href="%s"><i class="trashcans"></i></a></center></td>';
+                    $string = '<td class="admin-table"><center><a href="%s"><i class="trashcans"></i></a></center></td>';
                     echo sprintf($string, $link);
                     echo "</tr>";
                 }
