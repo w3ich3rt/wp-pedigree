@@ -31,6 +31,14 @@
         $dictionary['father_mother'] = wp_dog_pedigree_get_parents_by_name($father)[0]->mother;
         $dictionary['mother_father'] = wp_dog_pedigree_get_parents_by_name($mother)[0]->father;
         $dictionary['mother_mother'] = wp_dog_pedigree_get_parents_by_name($mother)[0]->mother;
+        $dictionary['father_father_father'] = wp_dog_pedigree_get_parents_by_name($dictionary['father_father'])[0]->father;
+        $dictionary['father_father_mother'] = wp_dog_pedigree_get_parents_by_name($dictionary['father_father'])[0]->mother;
+        $dictionary['father_mother_father'] = wp_dog_pedigree_get_parents_by_name($dictionary['father_mother'])[0]->father;
+        $dictionary['father_mother_mother'] = wp_dog_pedigree_get_parents_by_name($dictionary['father_mother'])[0]->mother;
+        $dictionary['mother_father_father'] = wp_dog_pedigree_get_parents_by_name($dictionary['mother_father'])[0]->father;
+        $dictionary['mother_father_mother'] = wp_dog_pedigree_get_parents_by_name($dictionary['mother_father'])[0]->mother;
+        $dictionary['mother_mother_father'] = wp_dog_pedigree_get_parents_by_name($dictionary['mother_mother'])[0]->father;
+        $dictionary['mother_mother_mother'] = wp_dog_pedigree_get_parents_by_name($dictionary['mother_mother'])[0]->mother;
         return $dictionary;
     }
 
@@ -46,30 +54,51 @@
         $pedigree = wp_dog_pedigree_generate_pedigree_dictionary($id);
         
         $output = '<div class="dog-pedigree">';
-        $output .= '<div class="dog-pedigree__father">';
-        $output .= '<div class="dog-pedigree__father__name">';
-        $output .= $pedigree['father'];
+        $output .= '<table>';
+        $output .= '<tr>';
+        $output .= '<td rowspan="4" class="dog-pedigree-name">' . $pedigree['father'] . '</td>';
+        $output .= '<td rowspan="2" class="dog-pedigree-name">' . $pedigree['father_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['father_father_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['father_father_mother'] . '</td>';
+        $output .= '</tr>';
+        $output .= '<tr>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['father_mother_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['father_mother_mother'] . '</td>';
+        $output .= '</tr>';
+        $output .= '<tr>';
+        $output .= '<td rowspan="2" class="dog-pedigree-name">' . $pedigree['father_mother'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_father_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_father_mother'] . '</td>';
+        $output .= '</tr>';
+        $output .= '<tr>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_mother_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_mother_mother'] . '</td>';
+        $output .= '</tr>';
+        $output .= '<tr>';
+        $output .= '<td rowspan="4" class="dog-pedigree-name">' . $pedigree['mother'] . '</td>';
+        $output .= '<td rowspan="2" class="dog-pedigree-name">' . $pedigree['mother_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_father_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_father_mother'] . '</td>';
+        $output .= '</tr>';
+        $output .= '<tr>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_mother_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_mother_mother'] . '</td>';
+        $output .= '</tr>';
+        $output .= '<tr>';
+        $output .= '<td rowspan="2" class="dog-pedigree-name">' . $pedigree['mother_mother'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_mother_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_mother_mother'] . '</td>';
+        $output .= '</tr>';
+        $output .= '<tr>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_mother_father'] . '</td>';
+        $output .= '<td class="dog-pedigree-name">' . $pedigree['mother_mother_mother'] . '</td>';
+        $output .= '</tr>';
+        $output .= '</table>';
         $output .= '</div>';
-        $output .= '<div class="dog-pedigree__father__father">';
-        $output .= $pedigree['father_father'];
-        $output .= '</div>';
-        $output .= '<div class="dog-pedigree__father__mother">';
-        $output .= $pedigree['father_mother'];
-        $output .= '</div>';
-        $output .= '</div>';
-        $output .= '<div class="dog-pedigree__mother">';
-        $output .= '<div class="dog-pedigree__mother__name">';
-        $output .= $pedigree['mother'];
-        $output .= '</div>';
-        $output .= '<div class="dog-pedigree__mother__father">';
-        $output .= $pedigree['mother_father'];
-        $output .= '</div>';
-        $output .= '<div class="dog-pedigree__mother__mother">';
-        $output .= $pedigree['mother_mother'];
-        $output .= '</div>';
-        $output .= '</div>';
-        $output .= '</div>';
-        
+
 
         return $output;
     }
+
+
+
