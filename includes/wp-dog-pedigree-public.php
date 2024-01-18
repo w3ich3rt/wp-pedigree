@@ -52,6 +52,37 @@
     }
 
     /**
+    * Generate the columns of the pedigree table
+    **/
+    function wp_dog_pedigree_build_parent($dog_name) {
+        $dog_data = wp_dog_pedigree_get_dog($dog_name);
+        switch ($dog_data->color) {
+            case "Red":
+                $color = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
+                break;
+            case "Black":
+                $color = __('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree');
+                break;
+            case "Blue":
+                $color = __('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree');
+                break;
+            case "Cream":
+                $color = __('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree');
+                break;
+            case "Fawn":
+                $color = __('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree');
+                break;
+            default:
+                $color = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
+        }
+        if($dog_data->fur_type == 0){ $furtype = '<p>' . __('wp_dog_pedigree_lang_shorthair','wp-dog-pedigree') . '</p>';}
+        if($dog_data->champion == 1){ $champion = __('wp_dog_pedigree_lang_champion','wp-dog-pedigree');}
+        if($dog_data->multi == 1){ $champion = __('wp_dog_pedigree_lang_multi','wp-dog-pedigree');} //TODO: Solve with a if-else statement
+        $output = '<p>'. $champion . '</p><p>' . $dog_name . '</p><p>' . $color . '</p>' . $furtype;
+        return $output;
+    }
+
+    /**
     * shortcode to display the dog's pedigree
     **/
     add_shortcode('dog_pedigree_by_dog', 'wp_dog_pedigree_shortcode');
@@ -61,11 +92,11 @@
         ), $atts));
 
         $pedigree = wp_dog_pedigree_generate_pedigree_dictionary($id);
-        
+
         $output = '<div class="dog-pedigree">';
         $output .= '<table>';
         $output .= '<tr>';
-        $output .= '<td rowspan="4" class="dog-pedigree-name"><p>' . $pedigree['father'] . '</p><p>' . wp_dog_pedigree_get_dog($pedigree['father'])[0]->color . '</p></td>';
+        $output .= '<td rowspan="4" class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['father']) . '</td>';
         $output .= '<td rowspan="2" class="dog-pedigree-name">' . $pedigree['father_father'] . '</td>';
         $output .= '<td class="dog-pedigree-name">' . $pedigree['father_father_father'] . '</td>';
         $output .= '</tr>';
