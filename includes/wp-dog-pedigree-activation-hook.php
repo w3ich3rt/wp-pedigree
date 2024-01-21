@@ -22,6 +22,7 @@ function wp_dog_pedigree_db_install() {
 		fur_type bool NOT NULL,
 		champion bool NOT NULL,
 		multi bool NOT NULL,
+		stud_dog bool NOT NULL,
 		father tinytext,
 		mother tinytext,
 		dog_title tinytext,
@@ -44,11 +45,12 @@ function wp_dog_pedigree_update_tables_when_plugin_updating() {
 	$newVersion = '1.1.0';
 	$table_name = $wpdb->prefix . 'dogpedigree';
 	$charset_collate = $wpdb->get_charset_collate();
-	$sql = "ALTER TABLE $table_name ADD dog_title tinytext $charset_collate;"
-	$sql .= "ALTER TABLE $table_name ADD dog_breed_conditions ttinytextext $charset_collate;"
-	$sql .= "ALTER TABLE $table_name ADD dog_miss_tooth tinytext $charset_collate;"
+	$sql = "ALTER TABLE $table_name ADD dog_title tinytext $charset_collate;";
+	$sql .= "ALTER TABLE $table_name ADD dog_breed_conditions ttinytextext $charset_collate;";
+	$sql .= "ALTER TABLE $table_name ADD dog_miss_tooth tinytext $charset_collate;";
+	$sql .= "ALTER TABLE $table_name ADD stud_dog bool $charset_collate;";
 
-	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 	dbDelta( $sql );
 	update_option( 'wp_dog_pedigree_version', $newVersion );
 
