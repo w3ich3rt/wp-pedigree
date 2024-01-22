@@ -42,17 +42,15 @@ function wp_dog_pedigree_update_tables_when_plugin_updating() {
 	global $wpdb;
 	$oldVersion = get_option( 'wp_dog_pedigree_version', '1.1.0' );
 	$newVersion = '1.3.0';
-	$table_name = $wpdb->prefix . 'dogpedigree';
-	$charset_collate = $wpdb->get_charset_collate();
-	$sql = "ALTER TABLE $table_name ADD dog_title tinytext $charset_collate;";
-	$sql .= "ALTER TABLE $table_name ADD dog_breed_conditions ttinytextext $charset_collate;";
-	$sql .= "ALTER TABLE $table_name ADD dog_miss_tooth tinytext $charset_collate;";
-	$sql .= "ALTER TABLE $table_name ADD stud_dog bool $charset_collate;";
-
-	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-	dbDelta( $sql );
-	update_option( 'wp_dog_pedigree_version', $newVersion );
-
+	if ( $oldVersion < $newVersion ) {
+		$table_name = $wpdb->prefix . 'dogpedigree';
+		$charset_collate = $wpdb->get_charset_collate();
+		$wpdb->query ("ALTER TABLE " . $table_name . " ADD dog_title tinytext " . $charset_collate);
+		$wpdb->query ("ALTER TABLE " . $table_name . " ADD dog_breed_conditions tinytext " . $charset_collate);
+		$wpdb->query ("ALTER TABLE " . $table_name . " ADD dog_miss_tooth tinytext " . $charset_collate);
+		$wpdb->query ("ALTER TABLE " . $table_name . " ADD stud_dog bool " . $charset_collate);
+		update_option( 'wp_dog_pedigree_version', $newVersion );
+	}
 }
 
 function wp_dog_pedigree_data() {

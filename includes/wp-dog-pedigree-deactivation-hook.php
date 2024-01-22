@@ -10,8 +10,5 @@ function wp_dog_pedigree_deinstall() {
 	
 	$charset_collate = $wpdb->get_charset_collate();
 
-	$sql = "DROP TABLE IF EXISTS $table_name;";
-
-	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-	dbDelta( $sql );
+	$wpdb->query( "DROP TABLE IF EXISTS " . $table_name );
 }
