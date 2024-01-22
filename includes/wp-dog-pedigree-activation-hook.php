@@ -4,7 +4,6 @@ $wp_dog_pedigree_db = '1.1.0';
 
 function wp_dog_pedigree_db_install() {
 	global $wpdb;
-	global $wp_dog_pedigree_db;
 
 	$table_name = $wpdb->prefix . 'dogpedigree';
 	
@@ -36,7 +35,7 @@ function wp_dog_pedigree_db_install() {
 	update_option( 'wp_dog_pedigree_version', $wp_dog_pedigree_db );
 	wp_dog_pedigree_update_tables_when_plugin_updating();
 
-	add_option( 'wp_dog_pedigree_db', $wp_dog_pedigree_db );
+	add_option( 'wp_dog_pedigree_version', $wp_dog_pedigree_db );
 }
 
 function wp_dog_pedigree_update_tables_when_plugin_updating() {
