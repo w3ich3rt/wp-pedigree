@@ -41,7 +41,7 @@ function wp_dog_pedigree_db_install() {
 function wp_dog_pedigree_update_tables_when_plugin_updating() {
 	global $wpdb;
 	$oldVersion = get_option( 'wp_dog_pedigree_version', '1.1.0' );
-	$newVersion = '1.2.0';
+	$newVersion = '1.3.0';
 	$table_name = $wpdb->prefix . 'dogpedigree';
 	$charset_collate = $wpdb->get_charset_collate();
 	$sql = "ALTER TABLE $table_name ADD dog_title tinytext $charset_collate;";
