@@ -78,7 +78,7 @@
         if($dog_data->fur_type == 0){ $furtype = '<p class="dog-pedigree-furtype">' . __('wp_dog_pedigree_lang_shorthair','wp-dog-pedigree') . '</p>';} else { $furtype = "" ;}
         if($dog_data->champion == 1){ $champion = __('wp_dog_pedigree_table_champion_short','wp-dog-pedigree');}
         if($dog_data->multi == 1){ $champion = __('wp_dog_pedigree_table_mchamp_short','wp-dog-pedigree');} else { $champion = "" ;}
-        if($dog_data->gender == 0){ $gender = '<i class="dog-male"></i>'; } else { $gender = '<i class="dog-venus"></i>'; }
+        if($dog_data->gender == 0){ $gender = '<i class="dog-mars"></i>'; } else { $gender = '<i class="dog-venus"></i>'; }
         $output = '<p class="dog-pedigree-champ">'. $champion . '</p><p class="dog-pedigree-dogname">' . $gender . $dog_name . '</p><p class="dog-pedigree-color">' . $color . '</p>' . $furtype;
         return $output;
     }

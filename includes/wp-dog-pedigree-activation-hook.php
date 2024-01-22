@@ -26,7 +26,7 @@ function wp_dog_pedigree_db_install() {
 		mother tinytext,
 		dog_title tinytext,
 		dog_breed_conditions tinytext,
-		dog_miss_tooth tinytext,
+		dog_miss_tooth tinytext, //TODO: Add values from version 1.4.0
 		PRIMARY KEY  (id)
 	) $charset_collate;";
 
@@ -55,8 +55,10 @@ function wp_dog_pedigree_update_tables_when_plugin_updating() {
 	// $newVersion = '1.4.0';
 	// if ( $oldVersion < $newVersion ) {
 	// 	$table_name = $wpdb->prefix . 'dogpedigree';
-	// 	$charset_collate = $wpdb->get_charset_collate();
-	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD owner_contact tinytext");
+	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD birthday date");
+	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD deathday date");
+	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD studbook_nr tinytext");
+	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD shoulder_height tinyint");
 	// 	update_option( 'wp_dog_pedigree_version', $newVersion );
 	// }
 }
