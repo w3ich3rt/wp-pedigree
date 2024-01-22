@@ -32,7 +32,6 @@
             }
     }
 
-
     /**
     * Add WPPED Menu to the Admin Control Panel
     **/
@@ -56,6 +55,12 @@
     function wp_dog_pedigree_Admin_Contents() {
         include_once('wp-dog-pedigree-admin.php');
     }
+
+    /**
+    * Import csv file to database_table
+    **/
+    add_action( 'admin_post_import_csv', 'wp_dog_pedigree_admin_import_csv' );
+    
 
     /**
     * Add a new pedigree to database_table
