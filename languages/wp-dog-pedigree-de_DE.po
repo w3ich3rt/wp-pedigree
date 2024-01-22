@@ -217,3 +217,11 @@ msgstr "Rüde"
 #: includes/wp-dog-pedigree-admin.php:83
 msgid "wp_dog_pedigree_table_female"
 msgstr "Hündin"
+
+#: includes/wp-dog-pedigree-functions.php:53
+msgid "Add Dogs"
+msgstr "Hunde hinzufügen"
+
+#: includes/wp-dog-pedigree-functions.php:60
+msgid "List Dogs"
+msgstr "Hunde auflisten"

@@ -50,15 +50,15 @@
         //add submenu
         add_submenu_page(
             'wp_dog_pedigree_Admin',
-            'ListDogs',
-            'List Dogs',
+            __('Add Dogs','wp-pedigree'),
+            __('Add Dogs','wp-pedigree'),
             'manage_options',
             'wp_dog_pedigree_Admin',
             'wp_dog_pedigree_Admin_Contents');
         add_submenu_page(
             'wp_dog_pedigree_Admin',
-            'ListDogs',
-            'List Dogs',
+            __('List Dogs','wp-pedigree'),
+            __('List Dogs','wp-pedigree'),
             'manage_options',
             'wp_dog_pedigree_Admin_ListDogs',
             'wp_dog_pedigree_Admin_ListDogs');

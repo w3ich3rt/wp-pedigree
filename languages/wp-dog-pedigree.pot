@@ -218,3 +218,10 @@ msgstr "Male"
 msgid "wp_dog_pedigree_table_female"
 msgstr "Female"
 
+#: includes/wp-dog-pedigree-functions.php:53
+msgid "Add Dogs"
+msgstr ""
+
+#: includes/wp-dog-pedigree-functions.php:60
+msgid "List Dogs"
+msgstr ""
