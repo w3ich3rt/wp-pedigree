@@ -72,6 +72,10 @@
         include_once('wp-dog-pedigree-admin.php');
     }
 
+    function wp_dog_pedigree_Admin_ListDogs() {
+        include_once('wp-dog-pedigree-admin-listdogs.php');
+    }
+
     /**
     * Import csv file to database_table
     **/
