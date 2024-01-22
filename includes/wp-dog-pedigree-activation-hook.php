@@ -3,7 +3,7 @@
 function wp_dog_pedigree_db_install() {
 	global $wpdb;
 	global $wp_dog_pedigree_db;
-	$wp_dog_pedigree_db = '1.1.0';
+	$wp_dog_pedigree_db = '1.3.0';
 
 	$table_name = $wpdb->prefix . 'dogpedigree';
 	
@@ -51,6 +51,14 @@ function wp_dog_pedigree_update_tables_when_plugin_updating() {
 		$wpdb->query ("ALTER TABLE " . $table_name . " ADD stud_dog bool");
 		update_option( 'wp_dog_pedigree_version', $newVersion );
 	}
+	//TODO: Add missing tables
+	// $newVersion = '1.4.0';
+	// if ( $oldVersion < $newVersion ) {
+	// 	$table_name = $wpdb->prefix . 'dogpedigree';
+	// 	$charset_collate = $wpdb->get_charset_collate();
+	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD owner_contact tinytext");
+	// 	update_option( 'wp_dog_pedigree_version', $newVersion );
+	// }
 }
 
 function wp_dog_pedigree_data() {
