@@ -1,19 +1,27 @@
 .wp-dog-pedigree-form {
 	width: 800px;
-	margin: 0 auto;
+	margin: 25px;
 	padding: 25px;
 	background-color: white;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
-label.wp-dog-pedigree-form {
+label {
 	display: block;
-	margin-bottom: 5px;
+	font-size: 12px;
 }
-input.wp-dog-pedigree-form {
+input {
 	width: 100%;
 }
-select.wp-dog-pedigree-form {
+input:focus {
 	width: 100%;
+	border: 1px solid #005097;
+}
+select {
+	width: 100%;
+}
+select:focus {
+	width: 100%;
+	border: 1px solid #005097;
 }
 input[type=button], input[type=submit], input[type=reset] {
 	background-color: #005097;
