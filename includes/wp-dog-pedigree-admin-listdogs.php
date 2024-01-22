@@ -3,7 +3,7 @@
         <div>
             <h2><?php esc_html_e('wp_dog_pedigree_list_pedigree','wp-dog-pedigree'); ?></h2>
             <table class="admin-table">
-                <caption><?php esc_html_e('wp_dog_pedigree_table_caption','wp-dog-pedigree'); ?></caption>
+                <caption><?php esc_html_e('wp_dog_pedigree_table_caption_listdogs','wp-dog-pedigree'); ?></caption>
                 <tr class="admin-table">
                     <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_id','wp-dog-pedigree'); ?></th>
                     <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_name','wp-dog-pedigree'); ?></th>

@@ -158,6 +158,10 @@ msgstr "Liste der Stammbäume"
 msgid "wp_dog_pedigree_table_caption"
 msgstr "Liste der 10 zuletzt erfassten Stammbäume der Tiere."
 
+#: includes/wp-dog-pedigree-admin-listdogs.php:6
+msgid "wp_dog_pedigree_table_caption_listdogs"
+msgstr "Liste aller erfassten Hunde resp. Stammbäume."
+
 #: includes/wp-dog-pedigree-admin.php:62
 msgid "wp_dog_pedigree_table_id"
 msgstr "ID"

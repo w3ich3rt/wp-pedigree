@@ -104,7 +104,7 @@
         $output .= '<td class="dog-pedigree-name" style="background:#F4D4E6">' . wp_dog_pedigree_build_parent($pedigree['father_father_mother']) . '</td>';
         $output .= '</tr>';
         $output .= '<tr>';
-        $output .= '<td rowspan="2" class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['father_mother']) . '</td>';
+        $output .= '<td rowspan="2" class="dog-pedigree-name" style="background:#F4D4E6">' . wp_dog_pedigree_build_parent($pedigree['father_mother']) . '</td>';
         $output .= '<td class="dog-pedigree-name" style="background:#A9CEEA">' . wp_dog_pedigree_build_parent($pedigree['father_mother_father']) . '</td>';
         $output .= '</tr>';
         $output .= '<tr>';

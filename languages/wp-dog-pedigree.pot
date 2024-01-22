@@ -150,6 +150,10 @@ msgstr "List of all pedigrees"
 msgid "wp_dog_pedigree_table_caption"
 msgstr "List of the last 10 added dog pedigrees."
 
+#: includes/wp-dog-pedigree-admin-listdogs.php:6
+msgid "wp_dog_pedigree_table_caption_listdogs"
+msgstr "List of all dog-pedigrees in the database."
+
 #: includes/wp-dog-pedigree-admin.php:62
 msgid "wp_dog_pedigree_table_id"
 msgstr "ID"
