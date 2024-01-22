@@ -78,8 +78,7 @@
         if($dog_data->fur_type == 0){ $furtype = '<p class="dog-pedigree-furtype">' . __('wp_dog_pedigree_lang_shorthair','wp-dog-pedigree') . '</p>';} else { $furtype = "" ;}
         if($dog_data->champion == 1){ $champion = __('wp_dog_pedigree_table_champion_short','wp-dog-pedigree');}
         if($dog_data->multi == 1){ $champion = __('wp_dog_pedigree_table_mchamp_short','wp-dog-pedigree');} else { $champion = "" ;}
-        if($dog_data->gender == 0){ $gender = '<i class="dog-mars"></i>'; } else { $gender = '<i class="dog-venus"></i>'; }
-        $output = '<p class="dog-pedigree-champ">'. $champion . '</p><p class="dog-pedigree-dogname">' . $gender . $dog_name . '</p><p class="dog-pedigree-color">' . $color . '</p>' . $furtype;
+        $output = '<p class="dog-pedigree-champ">'. $champion . '</p><p class="dog-pedigree-dogname">' . $dog_name . '</p><p class="dog-pedigree-color">' . $color . '</p>' . $furtype;
         return $output;
     }
 
@@ -97,7 +96,7 @@
         $output = '<div class="dog-pedigree">';
         $output .= '<table class="dog-pedigree-table">';
         $output .= '<tr>';
-        $output .= '<td rowspan="4" class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['father']) . '</td>';
+        $output .= '<td rowspan="4" class="dog-pedigree-name" style="background:#A9CEEA">' . wp_dog_pedigree_build_parent($pedigree['father']) . '</td>';
         $output .= '<td rowspan="2" class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['father_father']) . '</td>';
         $output .= '<td class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['father_father_father']) . '</td>';
         $output .= '</tr>';
@@ -112,7 +111,7 @@
         $output .= '<td class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['father_mother_mother']) . '</td>';
         $output .= '</tr>';
         $output .= '<tr>';
-        $output .= '<td rowspan="4" class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['mother']) . '</td>';
+        $output .= '<td rowspan="4" class="dog-pedigree-name" style="background:#F4D4E6">' . wp_dog_pedigree_build_parent($pedigree['mother']) . '</td>';
         $output .= '<td rowspan="2" class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['mother_father']) . '</td>';
         $output .= '<td class="dog-pedigree-name">' . wp_dog_pedigree_build_parent($pedigree['mother_father_father']) . '</td>';
         $output .= '</tr>';
