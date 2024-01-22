@@ -114,8 +114,9 @@ i.trashcans:hover {
 
 
 .dog-pedigree-table {
-	width: 800px;
 	margin: 0 auto;
+	width: 100%;
+	border: 1px solid rgb(211, 211, 211);
 }
 
 .dog-pedigree-name {
@@ -149,9 +150,4 @@ i.trashcans:hover {
 	padding: 15px;
 	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-
-.dog-pedigree-table {
-	width: 100%;
-	border: 1px solid rgb(211, 211, 211);
 }

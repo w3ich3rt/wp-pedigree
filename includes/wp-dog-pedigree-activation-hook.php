@@ -53,6 +53,7 @@ function wp_dog_pedigree_update_tables_when_plugin_updating() {
 	}
 	//TODO: Add missing tables
 	// $newVersion = '1.4.0';
+	// $oldVersion = get_option( 'wp_dog_pedigree_version', '1.3.0' );
 	// if ( $oldVersion < $newVersion ) {
 	// 	$table_name = $wpdb->prefix . 'dogpedigree';
 	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD birthday date");
