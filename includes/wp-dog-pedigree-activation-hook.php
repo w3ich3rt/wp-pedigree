@@ -35,7 +35,7 @@ function wp_dog_pedigree_db_install() {
 		CONSTRAINT fk_owner FOREIGN KEY (owner) REFERENCES $pedigree_table_owner(ID)
 	) $charset_collate;";
 
-	$sql_owner_table .= "CREATE TABLE IF NOT EXISTS $pedigree_table_owner (
+	$sql_owner_table = "CREATE TABLE IF NOT EXISTS $pedigree_table_owner (
 		ID mediumint(9) NOT NULL AUTO_INCREMENT,
 		name tinytext NOT NULL,
 		street tinytext,
@@ -49,7 +49,7 @@ function wp_dog_pedigree_db_install() {
 		PRIMARY KEY (ID)
 	) $charset_collate;";
 
-	$sql_title_table .= "CREATE TABLE IF NOT EXISTS $pedigree_table_title (
+	$sql_title_table = "CREATE TABLE IF NOT EXISTS $pedigree_table_title (
 		ID mediumint(9) NOT NULL AUTO_INCREMENT,
 		title tinytext NOT NULL,
 		dogname tinytext,
@@ -58,9 +58,9 @@ function wp_dog_pedigree_db_install() {
 	) $charset_collate;";
 
 	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-	dbDelta( $sql_owner_table );
-	dbDelta( $sql_dog_table );
-	dbDelta( $sql_title_table );
+	$wpdb->query( $sql_owner_table );
+	$wpdb->query( $sql_dog_table );
+	$wpdb->query( $sql_title_table );
 	update_option( 'wp_dog_pedigree_version', $wp_dog_pedigree_db );
 	wp_dog_pedigree_update_tables_when_plugin_updating();
 
