@@ -20,6 +20,7 @@
             </select>
             <label for="breeder"><?php esc_html_e('wp_dog_pedigree_lang_breeder','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="breeder" id="breeder" />
+            <label for="gender"><?php esc_html_e('wp_dog_pedigree_lang_gender','wp-dog-pedigree'); ?>:</label>
             <select name="gender" id="gender">
                 <option value="0"><?php esc_html_e('wp_dog_pedigree_lang_male','wp-dog-pedigree'); ?></option>
                 <option value="1"><?php esc_html_e('wp_dog_pedigree_lang_female','wp-dog-pedigree'); ?></option>
@@ -109,7 +110,7 @@
     **/
     function wp_dog_pedigree_get_all_dog_owners() {
         global $wpdb;
-        $table_name = $wpdb->prefix . 'wp_dog_pedigree_dog_owner';
+        $table_name = $wpdb->prefix . 'dogpedigree_owners';
         $results = $wpdb->get_results( "SELECT ID, name FROM $table_name" );
         return $results;
     }
