@@ -14,7 +14,7 @@ function wp_dog_pedigree_db_install() {
 	$sql_dog_table = "CREATE TABLE IF NOT EXISTS $pedigree_table_dog (
 		ID mediumint(9) NOT NULL AUTO_INCREMENT,
 		name tinytext NOT NULL,
-		owner int REFERENCES $pedigree_table_owner(ID),
+		owner int,
 		breeder tinytext,
 		gender bool NOT NULL,
 		color tinytext NOT NULL,
@@ -31,7 +31,8 @@ function wp_dog_pedigree_db_install() {
 		deathday date,
 		studbook_nr tinytext,
 		shoulder_height tinyint,
-		PRIMARY KEY  (id)
+		PRIMARY KEY  (id),
+		CONSTRAINT fk_owner FOREIGN KEY (owner) REFERENCES $pedigree_table_owner(ID)
 	) $charset_collate;";
 
 	$sql_owner_table .= "CREATE TABLE IF NOT EXISTS $pedigree_table_owner (
@@ -51,8 +52,9 @@ function wp_dog_pedigree_db_install() {
 	$sql_title_table .= "CREATE TABLE IF NOT EXISTS $pedigree_table_title (
 		ID mediumint(9) NOT NULL AUTO_INCREMENT,
 		title tinytext NOT NULL,
-		dogname tinytext REFERENCES $pedigree_table_dog(name),
-		PRIMARY KEY (ID)
+		dogname tinytext,
+		PRIMARY KEY (ID),
+		CONSTRAINT fk_dog FOREIGN KEY (dogname) REFERENCES $pedigree_table_dog(name)
 	) $charset_collate;";
 
 	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
