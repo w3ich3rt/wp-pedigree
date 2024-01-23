@@ -52,7 +52,7 @@ function wp_dog_pedigree_db_install() {
 	$sql_title_table = "CREATE TABLE IF NOT EXISTS $pedigree_table_title (
 		ID mediumint(9) NOT NULL AUTO_INCREMENT,
 		title tinytext NOT NULL,
-		dogname tinytext,
+		dogname tinytext NOT NULL,
 		PRIMARY KEY (ID),
 		CONSTRAINT fk_dogname FOREIGN KEY (dogname) REFERENCES $pedigree_table_dog(name)
 	) $charset_collate;";
