@@ -158,8 +158,8 @@
                     'stud_dog' => $stud_dog,
                     'dog_breed_conditions' => $dog_breed_conditions,
                     'dog_miss_tooth' => $dog_miss_tooth,
-                    'birthday_date' => $birthday_date,
-                    'deathday_date' => $deathday_date,
+                    'birthday' => $birthday_date,
+                    'deathday' => $deathday_date,
                     'studbook_nr' => $studbook_nr,
                     'shoulder_height' => $shoulder_height
                 )
