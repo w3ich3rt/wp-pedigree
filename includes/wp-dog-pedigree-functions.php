@@ -121,7 +121,7 @@
             && $_POST['shoulder_height'] != ''
         ) {
 
-            $table_name = $wpdb->prefix . 'dogpedigree';
+            $table_name = $wpdb->prefix . 'dogpedigree_dogs';
             $dog_name = sanitize_text_field($_POST['name']);
             $owner = sanitize_text_field($_POST['owner']);
             $breeder = sanitize_text_field($_POST['breeder']);
@@ -229,7 +229,7 @@
     function wp_dog_pedigree_admin_delete_pedigree() {
         global $wpdb;
         $success=$wpdb->delete(
-            $wpdb->prefix . 'dogpedigree',
+            $wpdb->prefix . 'dogpedigree_dogs',
             array( 'ID' => $_GET['id'] )
         );
         if ($success) {
