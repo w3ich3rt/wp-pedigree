@@ -229,3 +229,11 @@ msgstr "Hunde hinzufügen"
 #: includes/wp-dog-pedigree-functions.php:60
 msgid "List Dogs"
 msgstr "Hunde auflisten"
+
+#: includes/wp-dog-pedigree-functions.php:67
+msgid "List Owner"
+msgstr "Besitzer auflisten"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_update_sql_message"
+msgstr "Es gibt kein Update für die benutzerdefinierte SQL-Tabelle für das Hundestammbaum-Plugin."

@@ -3,17 +3,18 @@
 function wp_dog_pedigree_db_install() {
 	global $wpdb;
 	global $wp_dog_pedigree_db;
-	$wp_dog_pedigree_db = '1.3.0';
+	$wp_dog_pedigree_db = '1.0.0';
 
-	$table_name = $wpdb->prefix . 'dogpedigree';
+	$pedigree_table_dog = $wpdb->prefix . 'dogpedigree_dogs';
+	$pedigree_table_owner = $wpdb->prefix . 'dogpedigree_owners';
+	$pedigree_table_title = $wpdb->prefix . 'dogpedigree_titles';
 	
 	$charset_collate = $wpdb->get_charset_collate();
 
-	$sql = "CREATE TABLE IF NOT EXISTS $table_name (
+	$sql_dog_table = "CREATE TABLE IF NOT EXISTS $pedigree_table_dog (
 		ID mediumint(9) NOT NULL AUTO_INCREMENT,
 		name tinytext NOT NULL,
-		owner tinytext NOT NULL,
-		owner_contact tinytext,
+		owner int,
 		breeder tinytext,
 		gender bool NOT NULL,
 		color tinytext NOT NULL,
@@ -24,14 +25,42 @@ function wp_dog_pedigree_db_install() {
 		stud_dog bool NOT NULL,
 		father tinytext,
 		mother tinytext,
-		dog_title tinytext,
 		dog_breed_conditions tinytext,
-		dog_miss_tooth tinytext, //TODO: Add values from version 1.4.0
-		PRIMARY KEY  (id)
+		dog_miss_tooth tinytext,
+		birthday date,
+		deathday date,
+		studbook_nr tinytext,
+		shoulder_height tinyint,
+		PRIMARY KEY  (id),
+		CONSTRAINT FK_owner_ID FOREIGN KEY (owner) REFERENCES $pedigree_table_owner(ID)
+	) $charset_collate;";
+
+	$sql_owner_table .= "CREATE TABLE IF NOT EXISTS $pedigree_table_owner (
+		ID mediumint(9) NOT NULL AUTO_INCREMENT,
+		name tinytext NOT NULL,
+		street tinytext,
+		zip tinytext,
+		city tinytext,
+		country tinytext,
+		phone tinytext,
+		mobile tinytext,
+		email tinytext,
+		website tinytext,
+		PRIMARY KEY (ID)
+	) $charset_collate;";
+
+	$sql_title_table .= "CREATE TABLE IF NOT EXISTS $pedigree_table_title (
+		ID mediumint(9) NOT NULL AUTO_INCREMENT,
+		title tinytext NOT NULL,
+		dogname tinytext NOT NULL,
+		PRIMARY KEY (ID),
+		CONSTRAINT FK_dogname FOREIGN KEY (dogname) REFERENCES $pedigree_table_dog(name)
 	) $charset_collate;";
 
 	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-	dbDelta( $sql );
+	dbDelta( $sql_owner_table );
+	dbDelta( $sql_dog_table );
+	dbDelta( $sql_title_table );
 	update_option( 'wp_dog_pedigree_version', $wp_dog_pedigree_db );
 	wp_dog_pedigree_update_tables_when_plugin_updating();
 
@@ -40,28 +69,16 @@ function wp_dog_pedigree_db_install() {
 
 function wp_dog_pedigree_update_tables_when_plugin_updating() {
 	global $wpdb;
-	$oldVersion = get_option( 'wp_dog_pedigree_version', '1.1.0' );
-	$newVersion = '1.3.0';
+	$oldVersion = get_option( 'wp_dog_pedigree_version', '1.0.0' );
+	$newVersion = '0.0.0';
 	if ( $oldVersion < $newVersion ) {
-		$table_name = $wpdb->prefix . 'dogpedigree';
+		$pedigree_table_dog = $wpdb->prefix . 'dogpedigree_dogs';
+		$pedigree_table_owner = $wpdb->prefix . 'dogpedigree_owners';
 		$charset_collate = $wpdb->get_charset_collate();
-		$wpdb->query ("ALTER TABLE " . $table_name . " ADD dog_title tinytext");
-		$wpdb->query ("ALTER TABLE " . $table_name . " ADD dog_breed_conditions tinytext");
-		$wpdb->query ("ALTER TABLE " . $table_name . " ADD dog_miss_tooth tinytext");
-		$wpdb->query ("ALTER TABLE " . $table_name . " ADD stud_dog bool");
 		update_option( 'wp_dog_pedigree_version', $newVersion );
+	} else {
+		sprintf (__('wp_dog_pedigree_update_sql_message','wp-dog-pedigree'));
 	}
-	//TODO: Add missing tables
-	// $newVersion = '1.4.0';
-	// $oldVersion = get_option( 'wp_dog_pedigree_version', '1.3.0' );
-	// if ( $oldVersion < $newVersion ) {
-	// 	$table_name = $wpdb->prefix . 'dogpedigree';
-	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD birthday date");
-	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD deathday date");
-	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD studbook_nr tinytext");
-	// 	$wpdb->query ("ALTER TABLE " . $table_name . " ADD shoulder_height tinyint");
-	// 	update_option( 'wp_dog_pedigree_version', $newVersion );
-	// }
 }
 
 function wp_dog_pedigree_data() {
@@ -79,13 +96,14 @@ function wp_dog_pedigree_data() {
 	$example_father = 'Hary-Ming North Black King';
 	$example_mother = 'Sbi-Wang Ayumi';
 	
-	$table_name = $wpdb->prefix . 'dogpedigree';
+	$pedigree_table_dog = $wpdb->prefix . 'dogpedigree_dogs';
+	$pedigree_table_owner = $wpdb->prefix . 'dogpedigree_owners';
 
 	if($wpdb->get_results("SELECT * FROM $table_name WHERE name = '$example_dog'")) {
 		return true;
 	} else {
 		$wpdb->insert(
-			$table_name,
+			$pedigree_table_dog,
 			array(
 				'name' => $example_dog,
 				'owner' => $example_owner,

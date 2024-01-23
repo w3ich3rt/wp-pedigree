@@ -62,6 +62,13 @@
             'manage_options',
             'wp_dog_pedigree_Admin_ListDogs',
             'wp_dog_pedigree_Admin_ListDogs');
+        add_submenu_page(
+            'wp_dog_pedigree_Admin',
+            __('List Owner','wp-pedigree'),
+            __('List Owner','wp-pedigree'),
+            'manage_options',
+            'wp_dog_pedigree_Admin_ListOwner',
+            'wp_dog_pedigree_Admin_ListOwner');
     }
 
 
@@ -74,6 +81,10 @@
 
     function wp_dog_pedigree_Admin_ListDogs() {
         include_once('wp-dog-pedigree-admin-listdogs.php');
+    }
+
+    function wp_dog_pedigree_Admin_ListOwner() {
+        include_once('wp-dog-pedigree-admin-listowner.php');
     }
 
     /**
@@ -95,26 +106,40 @@
             && $_POST['breeder'] != ''
             && $_POST['gender'] != ''
             && $_POST['color'] != ''
-            && $_POST['hdvalue'] != ''
+            && $_POST['HD_value'] != ''
             && $_POST['fur_type'] != ''
             && $_POST['champion'] != ''
-            && $_POST['mchamp'] != ''
+            && $_POST['mchampion'] != ''
+            && $_POST['stud_dog'] != ''
             && $_POST['father'] != ''
             && $_POST['mother'] != ''
+            && $_POST['dog_breed_conditions'] != ''
+            && $_POST['dog_miss_tooth'] != ''
+            && $_POST['birthday_date'] != ''
+            && $_POST['deathday_date'] != ''
+            && $_POST['studbook_nr'] != ''
+            && $_POST['shoulder_height'] != ''
         ) {
 
             $table_name = $wpdb->prefix . 'dogpedigree';
             $dog_name = sanitize_text_field($_POST['name']);
             $owner = sanitize_text_field($_POST['owner']);
             $breeder = sanitize_text_field($_POST['breeder']);
-            $gender = $_POST['gender'];
+            $gender = sanitize_text_field($_POST['gender']);
             $color = sanitize_text_field($_POST['color']);
-            $hd_value = sanitize_text_field($_POST['hdvalue']);
+            $hd_value = sanitize_text_field($_POST['HD_value']);
             $fur_type = sanitize_text_field($_POST['fur_type']);
-            $champion = $_POST['champion'];
-            $multi = $_POST['mchamp'];
+            $champion = sanitize_text_field($_POST['champion']);
+            $multi = sanitize_text_field($_POST['mchampion']);
             $father = sanitize_text_field($_POST['father']);
             $mother = sanitize_text_field($_POST['mother']);
+            $stud_dog = sanitize_text_field($_POST['stud_dog']);
+            $dog_breed_conditions = sanitize_text_field($_POST['dog_breed_conditions']);
+            $dog_miss_tooth = sanitize_text_field($_POST['dog_miss_tooth']);
+            $birthday_date = sanitize_text_field($_POST['birthday_date']);
+            $deathday_date = sanitize_text_field($_POST['deathday_date']);
+            $studbook_nr = sanitize_text_field($_POST['studbook_nr']);
+            $shoulder_height = sanitize_text_field($_POST['shoulder_height']);
 
             $success=$wpdb->insert(
                 $table_name,
@@ -129,7 +154,64 @@
                     'champion' => $champion,
                     'multi' => $multi,
                     'father' => $father,
-                    'mother' => $mother
+                    'mother' => $mother,
+                    'stud_dog' => $stud_dog,
+                    'dog_breed_conditions' => $dog_breed_conditions,
+                    'dog_miss_tooth' => $dog_miss_tooth,
+                    'birthday_date' => $birthday_date,
+                    'deathday_date' => $deathday_date,
+                    'studbook_nr' => $studbook_nr,
+                    'shoulder_height' => $shoulder_height
+                )
+            );
+            if ($success) {
+                wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=true' ) );
+            } else {
+                wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=false' ) );
+            }
+        }
+    }
+
+
+    /**
+    * Add a new owner to the database_table
+    **/
+    add_action( 'admin_post_submit_add_pedigree_dog_owner', 'wp_dog_pedigree_admin_add_pedigree_dog_owner' );
+    function wp_dog_pedigree_admin_add_pedigree_dog_owner() {
+        global $wpdb;
+        if (
+            !empty($_POST)
+            && $_POST['name'] != ''
+            && $_POST['street'] != ''
+            && $_POST['zip'] != ''
+            && $_POST['city'] != ''
+            && $_POST['country'] != ''
+            && $_POST['phone'] != ''
+            && $_POST['mobile'] != ''
+            && $_POST['email'] != ''
+        ) {
+
+            $table_name = $wpdb->prefix . 'dogpedigree_owners';
+            $owner_name = sanitize_text_field($_POST['name']);
+            $street = sanitize_text_field($_POST['street']);
+            $zip = sanitize_text_field($_POST['zip']);
+            $city = sanitize_text_field($_POST['city']);
+            $country = sanitize_text_field($_POST['country']);
+            $phone = sanitize_text_field($_POST['phone']);
+            $mobile = sanitize_text_field($_POST['mobile']);
+            $email = sanitize_text_field($_POST['email']);
+            
+            $success=$wpdb->insert(
+                $table_name,
+                array(
+                    'name' => $owner_name,
+                    'street' => $street,
+                    'zip' => $zip,
+                    'city' => $city,
+                    'country' => $country,
+                    'phone' => $phone,
+                    'mobile' => $mobile,
+                    'email' => $email
                 )
             );
             if ($success) {

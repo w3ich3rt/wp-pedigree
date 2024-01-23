@@ -10,12 +10,16 @@
             <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="name" id="name" />
             <label for="owner"><?php esc_html_e('wp_dog_pedigree_lang_owner','wp-dog-pedigree'); ?>:</label>
-            <input type="text" name="owner" id="owner" />
+            <select name="owner" id="owner">
+                <?php
+                    $results = wp_dog_pedigree_get_all_dog_owners();
+                    foreach ($results as $result) {
+                        echo '<option value="' . $result->ID . '">' . $result->name . '</option>';
+                    }
+                ?>
+            </select>
             <label for="breeder"><?php esc_html_e('wp_dog_pedigree_lang_breeder','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="breeder" id="breeder" />
-            <label for="hdvalue"><?php esc_html_e('wp_dog_pedigree_lang_hdvalue','wp-dog-pedigree'); ?>:</label>
-            <input type="text" name="hdvalue" id="hdvalue" />
-            <label for="gender"><?php esc_html_e('wp_dog_pedigree_lang_gender','wp-dog-pedigree'); ?>:</label>
             <select name="gender" id="gender">
                 <option value="0"><?php esc_html_e('wp_dog_pedigree_lang_male','wp-dog-pedigree'); ?></option>
                 <option value="1"><?php esc_html_e('wp_dog_pedigree_lang_female','wp-dog-pedigree'); ?></option>
@@ -30,8 +34,8 @@
                 <option value="0"><?php esc_html_e('wp_dog_pedigree_lang_no','wp-dog-pedigree') ?></option>
                 <option value="1"><?php esc_html_e('wp_dog_pedigree_lang_yes','wp-dog-pedigree'); ?></option>
             </select>
-            <label for="mchamp"><?php esc_html_e('wp_dog_pedigree_lang_mchamp','wp-dog-pedigree'); ?>:</label>
-            <select name="mchamp" id="mchamp">
+            <label for="mchampion"><?php esc_html_e('wp_dog_pedigree_lang_mchamp','wp-dog-pedigree'); ?>:</label>
+            <select name="mchampion" id="mchampion">
                 <option value="0"><?php esc_html_e('wp_dog_pedigree_lang_no','wp-dog-pedigree') ?></option>
                 <option value="1"><?php esc_html_e('wp_dog_pedigree_lang_yes','wp-dog-pedigree'); ?></option>
             </select>
@@ -43,81 +47,70 @@
                 <option value="Cream"><?php esc_html_e('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree'); ?></option>
                 <option value="Fawn"><?php esc_html_e('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree'); ?></option>
             </select>
+            <label for="color"><?php esc_html_e('wp_dog_pedigree_lang_studdog','wp-dog-pedigree'); ?>:</label>
+            <select name="stud_dog" id="stud_dog">
+                <option value="0"><?php esc_html_e('wp_dog_pedigree_lang_no','wp-dog-pedigree') ?></option>
+                <option value="1"><?php esc_html_e('wp_dog_pedigree_lang_yes','wp-dog-pedigree'); ?></option>
+            </select>
+            <label for="HD_value"><?php esc_html_e('wp_dog_pedigree_lang_hd','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="HD_value" id="HD_value" />
             <label for="father"><?php esc_html_e('wp_dog_pedigree_lang_father','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="father" id="father" />
             <label for="mother"><?php esc_html_e('wp_dog_pedigree_lang_mother','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="mother" id="mother" />
+            <label for="birthday_date"><?php esc_html_e('wp_dog_pedigree_lang_birthday','wp-dog-pedigree'); ?>:</label>
+            <input type="date" name="birthday_date" id="birthday_date" value=<?php echo '"' . date("Y-m-d") . '"' ?> />
+            <label for="deathday_date"><?php esc_html_e('wp_dog_pedigree_lang_deathday','wp-dog-pedigree'); ?>:</label>
+            <input type="date" name="deathday_date" id="deathday_date" value=<?php echo '"' . date("Y-m-d") . '"' ?> />
+            <label for="studbook_nr"><?php esc_html_e('wp_dog_pedigree_lang_studbook','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="studbook_nr" id="studbook_nr" />
+            <label for="shoulder_height"><?php esc_html_e('wp_dog_pedigree_lang_shoulderheight','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="shoulder_height" id="shoulder_height" />
             <input type="hidden" name="action" value="submit_add_pedigree">
             <input type="submit" value="Submit" />
         </form>
     </div>
-    <div >
-        <div>
-            <h2><?php esc_html_e('wp_dog_pedigree_list_pedigree','wp-dog-pedigree'); ?></h2>
-            <table class="admin-table">
-                <caption><?php esc_html_e('wp_dog_pedigree_table_caption','wp-dog-pedigree'); ?></caption>
-                <tr class="admin-table">
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_id','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_name','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_owner','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_breeder','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_gender','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_color','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_hdvalue','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_furtype','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_champion','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_mchamp','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_father','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_mother','wp-dog-pedigree'); ?></th>
-                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_actions','wp-dog-pedigree'); ?></th>
-                </tr>
-            <?php
-                global $wpdb;
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree ORDER BY ID DESC LIMIT 10");
-                foreach ( $result as $row ) {
-                    if($row->fur_type == 1){ $furtypehtml = __('wp_dog_pedigree_lang_longhair','wp-dog-pedigree');} else { $furtypehtml = __('wp_dog_pedigree_lang_shorthair','wp-dog-pedigree');}
-                    if($row->gender == 0){ $genderhtml =  __('wp_dog_pedigree_table_male','wp-dog-pedigree');} else { $genderhtml = __('wp_dog_pedigree_table_female','wp-dog-pedigree');}
-                    if($row->champion == 0){ $championhtml =  __('wp_dog_pedigree_lang_no','wp-dog-pedigree');} else { $championhtml = __('wp_dog_pedigree_lang_yes','wp-dog-pedigree');}
-                    if($row->multi == 0){ $multihtml =  __('wp_dog_pedigree_lang_no','wp-dog-pedigree');} else { $multihtml = __('wp_dog_pedigree_lang_yes','wp-dog-pedigree');}
-                    switch ($row->color) {
-                        case "Red":
-                            $colorhtml = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
-                            break;
-                        case "Black":
-                            $colorhtml = __('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree');
-                            break;
-                        case "Blue":
-                            $colorhtml = __('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree');
-                            break;
-                        case "Cream":
-                            $colorhtml = __('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree');
-                            break;
-                        case "Fawn":
-                            $colorhtml = __('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree');
-                            break;
-                        default:
-                            $colorhtml = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
-                    }
-                    echo "<tr class='admin-table'>";
-                    echo "<td class='admin-table'>$row->ID</td>";
-                    echo "<td class='admin-table'>$row->name</td>";
-                    echo "<td class='admin-table'>$row->owner</td>";
-                    echo "<td class='admin-table'>$row->breeder</td>";
-                    echo "<td class='admin-table'>$genderhtml</td>";
-                    echo "<td class='admin-table'>$colorhtml</td>";
-                    echo "<td class='admin-table'>$row->HD_value</td>";
-                    echo "<td class='admin-table'>$furtypehtml</td>";
-                    echo "<td class='admin-table'>$championhtml</td>";
-                    echo "<td class='admin-table'>$multihtml</td>";
-                    echo "<td class='admin-table'>$row->father</td>";
-                    echo "<td class='admin-table'>$row->mother</td>";
-                    $link = admin_url('admin-post.php?action=delete_pedigree&id=' . $row->ID);
-                    $string = '<td class="admin-table"><center><a href="%s"><i class="trashcans"></i></a></center></td>';
-                    echo sprintf($string, $link);
-                    echo "</tr>";
-                }
-            ?>
-            </table>
-        </div>
+    <div class="wp-dog-pedigree-form">
+        <h2><?php esc_html_e('wp_dog_pedigree_lang_add-pedigree_owner','wp-dog-pedigree'); ?></h2>
+        <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
+            <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="name" id="name" />
+            <label for="street"><?php esc_html_e('wp_dog_pedigree_lang_street','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="street" id="street" />
+            <label for="zip"><?php esc_html_e('wp_dog_pedigree_lang_zip','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="zip" id="zip" />
+            <label for="city"><?php esc_html_e('wp_dog_pedigree_lang_city','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="city" id="city" />
+            <label for="country"><?php esc_html_e('wp_dog_pedigree_lang_country','wp-dog-pedigree'); ?>:</label>
+            <select name="country" id="country">
+                <option value="Germany"><?php esc_html_e('wp_dog_pedigree_lang_country_germany','wp-dog-pedigree'); ?></option>
+                <option value="Austria"><?php esc_html_e('wp_dog_pedigree_lang_country_austria','wp-dog-pedigree'); ?></option>
+                <option value="Switzerland"><?php esc_html_e('wp_dog_pedigree_lang_country_switzerland','wp-dog-pedigree'); ?></option>
+                <option value="Netherlands"><?php esc_html_e('wp_dog_pedigree_lang_country_netherlands','wp-dog-pedigree'); ?></option>
+                <option value="France"><?php esc_html_e('wp_dog_pedigree_lang_country_france','wp-dog-pedigree'); ?></option>
+            </select>
+            <label for="phone"><?php esc_html_e('wp_dog_pedigree_lang_phone','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="phone" id="phone" />
+            <label for="mobile"><?php esc_html_e('wp_dog_pedigree_lang_mobile','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="mobile" id="mobile" />
+            <label for="email"><?php esc_html_e('wp_dog_pedigree_lang_email','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="email" id="email" />
+            <label for="website"><?php esc_html_e('wp_dog_pedigree_lang_website','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="website" id="website" />
+            <input type="hidden" name="action" value="submit_add_pedigree_dog_owner">
+            <input type="submit" value="Submit" />
+        </form>
     </div>
 </div>
+
+<?php
+    /**
+    * Function to get all dog owners
+    **/
+    function wp_dog_pedigree_get_all_dog_owners() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'wp_dog_pedigree_dog_owner';
+        $results = $wpdb->get_results( "SELECT ID, name FROM $table_name" );
+        return $results;
+    }
+?>

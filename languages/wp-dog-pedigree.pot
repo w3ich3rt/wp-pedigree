@@ -229,3 +229,11 @@ msgstr ""
 #: includes/wp-dog-pedigree-functions.php:60
 msgid "List Dogs"
 msgstr ""
+
+#: includes/wp-dog-pedigree-functions.php:67
+msgid "List Owner"
+msgstr ""
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_update_sql_message"
+msgstr "There is no update for SQL custom table for the dog pedigree plugin."
