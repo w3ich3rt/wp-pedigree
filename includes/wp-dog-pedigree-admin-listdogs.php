@@ -21,7 +21,7 @@
                 </tr>
             <?php
                 global $wpdb;
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree");
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs");
                 foreach ( $result as $row ) {
                     if($row->fur_type == 1){ $furtypehtml = __('wp_dog_pedigree_lang_longhair','wp-dog-pedigree');} else { $furtypehtml = __('wp_dog_pedigree_lang_shorthair','wp-dog-pedigree');}
                     if($row->gender == 0){ $genderhtml =  __('wp_dog_pedigree_table_male','wp-dog-pedigree');} else { $genderhtml = __('wp_dog_pedigree_table_female','wp-dog-pedigree');}

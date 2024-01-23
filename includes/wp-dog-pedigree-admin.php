@@ -67,6 +67,8 @@
             <input type="text" name="studbook_nr" id="studbook_nr" />
             <label for="shoulder_height"><?php esc_html_e('wp_dog_pedigree_lang_shoulderheight','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="shoulder_height" id="shoulder_height" />
+            <label for="dog_breed_conditions"><?php esc_html_e('wp_dog_pedigree_lang_breedconditions','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="dog_breed_conditions" id="dog_breed_conditions" />
             <input type="hidden" name="action" value="submit_add_pedigree">
             <input type="submit" value="Submit" />
         </form>
