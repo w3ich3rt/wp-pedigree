@@ -9,8 +9,8 @@
         <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
             <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="name" id="name" />
-            <label for="dogimage"><?php esc_html_e('wp_dog_pedigree_lang_dogimage','wp-dog-pedigree'); ?>:</label>
-            <input type="file" name="dogimage" id="dogimage" />
+            <!-- <label for="dogimage"><?php //esc_html_e('wp_dog_pedigree_lang_dogimage','wp-dog-pedigree'); ?>:</label>
+            <input type="file" name="dogimage" id="dogimage" />-->
             <label for="owner"><?php esc_html_e('wp_dog_pedigree_lang_owner','wp-dog-pedigree'); ?>:</label>
             <select name="owner" id="owner">
                 <?php
@@ -96,7 +96,7 @@
     <div class="wp-dog-pedigree-form">
         <h2><?php esc_html_e('wp_dog_pedigree_lang_add-pedigree_owner','wp-dog-pedigree'); ?></h2>
         <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
-            <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
+            <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_owner_name','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="name" id="name" />
             <label for="street"><?php esc_html_e('wp_dog_pedigree_lang_street','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="street" id="street" />

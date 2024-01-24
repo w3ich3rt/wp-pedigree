@@ -234,6 +234,106 @@ msgstr ""
 msgid "List Owner"
 msgstr ""
 
+#: includes/wp-dog-pedigree-functions.php:67
+msgid "List Titles"
+msgstr ""
+
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_update_sql_message"
 msgstr "There is no update for SQL custom table for the dog pedigree plugin."
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_studdog"
+msgstr "Breeding dog"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_hd"
+msgstr "HD value"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_birthday"
+msgstr "Birthday"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_deathday"
+msgstr "Day of death"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_studbook"
+msgstr "Studbooknumber"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_shoulderheight"
+msgstr "Shoulderheight"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_breedconditions"
+msgstr "Breeding regulations"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_missingtooth"
+msgstr "Missing tooth"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_add-title"
+msgstr "Add dog title"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_title"
+msgstr "Title"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_owner_name"
+msgstr "Name of the owner"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_street"
+msgstr "Street"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_zip"
+msgstr "Zip"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_city"
+msgstr "City"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country"
+msgstr "Country"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_phone"
+msgstr "Phone"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_mobile"
+msgstr "Mobile"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_email"
+msgstr "E-Mail"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_website"
+msgstr "Website"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_germany"
+msgstr "Germany"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_austria"
+msgstr "Austria"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_switzerland"
+msgstr "Switzerland"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_netherlands"
+msgstr "Netherlands"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_france"
+msgstr "France"
