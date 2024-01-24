@@ -6,9 +6,9 @@ function wp_dog_pedigree_deinstall() {
 	global $wpdb;
 	global $wp_dog_pedigree_db;
 	$tables = array(
+		$wpdb->prefix . 'dogpedigree_titles',
 		$wpdb->prefix . 'dogpedigree_dogs',
-		$wpdb->prefix . 'dogpedigree_owners',
-		$wpdb->prefix . 'dogpedigree_titles'
+		$wpdb->prefix . 'dogpedigree_owners'
 	);
 	foreach ( $tables as $table ) {
 		$wpdb->query( "DROP TABLE IF EXISTS $table" );
