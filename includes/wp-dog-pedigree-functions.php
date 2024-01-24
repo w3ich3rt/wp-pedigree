@@ -39,8 +39,8 @@
     function wp_dog_pedigree_ACP_Menu_Page()
     {
         add_menu_page(
-            __('Dog Pedigree - Plugin','wp-pedigree'),
-            __('Dog Pedigree','wp-pedigree'),
+            __('Dog Pedigree - Plugin','wp-dog-pedigree'),
+            __('Dog Pedigree','wp-dog-pedigree'),
             'manage_options',
             'wp_dog_pedigree_Admin',
             'wp_dog_pedigree_Admin_Contents',
@@ -50,29 +50,29 @@
         //add submenu
         add_submenu_page(
             'wp_dog_pedigree_Admin',
-            __('Add Dogs','wp-pedigree'),
-            __('Add Dogs','wp-pedigree'),
+            __('Add Dogs','wp-dog-pedigree'),
+            __('Add Dogs','wp-dog-pedigree'),
             'manage_options',
             'wp_dog_pedigree_Admin',
             'wp_dog_pedigree_Admin_Contents');
         add_submenu_page(
             'wp_dog_pedigree_Admin',
-            __('List Dogs','wp-pedigree'),
-            __('List Dogs','wp-pedigree'),
+            __('List Dogs','wp-dog-pedigree'),
+            __('List Dogs','wp-dog-pedigree'),
             'manage_options',
             'wp_dog_pedigree_Admin_ListDogs',
             'wp_dog_pedigree_Admin_ListDogs');
         add_submenu_page(
             'wp_dog_pedigree_Admin',
-            __('List Owner','wp-pedigree'),
-            __('List Owner','wp-pedigree'),
+            __('List Owner','wp-dog-pedigree'),
+            __('List Owner','wp-dog-pedigree'),
             'manage_options',
             'wp_dog_pedigree_Admin_ListOwner',
             'wp_dog_pedigree_Admin_ListOwner');
         add_submenu_page(
             'wp_dog_pedigree_Admin',
-            __('List Titles','wp-pedigree'),
-            __('List Titles','wp-pedigree'),
+            __('List Titles','wp-dog-pedigree'),
+            __('List Titles','wp-dog-pedigree'),
             'manage_options',
             'wp_dog_pedigree_Admin_ListTitles',
             'wp_dog_pedigree_Admin_ListTitles');
