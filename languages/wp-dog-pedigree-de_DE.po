@@ -16,7 +16,7 @@ msgstr ""
 
 #. Plugin Name of the plugin
 msgid "Dog Pedigree"
-msgstr "Hunde Stammbaum"
+msgstr "Stammbaum"
 
 #. Plugin URI of the plugin
 msgid "https://www.wazishen.com/wp-dog-pedigree"
