@@ -76,6 +76,8 @@
             <input type="hidden" name="action" value="submit_add_pedigree">
             <input type="submit" value="Submit" />
         </form>
+    </div>
+    <div class="wp-dog-pedigree-form">
         <h2><?php esc_html_e('wp_dog_pedigree_lang_add-title','wp-dog-pedigree'); ?></h2>
         <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
             <label for="dogname"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
