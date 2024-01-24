@@ -138,7 +138,7 @@
 
             $table_name = $wpdb->prefix . 'dogpedigree_dogs';
             $dog_name = sanitize_text_field($_POST['name']);
-            $upload = wp_upload_bits($_FILES["userpic"]["name"], null, file_get_contents($_FILES["userpic"]["tmp_name"]));
+            $upload = wp_upload_bits($_FILES["dogimage"]["name"], null, file_get_contents($_FILES["dogimage"]["tmp_name"]));
             $dog_image = $upload['url'];
             $owner = sanitize_text_field($_POST['owner']);
             $breeder = sanitize_text_field($_POST['breeder']);
