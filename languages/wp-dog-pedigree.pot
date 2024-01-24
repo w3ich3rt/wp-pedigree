@@ -337,3 +337,7 @@ msgstr "Netherlands"
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_lang_country_france"
 msgstr "France"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_add-pedigree_owner"
+msgstr "Add a new owner"

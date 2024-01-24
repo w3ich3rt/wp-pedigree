@@ -96,8 +96,8 @@
     <div class="wp-dog-pedigree-form">
         <h2><?php esc_html_e('wp_dog_pedigree_lang_add-pedigree_owner','wp-dog-pedigree'); ?></h2>
         <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
-            <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_owner_name','wp-dog-pedigree'); ?>:</label>
-            <input type="text" name="name" id="name" />
+            <label for="ownername"><?php esc_html_e('wp_dog_pedigree_lang_owner_name','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="ownername" id="ownername" />
             <label for="street"><?php esc_html_e('wp_dog_pedigree_lang_street','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="street" id="street" />
             <label for="zip"><?php esc_html_e('wp_dog_pedigree_lang_zip','wp-dog-pedigree'); ?>:</label>
