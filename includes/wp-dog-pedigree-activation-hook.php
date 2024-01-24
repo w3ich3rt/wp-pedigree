@@ -14,6 +14,7 @@ function wp_dog_pedigree_db_install() {
 	$sql_dog_table = "CREATE TABLE IF NOT EXISTS $pedigree_table_dog (
 		ID mediumint(9) NOT NULL AUTO_INCREMENT,
 		name tinytext NOT NULL,
+		dog_image tinytext,
 		owner mediumint(9),
 		breeder tinytext,
 		gender bool NOT NULL,

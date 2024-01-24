@@ -69,6 +69,13 @@
             'manage_options',
             'wp_dog_pedigree_Admin_ListOwner',
             'wp_dog_pedigree_Admin_ListOwner');
+        add_submenu_page(
+            'wp_dog_pedigree_Admin',
+            __('List Titles','wp-pedigree'),
+            __('List Titles','wp-pedigree'),
+            'manage_options',
+            'wp_dog_pedigree_Admin_ListTitles',
+            'wp_dog_pedigree_Admin_ListTitles');
     }
 
 
@@ -87,6 +94,10 @@
         include_once('wp-dog-pedigree-admin-listowner.php');
     }
 
+    function wp_dog_pedigree_Admin_ListTitles() {
+        include_once('wp-dog-pedigree-admin-listtitles.php');
+    }
+
     /**
     * Import csv file to database_table
     **/
@@ -98,10 +109,14 @@
     **/
     add_action( 'admin_post_submit_add_pedigree', 'wp_dog_pedigree_admin_add_pedigree' );
     function wp_dog_pedigree_admin_add_pedigree() {
+        require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+        require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+        require_once(ABSPATH . "wp-admin" . '/includes/media.php');
         global $wpdb;
         if (
             !empty($_POST)
             && $_POST['name'] != ''
+            && $_POST['dogimage'] != ''
             && $_POST['owner'] != ''
             && $_POST['breeder'] != ''
             && $_POST['gender'] != ''
@@ -123,6 +138,8 @@
 
             $table_name = $wpdb->prefix . 'dogpedigree_dogs';
             $dog_name = sanitize_text_field($_POST['name']);
+            $upload = wp_upload_bits($_FILES["userpic"]["name"], null, file_get_contents($_FILES["userpic"]["tmp_name"]));
+            $dog_image = $upload['url'];
             $owner = sanitize_text_field($_POST['owner']);
             $breeder = sanitize_text_field($_POST['breeder']);
             $gender = sanitize_text_field($_POST['gender']);
@@ -145,6 +162,7 @@
                 $table_name,
                 array(
                     'name' => $dog_name,
+                    'dog_image' => $dog_image,
                     'owner' => $owner,
                     'breeder' => $breeder,
                     'gender' => $gender,
@@ -172,6 +190,36 @@
         }
     }
 
+    /**
+    * Add a new title to the dog_title database_table
+    **/
+    add_action( 'admin_post_submit_add_title', 'wp_dog_pedigree_admin_add_pedigree_dog_title' );
+    function wp_dog_pedigree_admin_add_pedigree_dog_title() {
+        global $wpdb;
+        if (
+            !empty($_POST)
+            && $_POST['dogname'] != ''
+            && $_POST['title'] != ''
+        ) {
+
+            $table_name = $wpdb->prefix . 'dogpedigree_dog_title';
+            $title = sanitize_text_field($_POST['title']);
+            $dogname = sanitize_text_field($_POST['dogname']);
+            
+            $success=$wpdb->insert(
+                $table_name,
+                array(
+                    'title' => $title,
+                    'dogid' => $dogname
+                )
+            );
+            if ($success) {
+                wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=true' ) );
+            } else {
+                wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=false' ) );
+            }
+        }
+    }
 
     /**
     * Add a new owner to the database_table

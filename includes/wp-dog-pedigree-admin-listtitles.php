@@ -6,12 +6,12 @@
                 <caption><?php esc_html_e('wp_dog_pedigree_table_caption_listdogs','wp-dog-pedigree'); ?></caption>
                 <tr class="admin-table">
                     <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_id','wp-dog-pedigree'); ?></th>
-                    
+
                     <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_actions','wp-dog-pedigree'); ?></th>
                 </tr>
             <?php
                 global $wpdb;
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_owners");
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs");
                 foreach ( $result as $row ) {
                     if($row->fur_type == 1){ $furtypehtml = __('wp_dog_pedigree_lang_longhair','wp-dog-pedigree');} else { $furtypehtml = __('wp_dog_pedigree_lang_shorthair','wp-dog-pedigree');}
                     if($row->gender == 0){ $genderhtml =  __('wp_dog_pedigree_table_male','wp-dog-pedigree');} else { $genderhtml = __('wp_dog_pedigree_table_female','wp-dog-pedigree');}
@@ -38,6 +38,16 @@
                     }
                     echo "<tr class='admin-table'>";
                     echo "<td class='admin-table'>$row->ID</td>";
+                    echo "<td class='admin-table'>$row->name</td>";
+                    echo "<td class='admin-table'>$row->owner</td>";
+                    echo "<td class='admin-table'>$row->breeder</td>";
+                    echo "<td class='admin-table'>$genderhtml</td>";
+                    echo "<td class='admin-table'>$colorhtml</td>";
+                    echo "<td class='admin-table'>$row->HD_value</td>";
+                    echo "<td class='admin-table'>$furtypehtml</td>";
+                    echo "<td class='admin-table'>$championhtml</td>";
+                    echo "<td class='admin-table'>$multihtml</td>";
+                    echo "<td class='admin-table'>$row->father</td>";
                     echo "<td class='admin-table'>$row->mother</td>";
                     $link = admin_url('admin-post.php?action=delete_pedigree&id=' . $row->ID);
                     $string = '<td class="admin-table"><center><a href="%s"><i class="trashcans"></i></a></center></td>';

@@ -9,6 +9,8 @@
         <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
             <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="name" id="name" />
+            <label for="dogimage"><?php esc_html_e('wp_dog_pedigree_lang_dogimage','wp-dog-pedigree'); ?>:</label>
+            <input type="file" name="dogimage" id="dogimage" />
             <label for="owner"><?php esc_html_e('wp_dog_pedigree_lang_owner','wp-dog-pedigree'); ?>:</label>
             <select name="owner" id="owner">
                 <?php
@@ -74,6 +76,22 @@
             <input type="hidden" name="action" value="submit_add_pedigree">
             <input type="submit" value="Submit" />
         </form>
+        <h2><?php esc_html_e('wp_dog_pedigree_lang_add-title','wp-dog-pedigree'); ?></h2>
+        <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
+            <label for="dogname"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
+            <select name="dogname" id="dogname">
+                <?php
+                    $results = wp_dog_pedigree_get_all_dog_names();
+                    foreach ($results as $result) {
+                        echo '<option value="' . $result->ID . '">' . $result->name . '</option>';
+                    }
+                ?>
+            </select>
+            <label for="title"><?php esc_html_e('wp_dog_pedigree_lang_title','wp-dog-pedigree'); ?>:</label>
+            <input type="text" name="title" id="title" />
+            <input type="hidden" name="action" value="submit_add_title">
+            <input type="submit" value="Submit" />
+        </form>
     </div>
     <div class="wp-dog-pedigree-form">
         <h2><?php esc_html_e('wp_dog_pedigree_lang_add-pedigree_owner','wp-dog-pedigree'); ?></h2>
@@ -115,6 +133,15 @@
     function wp_dog_pedigree_get_all_dog_owners() {
         global $wpdb;
         $table_name = $wpdb->prefix . 'dogpedigree_owners';
+        $results = $wpdb->get_results( "SELECT ID, name FROM $table_name" );
+        return $results;
+    }
+    /**
+    * Function to get all dog names
+    **/
+    function wp_dog_pedigree_get_all_dog_names() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'dogpedigree_dogs';
         $results = $wpdb->get_results( "SELECT ID, name FROM $table_name" );
         return $results;
     }
