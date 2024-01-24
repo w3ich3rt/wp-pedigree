@@ -109,14 +109,14 @@
     **/
     add_action( 'admin_post_submit_add_pedigree', 'wp_dog_pedigree_admin_add_pedigree' );
     function wp_dog_pedigree_admin_add_pedigree() {
-        require_once(ABSPATH . "wp-admin" . '/includes/image.php');
-        require_once(ABSPATH . "wp-admin" . '/includes/file.php');
-        require_once(ABSPATH . "wp-admin" . '/includes/media.php');
+        //require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+        //require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+        //require_once(ABSPATH . "wp-admin" . '/includes/media.php');
         global $wpdb;
         if (
             !empty($_POST)
             && $_POST['name'] != ''
-            && $_POST['dogimage'] != ''
+            //&& $_POST['dogimage'] != ''
             && $_POST['owner'] != ''
             && $_POST['breeder'] != ''
             && $_POST['gender'] != ''
@@ -138,8 +138,8 @@
 
             $table_name = $wpdb->prefix . 'dogpedigree_dogs';
             $dog_name = sanitize_text_field($_POST['name']);
-            $upload = wp_upload_bits($_FILES["dogimage"]["name"], null, file_get_contents($_FILES["dogimage"]["tmp_name"]));
-            $dog_image = $upload['url'];
+            //$upload = wp_upload_bits($_FILES["dogimage"]["name"], null, file_get_contents($_FILES["dogimage"]["tmp_name"]));
+            //$dog_image = $upload['url'];
             $owner = sanitize_text_field($_POST['owner']);
             $breeder = sanitize_text_field($_POST['breeder']);
             $gender = sanitize_text_field($_POST['gender']);
@@ -162,7 +162,7 @@
                 $table_name,
                 array(
                     'name' => $dog_name,
-                    'dog_image' => $dog_image,
+                    //'dog_image' => $dog_image,
                     'owner' => $owner,
                     'breeder' => $breeder,
                     'gender' => $gender,
