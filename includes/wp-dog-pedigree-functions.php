@@ -109,9 +109,6 @@
     **/
     add_action( 'admin_post_submit_add_pedigree', 'wp_dog_pedigree_admin_add_pedigree' );
     function wp_dog_pedigree_admin_add_pedigree() {
-        //require_once(ABSPATH . "wp-admin" . '/includes/image.php');
-        //require_once(ABSPATH . "wp-admin" . '/includes/file.php');
-        //require_once(ABSPATH . "wp-admin" . '/includes/media.php');
         global $wpdb;
         if (
             !empty($_POST)
@@ -138,7 +135,7 @@
 
             $table_name = $wpdb->prefix . 'dogpedigree_dogs';
             $dog_name = sanitize_text_field($_POST['name']);
-            $upload = media_handle_upload('wp_dog_pedigree_dogimage', 0);
+            $upload = media_handle_upload($_POST['wp_dog_pedigree_dogimage'], 0);
             $owner = sanitize_text_field($_POST['owner']);
             $breeder = sanitize_text_field($_POST['breeder']);
             $gender = sanitize_text_field($_POST['gender']);
@@ -157,8 +154,8 @@
             $studbook_nr = sanitize_text_field($_POST['studbook_nr']);
             $shoulder_height = sanitize_text_field($_POST['shoulder_height']);
 
-            if(is_wp_error($uploaded)){
-                echo "Error uploading file: " . $uploaded->get_error_message();
+            if(is_wp_error($upload)){
+                echo "Error uploading file: " . $upload->get_error_message();
             }else{
                 echo "File upload successful!";
             }
