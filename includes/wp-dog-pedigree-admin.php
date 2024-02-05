@@ -6,7 +6,7 @@
     </div>
     <div class="wp-dog-pedigree-form">
         <h2><?php esc_html_e('wp_dog_pedigree_lang_add-pedigree','wp-dog-pedigree'); ?></h2>
-        <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
+        <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post" enctype="multipart/form-data">
             <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="name" id="name" />
             <label for="wp_dog_pedigree_dogimage"><?php esc_html_e('wp_dog_pedigree_dogimage','wp-dog-pedigree'); ?>:</label>

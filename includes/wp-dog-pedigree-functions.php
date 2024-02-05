@@ -109,6 +109,9 @@
     **/
     add_action( 'admin_post_submit_add_pedigree', 'wp_dog_pedigree_admin_add_pedigree' );
     function wp_dog_pedigree_admin_add_pedigree() {
+        require_once( ABSPATH . 'wp-admin/includes/image.php' );
+        require_once( ABSPATH . 'wp-admin/includes/file.php' );
+        require_once( ABSPATH . 'wp-admin/includes/media.php' );
         global $wpdb;
         if (
             !empty($_POST)
