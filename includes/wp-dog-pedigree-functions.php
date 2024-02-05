@@ -116,7 +116,7 @@
         if (
             !empty($_POST)
             && $_POST['name'] != ''
-            && $_POST['dogimage'] != ''
+            && $_FILES['dogimage'] != ''
             && $_POST['owner'] != ''
             && $_POST['breeder'] != ''
             && $_POST['gender'] != ''
@@ -162,11 +162,14 @@
                 echo "File upload successful!";
             }
 
+            $file_url = $attachment_id['url'];
+
             $success=$wpdb->insert(
                 $table_name,
                 array(
                     'name' => $dog_name,
                     'owner' => $owner,
+                    'dog_image' => $file_url, 
                     'breeder' => $breeder,
                     'gender' => $gender,
                     'color' => $color,
