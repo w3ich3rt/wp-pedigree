@@ -9,8 +9,8 @@
         <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
             <label for="name"><?php esc_html_e('wp_dog_pedigree_lang_dogname','wp-dog-pedigree'); ?>:</label>
             <input type="text" name="name" id="name" />
-            <!-- <label for="dogimage"><?php //esc_html_e('wp_dog_pedigree_lang_dogimage','wp-dog-pedigree'); ?>:</label>
-            <input type="file" name="dogimage" id="dogimage" />-->
+            <label for="wp_dog_pedigree_dogimage"><?php esc_html_e('wp_dog_pedigree_dogimage','wp-dog-pedigree'); ?>:</label>
+            <input type='file' id='wp_dog_pedigree_dogimage' name='wp_dog_pedigree_dogimage'></input>
             <label for="owner"><?php esc_html_e('wp_dog_pedigree_lang_owner','wp-dog-pedigree'); ?>:</label>
             <select name="owner" id="owner">
                 <?php

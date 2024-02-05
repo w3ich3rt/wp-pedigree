@@ -116,7 +116,7 @@
         if (
             !empty($_POST)
             && $_POST['name'] != ''
-            //&& $_POST['dogimage'] != ''
+            && $_POST['wp_dog_pedigree_dogimage'] != ''
             && $_POST['owner'] != ''
             && $_POST['breeder'] != ''
             && $_POST['gender'] != ''
@@ -138,8 +138,7 @@
 
             $table_name = $wpdb->prefix . 'dogpedigree_dogs';
             $dog_name = sanitize_text_field($_POST['name']);
-            //$upload = wp_upload_bits($_FILES["dogimage"]["name"], null, file_get_contents($_FILES["dogimage"]["tmp_name"]));
-            //$dog_image = $upload['url'];
+            $upload = media_handle_upload('wp_dog_pedigree_dogimage', 0);
             $owner = sanitize_text_field($_POST['owner']);
             $breeder = sanitize_text_field($_POST['breeder']);
             $gender = sanitize_text_field($_POST['gender']);
@@ -158,11 +157,16 @@
             $studbook_nr = sanitize_text_field($_POST['studbook_nr']);
             $shoulder_height = sanitize_text_field($_POST['shoulder_height']);
 
+            if(is_wp_error($uploaded)){
+                echo "Error uploading file: " . $uploaded->get_error_message();
+            }else{
+                echo "File upload successful!";
+            }
+
             $success=$wpdb->insert(
                 $table_name,
                 array(
                     'name' => $dog_name,
-                    //'dog_image' => $dog_image,
                     'owner' => $owner,
                     'breeder' => $breeder,
                     'gender' => $gender,
