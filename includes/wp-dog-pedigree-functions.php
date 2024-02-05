@@ -162,14 +162,14 @@
                 echo "File upload successful!";
             }
 
-            $file_url = $attachment_id['url'];
+            $file_url = wp_get_attachment_url($attachment_id);
 
             $success=$wpdb->insert(
                 $table_name,
                 array(
                     'name' => $dog_name,
                     'owner' => $owner,
-                    'dog_image' => $file_url, 
+                    'dog_image' => $file_url,
                     'breeder' => $breeder,
                     'gender' => $gender,
                     'color' => $color,
