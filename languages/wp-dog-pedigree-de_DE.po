@@ -372,7 +372,11 @@ msgstr "Championtitel"
 
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_table_image"
-msgstr ""
+msgstr " "
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_dogimage"
+msgstr "Bild des Hundes"
 
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_table_studdog"
