@@ -34,6 +34,6 @@
 function wp_dog_pedigree_get_dogname($id) {
     global $wpdb;
     $result = $wpdb->get_results( "SELECT name FROM {$wpdb->prefix}dogpedigree_dogs WHERE ID = $id");
-    return $result;
+    return $result[0]->name;
 }
 ?>
