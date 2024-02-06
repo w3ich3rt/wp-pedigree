@@ -287,8 +287,42 @@
             array( 'ID' => $_GET['id'] )
         );
         if ($success) {
-            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=true' ) );
+            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin_ListDogs&success=true' ) );
         } else {
-            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin&success=false' ) );
+            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin_ListDogs&success=false' ) );
+        }
+    }
+
+    /**
+    * Delete a title from the database_table
+    **/
+    add_action( 'admin_post_delete_title', 'wp_dog_pedigree_admin_delete_title' );
+    function wp_dog_pedigree_admin_delete_title() {
+        global $wpdb;
+        $success=$wpdb->delete(
+            $wpdb->prefix . 'dogpedigree_titles',
+            array( 'ID' => $_GET['id'] )
+        );
+        if ($success) {
+            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin_ListTitles&success=true' ) );
+        } else {
+            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin_ListTitles&success=false' ) );
+        }
+    }
+
+    /**
+    * Delete a owner from the database_table
+    **/
+    add_action( 'admin_post_delete_owner', 'wp_dog_pedigree_admin_delete_owner' );
+    function wp_dog_pedigree_admin_delete_owner() {
+        global $wpdb;
+        $success=$wpdb->delete(
+            $wpdb->prefix . 'dogpedigree_owners',
+            array( 'ID' => $_GET['id'] )
+        );
+        if ($success) {
+            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin_ListOwner&success=true' ) );
+        } else {
+            wp_redirect( admin_url( 'admin.php?page=wp_dog_pedigree_Admin_ListOwner&success=false' ) );
         }
     }

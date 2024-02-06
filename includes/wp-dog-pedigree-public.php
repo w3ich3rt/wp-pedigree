@@ -93,6 +93,15 @@
 
         $pedigree = wp_dog_pedigree_generate_pedigree_dictionary($id);
 
+        $output = wp_dog_pedigree_build_htmltable($pedigree);
+
+        return $output;
+    }
+
+    /**
+    * Build pedigree html table
+    **/
+    function wp_dog_pedigree_build_htmltable($pedigree) {
         $output = '<div class="dog-pedigree">';
         $output .= '<table class="dog-pedigree-table">';
         $output .= '<tr>';
@@ -128,9 +137,7 @@
         $output .= '</table>';
         $output .= '</div>';
 
-
         return $output;
     }
-
 
 
