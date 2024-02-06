@@ -208,7 +208,7 @@
             && $_POST['title'] != ''
         ) {
 
-            $table_name = $wpdb->prefix . 'dogpedigree_dog_title';
+            $table_name = $wpdb->prefix . 'dogpedigree_titles';
             $title = sanitize_text_field($_POST['title']);
             $dogname = sanitize_text_field($_POST['dogname']);
             
