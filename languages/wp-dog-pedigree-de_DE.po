@@ -341,3 +341,63 @@ msgstr "Frankreich"
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_lang_add-pedigree_owner"
 msgstr "Einen neuen Besitzer hinzufügen"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_address"
+msgstr "Adresse"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_country"
+msgstr "Land"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_phone"
+msgstr "Telefon"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_mobile"
+msgstr "Handy"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_email"
+msgstr "E-Mailadresse"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_website"
+msgstr "Webseite"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_title"
+msgstr "Championtitel"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_image"
+msgstr ""
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_studdog"
+msgstr "Zuchtzulassung"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_dog_breed_conditions"
+msgstr "Zuctauflagen"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_dog_miss_tooth"
+msgstr "Fehlzahn"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_birthday"
+msgstr "Geburtstag"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_deathday"
+msgstr "Todestag"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_studbook_nr"
+msgstr "ZuchtbuchNr."
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_shoulderheight"
+msgstr "Schulterhöhe"

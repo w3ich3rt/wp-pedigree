@@ -341,3 +341,63 @@ msgstr "France"
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_lang_add-pedigree_owner"
 msgstr "Add a new owner"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_address"
+msgstr "Address"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_country"
+msgstr "Country"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_phone"
+msgstr "Phone"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_mobile"
+msgstr "Mobile"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_email"
+msgstr "E-Mailaddress"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_website"
+msgstr "Website"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_title"
+msgstr "Championtitle"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_image"
+msgstr ""
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_studdog"
+msgstr "Breeding license"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_dog_breed_conditions"
+msgstr "Breeding condtions"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_dog_miss_tooth"
+msgstr "Missing tooth"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_birthday"
+msgstr "Birthday"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_deathday"
+msgstr "Day of death"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_studbook_nr"
+msgstr "Studbooknr"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_shoulderheight"
+msgstr "Shoulderheight"
