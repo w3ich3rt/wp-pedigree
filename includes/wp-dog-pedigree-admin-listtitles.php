@@ -6,7 +6,8 @@
                 <caption><?php esc_html_e('wp_dog_pedigree_table_caption_listdogs','wp-dog-pedigree'); ?></caption>
                 <tr class="admin-table">
                     <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_id','wp-dog-pedigree'); ?></th>
-
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_name','wp-dog-pedigree'); ?></th>
+                    <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_title','wp-dog-pedigree'); ?></th>
                     <th class="admin-table"><?php esc_html_e('wp_dog_pedigree_table_actions','wp-dog-pedigree'); ?></th>
                 </tr>
             <?php
@@ -16,7 +17,7 @@
                     
                     echo "<tr class='admin-table'>";
                     echo "<td class='admin-table'>$row->ID</td>";
-                    echo "<td class='admin-table'>" + wp_dog_pedigree_get_dogname($row->dogid) + "</td>";
+                    echo "<td class='admin-table'>" . wp_dog_pedigree_get_dogname($row->dogid) . "</td>";
                     echo "<td class='admin-table'>$row->title</td>";
                     $link = admin_url('admin-post.php?action=delete_title&id=' . $row->ID);
                     $string = '<td class="admin-table"><center><a href="%s"><i class="trashcans"></i></a></center></td>';

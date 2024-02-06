@@ -22,8 +22,8 @@
                     echo "<tr class='admin-table'>";
                     echo "<td class='admin-table'>$row->ID</td>";
                     echo "<td class='admin-table'>$row->name</td>";
-                    echo "<td class='admin-table'>$row->street, $row->zip $row->city, $row->country</td>";
                     echo "<td class='admin-table'>$row->street, $row->zip $row->city</td>";
+                    echo "<td class='admin-table'>$row->country</td>";
                     echo "<td class='admin-table'>$row->phone</td>";
                     echo "<td class='admin-table'>$row->mobile</td>";
                     echo "<td class='admin-table'><a href='mailto:$row->email'>$row->email</a></td>";

@@ -59,7 +59,7 @@
                     echo "<td class='admin-table'><img src='$row->dog_image' width='64px'/></td>";
                     echo "<td class='admin-table'>$row->ID</td>";
                     echo "<td class='admin-table'>$row->name</td>";
-                    echo "<td class='admin-table'>" + wp_dog_pedigree_get_dogowner_by_ownerId($row->owner) + "</td>";
+                    echo "<td class='admin-table'>" . wp_dog_pedigree_get_dogowner_by_ownerId($row->owner) . "</td>";
                     echo "<td class='admin-table'>$row->breeder</td>";
                     echo "<td class='admin-table'>$genderhtml</td>";
                     echo "<td class='admin-table'>$colorhtml</td>";

@@ -235,7 +235,7 @@
         global $wpdb;
         if (
             !empty($_POST)
-            && $_POST['name'] != ''
+            && $_POST['ownername'] != ''
             && $_POST['street'] != ''
             && $_POST['zip'] != ''
             && $_POST['city'] != ''
@@ -243,10 +243,11 @@
             && $_POST['phone'] != ''
             && $_POST['mobile'] != ''
             && $_POST['email'] != ''
+            && $_POST['website'] != ''
         ) {
 
             $table_name = $wpdb->prefix . 'dogpedigree_owners';
-            $owner_name = sanitize_text_field($_POST['name']);
+            $owner_name = sanitize_text_field($_POST['ownername']);
             $street = sanitize_text_field($_POST['street']);
             $zip = sanitize_text_field($_POST['zip']);
             $city = sanitize_text_field($_POST['city']);
@@ -254,6 +255,8 @@
             $phone = sanitize_text_field($_POST['phone']);
             $mobile = sanitize_text_field($_POST['mobile']);
             $email = sanitize_text_field($_POST['email']);
+            $website = sanitize_text_field($_POST['website']);
+
             
             $success=$wpdb->insert(
                 $table_name,
@@ -265,7 +268,8 @@
                     'country' => $country,
                     'phone' => $phone,
                     'mobile' => $mobile,
-                    'email' => $email
+                    'email' => $email,
+                    'website' => $website
                 )
             );
             if ($success) {
