@@ -255,7 +255,7 @@
             $phone = sanitize_text_field($_POST['phone']);
             $mobile = sanitize_text_field($_POST['mobile']);
             $email = sanitize_text_field($_POST['email']);
-            $website = sanitize_text_field($_POST['website']);
+            $website = "https://" . sanitize_text_field($_POST['website']);
 
             
             $success=$wpdb->insert(
