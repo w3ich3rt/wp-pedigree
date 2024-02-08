@@ -5,13 +5,12 @@ $wp_dog_pedigree_db = '1.0.0';
 function wp_dog_pedigree_deinstall() {
 	global $wpdb;
 	global $wp_dog_pedigree_db;
-
-	$table_name = $wpdb->prefix . 'dogpedigree';
-	
-	$charset_collate = $wpdb->get_charset_collate();
-
-	$sql = "DROP TABLE IF EXISTS $table_name;";
-
-	require_once ABSPATH . 'wp-admin/includes/upgrade.php';
-	dbDelta( $sql );
+	$tables = array(
+		$wpdb->prefix . 'dogpedigree_titles',
+		$wpdb->prefix . 'dogpedigree_dogs',
+		$wpdb->prefix . 'dogpedigree_owners'
+	);
+	foreach ( $tables as $table ) {
+		$wpdb->query( "DROP TABLE IF EXISTS $table" );
+	}
 }

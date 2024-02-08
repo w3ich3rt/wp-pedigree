@@ -148,7 +148,11 @@ msgstr "List of all pedigrees"
 
 #: includes/wp-dog-pedigree-admin.php:60
 msgid "wp_dog_pedigree_table_caption"
-msgstr "List of all currently dog pedigrees."
+msgstr "List of the last 10 added dog pedigrees."
+
+#: includes/wp-dog-pedigree-admin-listdogs.php:6
+msgid "wp_dog_pedigree_table_caption_listdogs"
+msgstr "List of all dog-pedigrees in the database."
 
 #: includes/wp-dog-pedigree-admin.php:62
 msgid "wp_dog_pedigree_table_id"
@@ -190,6 +194,14 @@ msgstr "Champion"
 msgid "wp_dog_pedigree_table_mchamp"
 msgstr "Multi-Champion"
 
+#: includes/wp-dog-pedigree-public.php:79
+msgid "wp_dog_pedigree_table_champion_short"
+msgstr "Ch."
+
+#: includes/wp-dog-pedigree-public.php:80
+msgid "wp_dog_pedigree_table_mchamp_short"
+msgstr "Multi Ch."
+
 #: includes/wp-dog-pedigree-admin.php:72
 msgid "wp_dog_pedigree_table_father"
 msgstr "Father"
@@ -210,3 +222,186 @@ msgstr "Male"
 msgid "wp_dog_pedigree_table_female"
 msgstr "Female"
 
+#: includes/wp-dog-pedigree-functions.php:53
+msgid "Add Dogs"
+msgstr ""
+
+#: includes/wp-dog-pedigree-functions.php:60
+msgid "List Dogs"
+msgstr ""
+
+#: includes/wp-dog-pedigree-functions.php:67
+msgid "List Owner"
+msgstr ""
+
+#: includes/wp-dog-pedigree-functions.php:67
+msgid "List Titles"
+msgstr ""
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_update_sql_message"
+msgstr "There is no update for SQL custom table for the dog pedigree plugin."
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_studdog"
+msgstr "Breeding dog"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_hd"
+msgstr "HD value"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_birthday"
+msgstr "Birthday"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_deathday"
+msgstr "Day of death"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_studbook"
+msgstr "Studbooknumber"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_shoulderheight"
+msgstr "Shoulderheight"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_breedconditions"
+msgstr "Breeding regulations"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_missingtooth"
+msgstr "Missing tooth"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_add-title"
+msgstr "Add dog title"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_title"
+msgstr "Title"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_owner_name"
+msgstr "Name of the owner"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_street"
+msgstr "Street"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_zip"
+msgstr "Zip"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_city"
+msgstr "City"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country"
+msgstr "Country"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_phone"
+msgstr "Phone"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_mobile"
+msgstr "Mobile"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_email"
+msgstr "E-Mail"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_website"
+msgstr "Website"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_germany"
+msgstr "Germany"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_austria"
+msgstr "Austria"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_switzerland"
+msgstr "Switzerland"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_netherlands"
+msgstr "Netherlands"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_country_france"
+msgstr "France"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_lang_add-pedigree_owner"
+msgstr "Add a new owner"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_address"
+msgstr "Address"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_country"
+msgstr "Country"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_phone"
+msgstr "Phone"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_mobile"
+msgstr "Mobile"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_email"
+msgstr "E-Mailaddress"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_website"
+msgstr "Website"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_title"
+msgstr "Championtitle"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_dogimage"
+msgstr "Image of the dog"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_image"
+msgstr " "
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_studdog"
+msgstr "Breeding license"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_dog_breed_conditions"
+msgstr "Breeding condtions"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_dog_miss_tooth"
+msgstr "Missing tooth"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_birthday"
+msgstr "Birthday"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_deathday"
+msgstr "Day of death"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_studbook_nr"
+msgstr "Studbooknr"
+
+#: includes/wp-dog-pedigree-activation-hook.php:54
+msgid "wp_dog_pedigree_table_shoulderheight"
+msgstr "Shoulderheight"
