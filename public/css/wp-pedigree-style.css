@@ -159,15 +159,25 @@ i.trashcans:hover {
 	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
+.studdog hr{
+	border: 1px solid #005097;
+}
 
-.studdog-image {
+.studdog-image img {
+	width: auto;
 	height: 200px;
 }
 
 .studdog-owner {
-	height: 200px;
+	font-size: 15px;
+	padding: 0px;
+}
+.studdog-owner h1 {
+	font-size: 20px;
+	padding: 0px;
 }
 
 .studdog-dog {
-	font-size: 14px;
+	font-size: 15px;
+	padding: 0px;
 }

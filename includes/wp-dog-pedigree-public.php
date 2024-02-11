@@ -189,6 +189,7 @@
             $output .= '<p>FB: ' . $studdog->fur_type . $studdog->color . '</p>';
             $output .= '<p>FZ: ' . $studdog->dog_miss_tooth . '</p>';
             $output .= '<p>AL: ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '<hr>';
             $output .= '</div>';
         }
         foreach ($studdogs_black as $studdog) {
@@ -214,6 +215,7 @@
             $output .= '<p>FB: ' . $studdog->fur_type . $studdog->color . '</p>';
             $output .= '<p>FZ: ' . $studdog->dog_miss_tooth . '</p>';
             $output .= '<p>AL: ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '<hr>';
             $output .= '</div>';
         }
         foreach ($studdogs_red as $studdog) {
@@ -239,6 +241,7 @@
             $output .= '<p>FB: ' . $studdog->fur_type . $studdog->color . '</p>';
             $output .= '<p>FZ: ' . $studdog->dog_miss_tooth . '</p>';
             $output .= '<p>AL: ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '<hr>';
             $output .= '</div>';
         }
         return $output;
