@@ -200,5 +200,8 @@ i.trashcans:hover {
 
 .wp-pedigree-info {
 	font-size: 18px;
-	padding: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-style: italic;
+	color: #09B2A0;
 }
