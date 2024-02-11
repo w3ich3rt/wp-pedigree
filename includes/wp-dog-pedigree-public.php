@@ -187,60 +187,68 @@
         $studdogs_foreign = wp_dog_pedigree_get_studdog('Foreigner');
         $output = '';
         $output .= '<h2>Kurzhaar-Deckrüden</h2>';//TODO: make this translatable
-        foreach ($studdogs_shorthair as $studdog) {
-            $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
-            $output .= '<div class="studdog">';
-            $output .= '<div class="studdog-image"' . $iamgestyle . '>';
-            $output .= '</div>';
-            $output .= '<div class="studdog-owner">';
-            $output .= '<h1>' . $studdog->name . '</h1>';
-            $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
-            $output .= '<p>' . $studdog->street . '<br />';
-            $output .= $studdog->zip . " " . $studdog->city . '</p>';
-            $output .= '<p>' . $studdog->phone . '</p>';
-            $output .= '<p>' . $studdog->mobile . '</p>';
-            $output .= '<p><a href="mailto:' . $studdog->email . '">'. $studdog->email . '</a></p>';
-            $output .= '<p><a href="https://' . $studdog->website . '" target="_blank">' . $studdog->website . '</a></p>';
-            $output .= '</div>';
-            $output .= '<div class="studdog-dog">';
-            $output .= '<h1>Infos</h1>';
-            $output .= '<p><strong>WT</strong>: ' . $studdog->birthday . '</p>';
-            $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
-            $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
-            $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
-            $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
-            $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
-            $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
-            $output .= '</div>';
-            $output .= '</div>';
+        if (empty($studdogs_shorthair)){
+            $output .= '<p>Keine Kurzhaar-Deckrüden gefunden.</p>';
+        } else {
+            foreach ($studdogs_shorthair as $studdog) {
+                $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
+                $output .= '<div class="studdog">';
+                $output .= '<div class="studdog-image"' . $iamgestyle . '>';
+                $output .= '</div>';
+                $output .= '<div class="studdog-owner">';
+                $output .= '<h1>' . $studdog->name . '</h1>';
+                $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
+                $output .= '<p>' . $studdog->street . '<br />';
+                $output .= $studdog->zip . " " . $studdog->city . '</p>';
+                $output .= '<p>' . $studdog->phone . '</p>';
+                $output .= '<p>' . $studdog->mobile . '</p>';
+                $output .= '<p><a href="mailto:' . $studdog->email . '">'. $studdog->email . '</a></p>';
+                $output .= '<p><a href="https://' . $studdog->website . '" target="_blank">' . $studdog->website . '</a></p>';
+                $output .= '</div>';
+                $output .= '<div class="studdog-dog">';
+                $output .= '<h1>Infos</h1>';
+                $output .= '<p><strong>WT</strong>: ' . $studdog->birthday . '</p>';
+                $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+                $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
+                $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
+                $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+                $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
+                $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
+                $output .= '</div>';
+                $output .= '</div>';
+            }
         }
         $output .= '<h2>Deckrüden in der Farbe blau</h2>';//TODO: make this translatable
-        foreach ($studdogs_blue as $studdog) {
-            $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
-            $output .= '<div class="studdog">';
-            $output .= '<div class="studdog-image"' . $iamgestyle . '>';
-            $output .= '</div>';
-            $output .= '<div class="studdog-owner">';
-            $output .= '<h1>' . $studdog->name . '</h1>';
-            $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
-            $output .= '<p>' . $studdog->street . '<br />';
-            $output .= $studdog->zip . " " . $studdog->city . '</p>';
-            $output .= '<p>' . $studdog->phone . '</p>';
-            $output .= '<p>' . $studdog->mobile . '</p>';
-            $output .= '<p><a href="mailto:' . $studdog->email . '">'. $studdog->email . '</a></p>';
-            $output .= '<p><a href="https://' . $studdog->website . '" target="_blank">' . $studdog->website . '</a></p>';
-            $output .= '</div>';
-            $output .= '<div class="studdog-dog">';
-            $output .= '<h1>Infos</h1>';
-            $output .= '<p><strong>WT</strong>: ' . $studdog->birthday . '</p>';
-            $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
-            $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
-            $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
-            $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
-            $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
-            $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
-            $output .= '</div>';
-            $output .= '</div>';
+        if (empty($studdogs_blue)){
+            $output .= '<p>Keine Kurzhaar-Deckrüden gefunden.</p>';
+        } else {
+            foreach ($studdogs_blue as $studdog) {
+                $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
+                $output .= '<div class="studdog">';
+                $output .= '<div class="studdog-image"' . $iamgestyle . '>';
+                $output .= '</div>';
+                $output .= '<div class="studdog-owner">';
+                $output .= '<h1>' . $studdog->name . '</h1>';
+                $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
+                $output .= '<p>' . $studdog->street . '<br />';
+                $output .= $studdog->zip . " " . $studdog->city . '</p>';
+                $output .= '<p>' . $studdog->phone . '</p>';
+                $output .= '<p>' . $studdog->mobile . '</p>';
+                $output .= '<p><a href="mailto:' . $studdog->email . '">'. $studdog->email . '</a></p>';
+                $output .= '<p><a href="https://' . $studdog->website . '" target="_blank">' . $studdog->website . '</a></p>';
+                $output .= '</div>';
+                $output .= '<div class="studdog-dog">';
+                $output .= '<h1>Infos</h1>';
+                $output .= '<p><strong>WT</strong>: ' . $studdog->birthday . '</p>';
+                $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+                $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
+                $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
+                $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+                $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
+                $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
+                $output .= '</div>';
+                $output .= '</div>';
+            }
         }
         $output .= '<h2>Deckrüden in der Farbe zimt</h2>';//TODO: make this translatable
         foreach ($studdogs_fawn as $studdog) {
