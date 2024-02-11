@@ -171,10 +171,6 @@
             default:
                 $result = "No studdog found.";
         }
-        $arr = (array)$result;
-        if(!$arr) {
-            $result = "<p>No studdog found... sorry</p>"; //TODO: Make it translatable
-        }
         return $result;
     }
 
@@ -360,6 +356,31 @@
         }
         $output .= '<h2>Deckrüden unserer ausländischen Mitglieder</h2>';//TODO: make this translatable
         foreach ($studdogs_foreign as $studdog) {
+            $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
+            $output .= '<div class="studdog">';
+            $output .= '<div class="studdog-image"' . $iamgestyle . '>';
+            $output .= '</div>';
+            $output .= '<div class="studdog-owner">';
+            $output .= '<h1>' . $studdog->name . '</h1>';
+            $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
+            $output .= '<p>' . $studdog->street . '<br />';
+            $output .= $studdog->zip . " " . $studdog->city . '</p>';
+            $output .= '<p>' . $studdog->phone . '</p>';
+            $output .= '<p>' . $studdog->mobile . '</p>';
+            $output .= '<p>' . $studdog->email . '</p>';
+            $output .= '<p>' . $studdog->website . '</p>';
+            $output .= '</div>';
+            $output .= '<div class="studdog-dog">';
+            $output .= '<h1>Infos</h1>';
+            $output .= '<p><strong>WT</strong>: ' . $studdog->birthday . '</p>';
+            $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+            $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
+            $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . '</p>'; //TODO: make this translatable
+            $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+            $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
+            $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '</div>';
+            $output .= '</div>';
         }
         return $output;
     }
