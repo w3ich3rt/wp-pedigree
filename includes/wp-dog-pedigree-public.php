@@ -198,7 +198,7 @@
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
-            $output .= '<p>' . $studdog->ownername . '</p>';
+            $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
             $output .= '<p>' . $studdog->street . '<br />';
             $output .= $studdog->zip . " " . $studdog->city . '</p>';
             $output .= '<p>' . $studdog->phone . '</p>';
@@ -226,7 +226,7 @@
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
-            $output .= '<p>' . $studdog->ownername . '</p>';
+            $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
             $output .= '<p>' . $studdog->street . '<br />';
             $output .= $studdog->zip . " " . $studdog->city . '</p>';
             $output .= '<p>' . $studdog->phone . '</p>';
@@ -254,7 +254,7 @@
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
-            $output .= '<p>' . $studdog->ownername . '</p>';
+            $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
             $output .= '<p>' . $studdog->street . '<br />';
             $output .= $studdog->zip . " " . $studdog->city . '</p>';
             $output .= '<p>' . $studdog->phone . '</p>';
@@ -282,7 +282,7 @@
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
-            $output .= '<p>' . $studdog->ownername . '</p>';
+            $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
             $output .= '<p>' . $studdog->street . '<br />';
             $output .= $studdog->zip . " " . $studdog->city . '</p>';
             $output .= '<p>' . $studdog->phone . '</p>';
@@ -310,7 +310,7 @@
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
-            $output .= '<p>' . $studdog->ownername . '</p>';
+            $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
             $output .= '<p>' . $studdog->street . '<br />';
             $output .= $studdog->zip . " " . $studdog->city . '</p>';
             $output .= '<p>' . $studdog->phone . '</p>';
@@ -338,7 +338,7 @@
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
-            $output .= '<p>' . $studdog->ownername . '</p>';
+            $output .= '<p><strong>' . $studdog->ownername . '</strong></p>';
             $output .= '<p>' . $studdog->street . '<br />';
             $output .= $studdog->zip . " " . $studdog->city . '</p>';
             $output .= '<p>' . $studdog->phone . '</p>';
