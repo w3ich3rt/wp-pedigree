@@ -170,7 +170,6 @@
             $iamgestyle = 'style="width:200px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
             $output .= '<div class="studdog">';
             $output .= '<div class="studdog-image"' . $iamgestyle . '>';
-            //$output .= '<img src="' . $studdog->dog_image . '" />';
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
@@ -194,9 +193,9 @@
             $output .= '</div>';
         }
         foreach ($studdogs_black as $studdog) {
+            $iamgestyle = 'style="width:200px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
             $output .= '<div class="studdog">';
-            $output .= '<div class="studdog-image">';
-            $output .= '<img src="' . $studdog->dog_image . '" />';
+            $output .= '<div class="studdog-image"' . $iamgestyle . '>';
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
@@ -220,9 +219,9 @@
             $output .= '</div>';
         }
         foreach ($studdogs_red as $studdog) {
+            $iamgestyle = 'style="width:200px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
             $output .= '<div class="studdog">';
-            $output .= '<div class="studdog-image">';
-            $output .= '<img src="' . $studdog->dog_image . '" />';
+            $output .= '<div class="studdog-image"' . $iamgestyle . '>';
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';

@@ -155,13 +155,8 @@ i.trashcans:hover {
 .studdog {
 	width: 100%;
 	margin: 0 auto;
-	background-color: white;
-	box-shadow: rgba(0, 0, 0, 0.10) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	border: 1px ridge #005097;
 }
-.studdog hr{
-	border: 1px solid #005097;
-}
-
 
 .studdog-image {
 	width: 250px;
