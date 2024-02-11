@@ -139,3 +139,53 @@
 
         return $output;
     }
+
+
+    /**
+    * Get all infos of a studdog for the male stud list
+    **/
+    function wp_dog_pedigree_get_studdog($furtype, $color) {
+        global $wpdb;
+        if ($color == NULL) {
+            $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND WHERE {$wpdb->prefix}dogpedigree_dogs.fur_type = $furtype ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+            return $result;
+        } else {
+            $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND WHERE {$wpdb->prefix}dogpedigree_dogs.color = $color AND WHERE {$wpdb->prefix}dogpedigree_dogs.fur_type = $furtype ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+            return $result;
+        }
+    }
+
+    /**
+    * Build studdog html list
+    **/
+    function wp_dog_pedigree_build_studdog_list() {
+        $studdogs_shorthair = wp_dog_pedigree_get_studdog(0);
+        $studdogs_black = wp_dog_pedigree_get_studdog(1, 'Black');
+        $studdogs_blue = wp_dog_pedigree_get_studdog(1, 'Blue');
+        $studdogs_cream = wp_dog_pedigree_get_studdog(1, 'Cream');
+        $studdogs_fawn = wp_dog_pedigree_get_studdog(1, 'Fawn');
+        $studdogs_red = wp_dog_pedigree_get_studdog(1, 'Red');
+        foreach ($studdogs_shorthair as $studdog) {
+            $output .= '<div class="studdog">';
+            $output .= '<img src="' . $studdog->dog_image . '" />';
+            $output .= '<p>' . $studdog->name . '</p>';
+            $output .= '<p>' . $studdog->birthday . '</p>';
+            $output .= '<p>' . $studdog->shoulderheight . '</p>';
+            $output .= '<p>' . $studdog->owner . '</p>';
+            $output .= '</div>';
+        }
+        return $output;
+    }
+
+    /**
+    * shortcode to display studdogs
+    **/
+    add_shortcode('dog_pedigree_studdog_list', 'wp_dog_pedigree_shortcode_studdog_list');
+    function wp_dog_pedigree_shortcode_studdog_list($atts) {
+        extract(shortcode_atts(array(
+            'id' => '',
+        ), $atts));
+
+        $studdogs_html = wp_dog_pedigree_build_studdog_list();
+        return $studdogs_html;
+    }
