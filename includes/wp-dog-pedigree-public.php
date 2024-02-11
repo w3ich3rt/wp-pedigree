@@ -163,7 +163,7 @@
                 $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Fawn' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
                 break;
             case "Red":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Red' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Red' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = $furtype ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
                 break;
             case "Foreigner":
                 $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_owners.country != 'Germany' ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
@@ -171,8 +171,9 @@
             default:
                 $result = "No studdog found.";
         }
-        if($result == null) {
-            $result = "No studdog found... sorry"; //TODO: Make it translatable
+        $arr = (array)$result;
+        if(!$arr) {
+            $result = "<p>No studdog found... sorry</p>"; //TODO: Make it translatable
         }
         return $result;
     }
@@ -215,6 +216,7 @@
             $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
             $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
             $output .= '</div>';
+            $output .= '</div>';
         }
         $output .= '<h2>Deckrüden in der Farbe blau</h2>';//TODO: make this translatable
         foreach ($studdogs_blue as $studdog) {
@@ -241,6 +243,7 @@
             $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
             $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
             $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '</div>';
             $output .= '</div>';
         }
         $output .= '<h2>Deckrüden in der Farbe zimt</h2>';//TODO: make this translatable
@@ -269,6 +272,7 @@
             $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
             $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
             $output .= '</div>';
+            $output .= '</div>';
         }
         $output .= '<h2>Deckrüden in der Farbe creme</h2>';//TODO: make this translatable
         foreach ($studdogs_cream as $studdog) {
@@ -295,6 +299,7 @@
             $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
             $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
             $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '</div>';
             $output .= '</div>';
         }
         $output .= '<h2>Deckrüden in der Farbe schwarz</h2>';//TODO: make this translatable
@@ -323,6 +328,7 @@
             $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
             $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
             $output .= '</div>';
+            $output .= '</div>';
         }
         $output .= '<h2>Deckrüden in der Farbe rot</h2>';//TODO: make this translatable
         foreach ($studdogs_red as $studdog) {
@@ -349,6 +355,7 @@
             $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
             $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
             $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '</div>';
             $output .= '</div>';
         }
         $output .= '<h2>Deckrüden unserer ausländischen Mitglieder</h2>';//TODO: make this translatable
