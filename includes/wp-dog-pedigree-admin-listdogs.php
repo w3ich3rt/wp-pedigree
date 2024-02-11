@@ -90,7 +90,7 @@
 <?php
     function wp_dog_pedigree_get_dogowner_by_ownerId($owner_id) {
         global $wpdb;
-        $result = $wpdb->get_results( "SELECT name FROM {$wpdb->prefix}dogpedigree_owners WHERE ID = '$owner_id'" );
+        $result = $wpdb->get_results( "SELECT ownername FROM {$wpdb->prefix}dogpedigree_owners WHERE ID = '$owner_id'" );
         return $result[0]->name;
     }
 ?>
