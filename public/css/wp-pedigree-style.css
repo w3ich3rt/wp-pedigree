@@ -164,20 +164,12 @@ i.trashcans:hover {
 
 
 .studdog-image {
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	float: left;
 	padding: 15px;
 	display: block;
 	overflow: hidden;
-}
-.studdog-image img {
-	width: auto;
-	height: 200px;
-	float: left;
-	padding: 15px;
-	display: block;
-	margin: -75px 0 0 -100px;
 }
 
 .studdog-owner {
@@ -197,6 +189,10 @@ i.trashcans:hover {
 .studdog-dog {
 	font-size: 15px;
 	padding: 15px;
+}
+.studdog-dog h1 {
+	font-size: 20px;
+	padding: 0px;
 }
 .studdog-dog p {
 	padding: 0px;

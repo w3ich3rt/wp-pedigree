@@ -167,9 +167,10 @@
         $studdogs_red = wp_dog_pedigree_get_studdog(1, 'Red');
         $output = '';
         foreach ($studdogs_shorthair as $studdog) {
+            $iamgestyle = 'style="width:200px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
             $output .= '<div class="studdog">';
-            $output .= '<div class="studdog-image">';
-            $output .= '<img src="' . $studdog->dog_image . '" />';
+            $output .= '<div class="studdog-image"' . $iamgestyle . '>';
+            //$output .= '<img src="' . $studdog->dog_image . '" />';
             $output .= '</div>';
             $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
@@ -183,13 +184,13 @@
             $output .= '</div>';
             $output .= '<div class="studdog-dog">';
             $output .= '<h1>Infos</h1>';
-            $output .= '<p><strong>WT:</strong> ' . $studdog->birthday . '</p>';
-            $output .= '<p><strong>Zuchtbuch::</strong> ' . $studdog->studbook_nr . '</p>';
-            $output .= '<p><strong>HD::</strong> ' . $studdog->HD_value . '</p>';
-            $output .= '<p><strong>Größe::</strong> ' . $studdog->shoulder_height . '</p>'; //TODO: make this translatable
-            $output .= '<p><strong>FB::</strong> ' . $studdog->fur_type . $studdog->color . '</p>';
-            $output .= '<p><strong>FZ::</strong> ' . $studdog->dog_miss_tooth . '</p>';
-            $output .= '<p><strong>AL::</strong> ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '<p><strong>WT</strong>: ' . $studdog->birthday . '</p>';
+            $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+            $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
+            $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . '</p>'; //TODO: make this translatable
+            $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+            $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
+            $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
             $output .= '</div>';
         }
         foreach ($studdogs_black as $studdog) {
@@ -209,13 +210,13 @@
             $output .= '</div>';
             $output .= '<div class="studdog-dog">';
             $output .= '<h1>Infos</h1>';
-            $output .= '<p><strong>WT:</strong> ' . $studdog->birthday . '</p>';
-            $output .= '<p><strong>Zuchtbuch::</strong> ' . $studdog->studbook_nr . '</p>';
-            $output .= '<p><strong>HD::</strong> ' . $studdog->HD_value . '</p>';
-            $output .= '<p><strong>Größe::</strong> ' . $studdog->shoulder_height . '</p>'; //TODO: make this translatable
-            $output .= '<p><strong>FB::</strong> ' . $studdog->fur_type . $studdog->color . '</p>';
-            $output .= '<p><strong>FZ::</strong> ' . $studdog->dog_miss_tooth . '</p>';
-            $output .= '<p><strong>AL::</strong> ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '<p><strong>WT</strong>: ' . $studdog->birthday . '</p>';
+            $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+            $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
+            $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . '</p>'; //TODO: make this translatable
+            $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+            $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
+            $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
             $output .= '</div>';
         }
         foreach ($studdogs_red as $studdog) {
@@ -235,13 +236,13 @@
             $output .= '</div>';
             $output .= '<div class="studdog-dog">';
             $output .= '<h1>Infos</h1>';
-            $output .= '<p><strong>WT:</strong> ' . $studdog->birthday . '</p>';
-            $output .= '<p><strong>Zuchtbuch::</strong> ' . $studdog->studbook_nr . '</p>';
-            $output .= '<p><strong>HD::</strong> ' . $studdog->HD_value . '</p>';
-            $output .= '<p><strong>Größe::</strong> ' . $studdog->shoulder_height . '</p>'; //TODO: make this translatable
-            $output .= '<p><strong>FB::</strong> ' . $studdog->fur_type . $studdog->color . '</p>';
-            $output .= '<p><strong>FZ::</strong> ' . $studdog->dog_miss_tooth . '</p>';
-            $output .= '<p><strong>AL::</strong> ' . $studdog->dog_breed_conditions . '</p>';
+            $output .= '<p><strong>WT</strong>: ' . $studdog->birthday . '</p>';
+            $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+            $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
+            $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . '</p>'; //TODO: make this translatable
+            $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+            $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
+            $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
             $output .= '</div>';
         }
         return $output;
