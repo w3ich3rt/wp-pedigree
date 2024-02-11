@@ -197,3 +197,8 @@ i.trashcans:hover {
 	padding: 0px;
 	margin: 0px;
 }
+
+.wp-pedigree-info {
+	font-size: 18px;
+	padding: 20px;
+}

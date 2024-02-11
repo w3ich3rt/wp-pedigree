@@ -148,25 +148,25 @@
         global $wpdb;
         switch ($which_studdog) {
             case "shorthair":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 0 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 0 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Black":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Black' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Black' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Blue":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Blue' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Blue' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Cream":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Cream' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Cream' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Fawn":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Fawn' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Fawn' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Red":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Red' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = $furtype ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Red' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = $furtype ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Foreigner":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_owners.country != 'Germany' ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_owners.country != 'Germany' ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             default:
                 $result = "No studdog found.";
@@ -188,7 +188,7 @@
         $output = '';
         $output .= '<h2>Kurzhaar-Deckrüden</h2>';//TODO: make this translatable
         if (empty($studdogs_shorthair)){
-            $output .= '<p>Aktuell gibt es keine Kurzhaar-Deckrüden.</p>';
+            $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine Kurzhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_shorthair as $studdog) {
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
@@ -220,7 +220,7 @@
         }
         $output .= '<h2>Deckrüden in der Farbe blau</h2>';//TODO: make this translatable
         if (empty($studdogs_blue)){
-            $output .= '<p>Aktuell gibt es keine blauen Langhaar-Deckrüden.</p>';
+            $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine blauen Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_blue as $studdog) {
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
@@ -252,7 +252,7 @@
         }
         $output .= '<h2>Deckrüden in der Farbe zimt</h2>';//TODO: make this translatable
         if (empty($studdogs_fawn)){
-            $output .= '<p>Aktuell gibt es keine zimt-farbenen Langhaar-Deckrüden.</p>';
+            $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine zimt-farbenen Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_fawn as $studdog) {
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
@@ -284,7 +284,7 @@
         }
         $output .= '<h2>Deckrüden in der Farbe creme</h2>';//TODO: make this translatable
         if (empty($studdogs_cream)){
-            $output .= '<p>Aktuell gibt es keine creme-farbenen Langhaar-Deckrüden.</p>';
+            $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine creme-farbenen Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_cream as $studdog) {
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
@@ -316,7 +316,7 @@
         }
         $output .= '<h2>Deckrüden in der Farbe schwarz</h2>';//TODO: make this translatable
         if (empty($studdogs_black)){
-            $output .= '<p>Aktuell gibt es keine schwarzen Langhaar-Deckrüden.</p>';
+            $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine schwarzen Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_black as $studdog) {
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
@@ -348,7 +348,7 @@
         }
         $output .= '<h2>Deckrüden in der Farbe rot</h2>';//TODO: make this translatable
         if (empty($studdogs_red)){
-            $output .= '<p>Aktuell gibt es keine roten Langhaar-Deckrüden.</p>';
+            $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine roten Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_red as $studdog) {
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
@@ -380,7 +380,7 @@
         }
         $output .= '<h2>Deckrüden unserer ausländischen Mitglieder</h2>';//TODO: make this translatable
         if (empty($studdogs_foreign)){
-            $output .= '<p>Aktuell gibt es keine Deckrüden von ACC Mitgliedern im Ausland.</p>';
+            $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine Deckrüden von ACC Mitgliedern im Ausland.</p>';
         } else {
             foreach ($studdogs_foreign as $studdog) {
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
