@@ -171,6 +171,9 @@
             default:
                 $result = "No studdog found.";
         }
+        if($result == null) {
+            $result = "No studdog found... sorry"; //TODO: Make it translatable
+        }
         return $result;
     }
 
@@ -179,12 +182,12 @@
     **/
     function wp_dog_pedigree_build_studdog_list() {
         $studdogs_shorthair = wp_dog_pedigree_get_studdog('shorthair');
-        $studdogs_black = wp_dog_pedigree_get_studdog(1, 'Black');
-        $studdogs_blue = wp_dog_pedigree_get_studdog(1, 'Blue');
-        $studdogs_cream = wp_dog_pedigree_get_studdog(1, 'Cream');
-        $studdogs_fawn = wp_dog_pedigree_get_studdog(1, 'Fawn');
-        $studdogs_red = wp_dog_pedigree_get_studdog(1, 'Red');
-        $studdogs_foreign = wp_dog_pedigree_get_studdog(1, 'Foreigner');
+        $studdogs_black = wp_dog_pedigree_get_studdog('Black');
+        $studdogs_blue = wp_dog_pedigree_get_studdog('Blue');
+        $studdogs_cream = wp_dog_pedigree_get_studdog('Cream');
+        $studdogs_fawn = wp_dog_pedigree_get_studdog('Fawn');
+        $studdogs_red = wp_dog_pedigree_get_studdog('Red');
+        $studdogs_foreign = wp_dog_pedigree_get_studdog('Foreigner');
         $output = '';
         $output .= '<h2>Kurzhaar-Deckrüden</h2>';//TODO: make this translatable
         foreach ($studdogs_shorthair as $studdog) {
@@ -240,7 +243,7 @@
             $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
             $output .= '</div>';
         }
-        $output .= '<h2>Deckrüden in der Farbe rzimtot</h2>';//TODO: make this translatable
+        $output .= '<h2>Deckrüden in der Farbe zimt</h2>';//TODO: make this translatable
         foreach ($studdogs_fawn as $studdog) {
             $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
             $output .= '<div class="studdog">';
