@@ -168,10 +168,10 @@
         $output = '';
         foreach ($studdogs_shorthair as $studdog) {
             $output .= '<div class="studdog">';
-            $output .= '<div>';
-            $output .= '<img height="100px" src="' . $studdog->dog_image . '" />';
+            $output .= '<div class="studdog-image">';
+            $output .= '<img src="' . $studdog->dog_image . '" />';
             $output .= '</div>';
-            $output .= '<div>';
+            $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
             $output .= '<p>' . $studdog->ownername . '</p>';
             $output .= '<p>' . $studdog->street . '</p>';
@@ -181,7 +181,7 @@
             $output .= '<p>' . $studdog->email . '</p>';
             $output .= '<p>' . $studdog->website . '</p>';
             $output .= '</div>';
-            $output .= '<div>';
+            $output .= '<div class="studdog-dog">';
             $output .= '<p>WT: ' . $studdog->birthday . '</p>';
             $output .= '<p>Zuchtbuch: ' . $studdog->studbook_nr . '</p>';
             $output .= '<p>HD: ' . $studdog->HD_value . '</p>';
@@ -193,10 +193,10 @@
         }
         foreach ($studdogs_black as $studdog) {
             $output .= '<div class="studdog">';
-            $output .= '<div>';
-            $output .= '<img height="100px" src="' . $studdog->dog_image . '" />';
+            $output .= '<div class="studdog-image">';
+            $output .= '<img src="' . $studdog->dog_image . '" />';
             $output .= '</div>';
-            $output .= '<div>';
+            $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
             $output .= '<p>' . $studdog->ownername . '</p>';
             $output .= '<p>' . $studdog->street . '</p>';
@@ -206,7 +206,7 @@
             $output .= '<p>' . $studdog->email . '</p>';
             $output .= '<p>' . $studdog->website . '</p>';
             $output .= '</div>';
-            $output .= '<div>';
+            $output .= '<div class="studdog-dog">';
             $output .= '<p>WT: ' . $studdog->birthday . '</p>';
             $output .= '<p>Zuchtbuch: ' . $studdog->studbook_nr . '</p>';
             $output .= '<p>HD: ' . $studdog->HD_value . '</p>';
@@ -218,10 +218,10 @@
         }
         foreach ($studdogs_red as $studdog) {
             $output .= '<div class="studdog">';
-            $output .= '<div>';
-            $output .= '<img height="100px" src="' . $studdog->dog_image . '" />';
+            $output .= '<div class="studdog-image">';
+            $output .= '<img src="' . $studdog->dog_image . '" />';
             $output .= '</div>';
-            $output .= '<div>';
+            $output .= '<div class="studdog-owner">';
             $output .= '<h1>' . $studdog->name . '</h1>';
             $output .= '<p>' . $studdog->ownername . '</p>';
             $output .= '<p>' . $studdog->street . '</p>';
@@ -231,7 +231,7 @@
             $output .= '<p>' . $studdog->email . '</p>';
             $output .= '<p>' . $studdog->website . '</p>';
             $output .= '</div>';
-            $output .= '<div>';
+            $output .= '<div class="studdog-dog">';
             $output .= '<p>WT: ' . $studdog->birthday . '</p>';
             $output .= '<p>Zuchtbuch: ' . $studdog->studbook_nr . '</p>';
             $output .= '<p>HD: ' . $studdog->HD_value . '</p>';
