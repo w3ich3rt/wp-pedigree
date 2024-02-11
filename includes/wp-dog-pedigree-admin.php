@@ -16,7 +16,7 @@
                 <?php
                     $results = wp_dog_pedigree_get_all_dog_owners();
                     foreach ($results as $result) {
-                        echo '<option value="' . $result->ID . '">' . $result->name . '</option>';
+                        echo '<option value="' . $result->ID . '">' . $result->ownername . '</option>';
                     }
                 ?>
             </select>
@@ -135,7 +135,7 @@
     function wp_dog_pedigree_get_all_dog_owners() {
         global $wpdb;
         $table_name = $wpdb->prefix . 'dogpedigree_owners';
-        $results = $wpdb->get_results( "SELECT ID, name FROM $table_name" );
+        $results = $wpdb->get_results( "SELECT ID, ownername FROM $table_name" );
         return $results;
     }
     /**
