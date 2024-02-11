@@ -231,7 +231,7 @@
                 $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
-                $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+                $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
                 $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
                 $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
                 $output .= '</div>';
@@ -283,7 +283,7 @@
                 $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
-                $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+                $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
                 $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
                 $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
                 $output .= '</div>';
@@ -335,7 +335,7 @@
                 $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
-                $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+                $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
                 $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
                 $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
                 $output .= '</div>';
@@ -387,7 +387,7 @@
                 $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
-                $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+                $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
                 $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
                 $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
                 $output .= '</div>';
@@ -439,7 +439,7 @@
                 $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
-                $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+                $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
                 $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
                 $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
                 $output .= '</div>';
@@ -491,7 +491,7 @@
                 $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
-                $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+                $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
                 $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
                 $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
                 $output .= '</div>';
