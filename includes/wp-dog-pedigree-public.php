@@ -191,6 +191,26 @@
             $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine Kurzhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_shorthair as $studdog) {
+                if($studdog->fur_type == 1) { $furtype = ""; } else { $furtype = 'KH - '; }
+                switch ($studdog->color) {
+                    case "Red":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
+                        break;
+                    case "Black":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree');
+                        break;
+                    case "Blue":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree');
+                        break;
+                    case "Cream":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree');
+                        break;
+                    case "Fawn":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree');
+                        break;
+                    default:
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
+                }
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
                 $output .= '<div class="studdog">';
                 $output .= '<div class="studdog-image"' . $iamgestyle . '>';
@@ -223,6 +243,26 @@
             $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine blauen Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_blue as $studdog) {
+                if($studdog->fur_type == 1) { $furtype = ""; } else { $furtype = 'KH - '; }
+                switch ($studdog->color) {
+                    case "Red":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
+                        break;
+                    case "Black":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree');
+                        break;
+                    case "Blue":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree');
+                        break;
+                    case "Cream":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree');
+                        break;
+                    case "Fawn":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree');
+                        break;
+                    default:
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
+                }
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
                 $output .= '<div class="studdog">';
                 $output .= '<div class="studdog-image"' . $iamgestyle . '>';
@@ -255,6 +295,26 @@
             $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine zimt-farbenen Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_fawn as $studdog) {
+                if($studdog->fur_type == 1) { $furtype = ""; } else { $furtype = 'KH - '; }
+                switch ($studdog->color) {
+                    case "Red":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
+                        break;
+                    case "Black":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree');
+                        break;
+                    case "Blue":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree');
+                        break;
+                    case "Cream":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree');
+                        break;
+                    case "Fawn":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree');
+                        break;
+                    default:
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
+                }
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
                 $output .= '<div class="studdog">';
                 $output .= '<div class="studdog-image"' . $iamgestyle . '>';
@@ -287,6 +347,26 @@
             $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine creme-farbenen Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_cream as $studdog) {
+                if($studdog->fur_type == 1) { $furtype = ""; } else { $furtype = 'KH - '; }
+                switch ($studdog->color) {
+                    case "Red":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
+                        break;
+                    case "Black":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree');
+                        break;
+                    case "Blue":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree');
+                        break;
+                    case "Cream":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree');
+                        break;
+                    case "Fawn":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree');
+                        break;
+                    default:
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
+                }
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
                 $output .= '<div class="studdog">';
                 $output .= '<div class="studdog-image"' . $iamgestyle . '>';
@@ -319,6 +399,26 @@
             $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine schwarzen Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_black as $studdog) {
+                if($studdog->fur_type == 1) { $furtype = ""; } else { $furtype = 'KH - '; }
+                switch ($studdog->color) {
+                    case "Red":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
+                        break;
+                    case "Black":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree');
+                        break;
+                    case "Blue":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree');
+                        break;
+                    case "Cream":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree');
+                        break;
+                    case "Fawn":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree');
+                        break;
+                    default:
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
+                }
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
                 $output .= '<div class="studdog">';
                 $output .= '<div class="studdog-image"' . $iamgestyle . '>';
@@ -351,6 +451,26 @@
             $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine roten Langhaar-Deckrüden.</p>';
         } else {
             foreach ($studdogs_red as $studdog) {
+                if($studdog->fur_type == 1) { $furtype = ""; } else { $furtype = 'KH - '; }
+                switch ($studdog->color) {
+                    case "Red":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
+                        break;
+                    case "Black":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree');
+                        break;
+                    case "Blue":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree');
+                        break;
+                    case "Cream":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree');
+                        break;
+                    case "Fawn":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree');
+                        break;
+                    default:
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
+                }
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
                 $output .= '<div class="studdog">';
                 $output .= '<div class="studdog-image"' . $iamgestyle . '>';
@@ -383,6 +503,26 @@
             $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine Deckrüden von ACC Mitgliedern im Ausland.</p>';
         } else {
             foreach ($studdogs_foreign as $studdog) {
+                if($studdog->fur_type == 1) { $furtype = ""; } else { $furtype = 'KH - '; }
+                switch ($studdog->color) {
+                    case "Red":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_red','wp-dog-pedigree');
+                        break;
+                    case "Black":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_black','wp-dog-pedigree');
+                        break;
+                    case "Blue":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_blue','wp-dog-pedigree');
+                        break;
+                    case "Cream":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_cream','wp-dog-pedigree');
+                        break;
+                    case "Fawn":
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_fawn','wp-dog-pedigree');
+                        break;
+                    default:
+                        $colorhtml = __('wp_dog_pedigree_lang_furcolor_no','wp-dog-pedigree');
+                }
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
                 $output .= '<div class="studdog">';
                 $output .= '<div class="studdog-image"' . $iamgestyle . '>';
@@ -403,7 +543,7 @@
                 $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
-                $output .= '<p><strong>FB</strong>: ' . $studdog->fur_type . $studdog->color . '</p>';
+                $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
                 $output .= '<p><strong>FZ</strong>: ' . $studdog->dog_miss_tooth . '</p>';
                 $output .= '<p><strong>AL</strong>: ' . $studdog->dog_breed_conditions . '</p>';
                 $output .= '</div>';
