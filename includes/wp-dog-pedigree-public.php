@@ -148,13 +148,12 @@
         global $wpdb;
         if ($color == 0) {
             $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.fur_type = $furtype ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
-            return $result;
         } elseif ($color == 'Foreigner') {
             $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_owners.country != 'Germany' ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
         } else {
             $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = '$color' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = $furtype ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday ASC" );
-            return $result;
         }
+        return $result;
     }
 
     /**
