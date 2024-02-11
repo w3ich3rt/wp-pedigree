@@ -11,7 +11,7 @@
      * Plugin Name:       Dog Pedigree
      * Plugin URI:        https://www.wazishen.com/wp-dog-pedigree
      * Description:       This is a plugin to create pedigree charts for animals or other things.
-     * Version:           0.16.0
+     * Version:           0.17.0
      * Requires at least: 5.2
      * Requires PHP:      7.2
      * Author:            Ullrich Weichert - w3ich3rt
@@ -28,7 +28,7 @@
         die;
     }
 
-    define( 'WP_DOG_PEDIGREE_VERSION', '0.16.0' );
+    define( 'WP_DOG_PEDIGREE_VERSION', '0.17.0' );
 
     /**
     * Load internationalization files

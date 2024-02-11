@@ -21,7 +21,7 @@
                 foreach ( $result as $row ) {
                     echo "<tr class='admin-table'>";
                     echo "<td class='admin-table'>$row->ID</td>";
-                    echo "<td class='admin-table'>$row->name</td>";
+                    echo "<td class='admin-table'>$row->ownername</td>";
                     echo "<td class='admin-table'>$row->street, $row->zip $row->city</td>";
                     echo "<td class='admin-table'>$row->country</td>";
                     echo "<td class='admin-table'>$row->phone</td>";

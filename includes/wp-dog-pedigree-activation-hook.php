@@ -38,7 +38,7 @@ function wp_dog_pedigree_db_install() {
 
 	$sql_owner_table = "CREATE TABLE IF NOT EXISTS $pedigree_table_owner (
 		ID mediumint(9) NOT NULL AUTO_INCREMENT,
-		name tinytext NOT NULL,
+		ownername tinytext NOT NULL,
 		street tinytext,
 		zip tinytext,
 		city tinytext,

@@ -261,7 +261,7 @@
             $success=$wpdb->insert(
                 $table_name,
                 array(
-                    'name' => $owner_name,
+                    'ownername' => $owner_name,
                     'street' => $street,
                     'zip' => $zip,
                     'city' => $city,
