@@ -154,8 +154,7 @@ i.trashcans:hover {
 
 .studdog {
 	width: 100%;
-	margin: 0 auto;
-	border: 1px ridge #005097;
+	background-color: white;
 }
 
 .studdog-image {
@@ -169,7 +168,7 @@ i.trashcans:hover {
 
 .studdog-owner {
 	font-size: 15px;
-	padding: 15px;
+	padding: 15px 30px;
 	float: left;
 }
 .studdog-owner h1 {
@@ -183,7 +182,8 @@ i.trashcans:hover {
 
 .studdog-dog {
 	font-size: 15px;
-	padding: 15px;
+	float: left;
+	padding: 15px 30px;
 }
 .studdog-dog h1 {
 	font-size: 20px;
