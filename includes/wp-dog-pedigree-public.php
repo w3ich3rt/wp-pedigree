@@ -186,14 +186,6 @@
         $studdogs_red = wp_dog_pedigree_get_studdog('Red');
         $studdogs_foreign = wp_dog_pedigree_get_studdog('Foreigner');
         $output = '';
-        $output .= '<script>';
-        $output .= 'function on() {';
-        $output .= '  document.getElementById("overlay").style.display = "block";';
-        $output .= '}';
-        $output .= 'function off() {';
-        $output .= '  document.getElementById("overlay").style.display = "none";';
-        $output .= '}';
-        $output .= '</script>';
         $output .= '<h2>Kurzhaar-Deckrüden</h2>';//TODO: make this translatable
         if (empty($studdogs_shorthair)){
             $output .= '<p class="wp-pedigree-info">Aktuell gibt es keine Kurzhaar-Deckrüden.</p>';
@@ -221,8 +213,7 @@
                 }
                 $iamgestyle = 'style="width:250px; height:250px;background-image: url(' . $studdog->dog_image . '); background-size: cover; background-position: center;"';
                 $output .= '<div class="studdog">';
-                $output .= '<div  id="overlay" onclick="off()"> ' . wp_dog_pedigree_create_studdog_page($studdog->ID) . ' </div>';
-                $output .= '<div class="studdog-image"' . $iamgestyle . 'onclick="on()">';
+                $output .= '<div class="studdog-image"' . $iamgestyle . '>';
                 $output .= '</div>';
                 $output .= '<div class="studdog-owner">';
                 $output .= '<h1>' . $studdog->name . '</h1>';
@@ -569,18 +560,4 @@
     function wp_dog_pedigree_shortcode_studdog_list($atts) {
         $studdogs_html = wp_dog_pedigree_build_studdog_list();
         return $studdogs_html;
-    }
-
-
-    function wp_dog_pedigree_create_studdog_page($dogid) {
-        $pedigree = wp_dog_pedigree_generate_pedigree_dictionary($id);
-        $pedigree_html = wp_dog_pedigree_build_htmltable($pedigree);
-        $output = '<div class="overlaybox">';
-        $output .= '<div class="overlaybox-content">';
-        $output .= '<h1>&times;</h1>';
-        $output .= $pedigree_html;
-        $output .= '</div>';
-        $output .= '</div>';
-
-        return $output;
     }
