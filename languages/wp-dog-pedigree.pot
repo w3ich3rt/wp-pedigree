@@ -244,7 +244,7 @@ msgstr "There is no update for SQL custom table for the dog pedigree plugin."
 
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_lang_studdog"
-msgstr "Breeding dog"
+msgstr "Breeding dog in your club"
 
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_lang_hd"

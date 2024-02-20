@@ -244,7 +244,7 @@ msgstr "Es gibt kein Update für die benutzerdefinierte SQL-Tabelle für das Hun
 
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_lang_studdog"
-msgstr "Hund mit Zuchtzulassung"
+msgstr "Hund mit Zuchtzulassung im Verein"
 
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_lang_hd"
