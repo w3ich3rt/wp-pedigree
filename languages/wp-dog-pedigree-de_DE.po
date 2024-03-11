@@ -384,7 +384,7 @@ msgstr "Zuchtzulassung"
 
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_table_dog_breed_conditions"
-msgstr "Zuctauflagen"
+msgstr "Zuchtauflagen"
 
 #: includes/wp-dog-pedigree-activation-hook.php:54
 msgid "wp_dog_pedigree_table_dog_miss_tooth"

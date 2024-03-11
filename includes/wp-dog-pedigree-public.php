@@ -148,25 +148,25 @@
         global $wpdb;
         switch ($which_studdog) {
             case "shorthair":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 0 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.stud_dog = 1 AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 0 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Black":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Black' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.stud_dog = 1 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Black' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Blue":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Blue' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.stud_dog = 1 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Blue' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Cream":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Cream' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.stud_dog = 1 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Cream' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Fawn":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Fawn' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.stud_dog = 1 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Fawn' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Red":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Red' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.stud_dog = 1 AND {$wpdb->prefix}dogpedigree_dogs.color = 'Red' AND {$wpdb->prefix}dogpedigree_dogs.fur_type = 1 ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             case "Foreigner":
-                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_owners.country != 'Germany' ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
+                $result = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}dogpedigree_dogs INNER JOIN {$wpdb->prefix}dogpedigree_owners ON {$wpdb->prefix}dogpedigree_dogs.owner = {$wpdb->prefix}dogpedigree_owners.ID WHERE {$wpdb->prefix}dogpedigree_dogs.gender = 0 AND {$wpdb->prefix}dogpedigree_dogs.stud_dog = 1 AND {$wpdb->prefix}dogpedigree_owners.country != 'Germany' ORDER BY {$wpdb->prefix}dogpedigree_dogs.birthday DESC" );
                 break;
             default:
                 $result = "No studdog found.";
@@ -228,7 +228,7 @@
                 $output .= '<div class="studdog-dog">';
                 $output .= '<h1>Infos</h1>';
                 $output .= '<p><strong>WT</strong>: ' . date('d.m.Y', strtotime($studdog->birthday)) . '</p>';
-                $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+                #$output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
                 $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
@@ -280,7 +280,7 @@
                 $output .= '<div class="studdog-dog">';
                 $output .= '<h1>Infos</h1>';
                 $output .= '<p><strong>WT</strong>: ' . date('d.m.Y', strtotime($studdog->birthday)) . '</p>';
-                $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+                #$output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
                 $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
@@ -332,7 +332,7 @@
                 $output .= '<div class="studdog-dog">';
                 $output .= '<h1>Infos</h1>';
                 $output .= '<p><strong>WT</strong>: ' . date('d.m.Y', strtotime($studdog->birthday)) . '</p>';
-                $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+                #$output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
                 $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
@@ -384,7 +384,7 @@
                 $output .= '<div class="studdog-dog">';
                 $output .= '<h1>Infos</h1>';
                 $output .= '<p><strong>WT</strong>: ' . date('d.m.Y', strtotime($studdog->birthday)) . '</p>';
-                $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+                #$output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
                 $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
@@ -436,7 +436,7 @@
                 $output .= '<div class="studdog-dog">';
                 $output .= '<h1>Infos</h1>';
                 $output .= '<p><strong>WT</strong>: ' . date('d.m.Y', strtotime($studdog->birthday)) . '</p>';
-                $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+                #$output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
                 $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
@@ -488,7 +488,7 @@
                 $output .= '<div class="studdog-dog">';
                 $output .= '<h1>Infos</h1>';
                 $output .= '<p><strong>WT</strong>: ' . date('d.m.Y', strtotime($studdog->birthday)) . '</p>';
-                $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+                #$output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
                 $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
@@ -540,7 +540,7 @@
                 $output .= '<div class="studdog-dog">';
                 $output .= '<h1>Infos</h1>';
                 $output .= '<p><strong>WT</strong>: ' . date('d.m.Y', strtotime($studdog->birthday)) . '</p>';
-                $output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
+                #$output .= '<p><strong>Zuchtbuch</strong>: ' . $studdog->studbook_nr . '</p>';
                 $output .= '<p><strong>HD</strong>: ' . $studdog->HD_value . '</p>';
                 $output .= '<p><strong>Größe</strong>: ' . $studdog->shoulder_height . ' cm</p>'; //TODO: make this translatable
                 $output .= '<p><strong>FB</strong>: ' . $furtype . $colorhtml . '</p>';
